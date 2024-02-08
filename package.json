@@ -1,0 +1,29 @@
+{
+  "name": "tip-tracker-base",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "main": "./nuxt.config.ts",
+  "scripts": {
+    "build": "nuxt build",
+    "playground": "nuxt dev playground",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "debug": "nuxi dev --inspect"
+  },
+  "dependencies": {
+    "@formkit/nuxt": "^1.5.7",
+    "@nuxt/ui": "^2.13.0",
+    "nuxt": "^3.10.1",
+    "vue": "^3.4.15",
+    "vue-router": "^4.2.5",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@nuxtjs/supabase": "^1.1.6",
+    "@pinia/nuxt": "^0.5.1",
+    "eslint": "^8.56.0"
+  }
+}

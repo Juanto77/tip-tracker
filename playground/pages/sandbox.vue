@@ -1,6 +1,6 @@
-<script setup></script>
 
 <template>
   <!-- <FormExample /> -->
-  <addTip />
+  <!-- <addTip /> -->
+  <CalendarPv />
 </template>

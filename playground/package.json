@@ -1,0 +1,7 @@
+
+{
+	"name": "@tip-tracker/playground",
+	"devDependencies": {
+		"@tip-tracker/base": "workspace:^"
+	}
+}

@@ -1,6 +1,12 @@
-import * as path from 'path';
+
 export default defineNuxtConfig({
-  extends: ['@tip-tracker/base'],
+  // modules: [
+  //   'nuxt-primevue'
+  // ],
+  extends: ['..'],
 
-
+  // primevue: {
+  //   options: { unstyled: true },
+  //  importPT: { from: '' } 
+  // },
 });

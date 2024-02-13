@@ -2,5 +2,5 @@
 <template>
   <!-- <FormExample /> -->
   <!-- <addTip /> -->
-  <CalendarPv />
+  <Calendar />
 </template>

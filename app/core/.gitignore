@@ -34,4 +34,5 @@ scratchpad.md
 
 #Config Files
 .vscode
-node_modules
+.eslintrc.cjs
+.eslintignore

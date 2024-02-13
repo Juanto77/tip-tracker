@@ -1,21 +1,21 @@
 <script setup lang="ts">
 /* ///////////////////////////////////////////////////////////////////////////////////////////
 
-TODO - Refactor & Consolodate Code
-
-TODO - Template Versions:
-TODO  - All Manual input (no calc)
-TODO  - All Manual input (no calc)
-TODO  - No Sales Tracking 
-TODO    - Cash Tips
-TODO    - Credit Tips
-TODO    - Total Sales
-TODO    - Total Tipout
-
-TODO - Test to see if this data can be referenced later on and elimanate function: jobData
-
-TODO - Form Validation:
-TODO   - Change input type=number to text, validate that only numbers are entered
+// TODO * Refactor & Consolodate Code
+// 
+// TODO * Template Versions:
+// TODO  ** All Manual input (no calc)
+// TODO  ** All Manual input (no calc)
+// TODO  ** No Sales Tracking 
+// TODO    ** Cash Tips
+// TODO    ** Credit Tips
+// TODO    ** Total Sales
+// TODO    ** Total Tipout
+// 
+// TODO * Test to see if this data can be referenced later on and elimanate function: jobData
+// 
+// TODO * Form Validation:
+// TODO   ** Change input type=number to text, validate that only numbers are entered
 
 ///////////////////////////////////////////////////////////////////////////////////////////*/
 

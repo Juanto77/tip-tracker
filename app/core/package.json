@@ -1,0 +1,28 @@
+{
+  "name": "tip-tracker",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "nuxt build",
+    "playground": "nuxt dev",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "debug": "nuxi dev --inspect",
+    "lint": "eslint --ext .js,.vue,.ts,.tsx --ignore-path .gitignore ."
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "nuxt": "^3.10.1",
+    "vue": "^3.4.15",
+    "vue-router": "^4.2.5",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "@tip-tracker/auth": "workspace:^",
+    "@tip-tracker/playground": "workspace:^",
+    "@tip-tracker/ui": "workspace:^",
+    "eslint": "^8.56.0"
+  }
+}

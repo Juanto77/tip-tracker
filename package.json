@@ -1,33 +1,19 @@
 {
-  "name": "@tip-tracker/base",
-  "private": true,
-  "type": "module",
+  "name": "@tip-tracker/home",
+  "private":true,
   "version": "1.0.0",
-  "main": "./nuxt.config.ts",
   "scripts": {
-    "build": "nuxt build",
-    "playground": "nuxt dev",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "debug": "nuxi dev --inspect",
-    "lint": "eslint --ext .js,.vue,.ts,.tsx --ignore-path .gitignore ."
+    "build": "pnpm -r build",
+    "devc": "pnpm --filter tip-tracker dev",
+    "devp": "pnpm --filter @tip-tracker/playground dev",
+    "devu" : "pnpm --filter @tip-tracker/ui dev",
+    "deva" : "pnpm --filter @tip-tracker/auth dev"
+
   },
-  "dependencies": {
-    "@formkit/nuxt": "^1.5.7",
-    "nuxt": "^3.10.1",
-    "primevue": "^3.48.1",
-    "vue": "^3.4.15",
-    "vue-router": "^4.2.5",
-    "zod": "^3.22.4"
-  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "@nuxtjs/eslint-config-typescript": "^12.1.0",
-    "@nuxtjs/supabase": "^1.1.6",
-    "@nuxtjs/tailwindcss": "^6.11.4",
-    "@pinia/nuxt": "^0.5.1",
-    "eslint": "^8.56.0",
-    "nuxt-primevue": "^0.3.0"
+    "dotenv-cli": "^7.3.0"
   }
 }

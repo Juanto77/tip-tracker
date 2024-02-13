@@ -1,0 +1,12 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  modules: ['@nuxtjs/supabase'],
+  /* Supabase Config */
+  supabase: {
+    redirectOptions: {
+      login: '/login',
+      callback: '/confirm',
+      exclude: ['/form', '/sandbox', '/signup', '/magiclink'],
+    },
+  },
+});

@@ -1,8 +1,8 @@
 <script setup>
 /* Adding tip entries to database via function. */
 
-/* TODO
-- Refactor & use store to hold tip entires before push to db
+/* 
+// TODO * Refactor & use store to hold tip entires before push to db
 */
 const client = useSupabaseClient();
 const user = useSupabaseUser();

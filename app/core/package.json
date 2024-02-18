@@ -13,16 +13,16 @@
     "debug": "nuxi dev --inspect",
     "lint": "eslint --ext .js,.vue,.ts,.tsx --ignore-path .gitignore ."
   },
-  "dependencies": {
-  },
   "devDependencies": {
-    "nuxt": "^3.10.1",
-    "vue": "^3.4.15",
-    "vue-router": "^4.2.5",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@tip-tracker/auth": "workspace:^",
     "@tip-tracker/playground": "workspace:^",
     "@tip-tracker/ui": "workspace:^",
-    "eslint": "^8.56.0"
+    "@tip-tracker/util": "workspace:^",
+    "eslint": "^8.56.0",
+    "nuxt": "^3.10.1",
+    "vue": "^3.4.15",
+    "vue-router": "^4.2.5",
+    "@nuxt/devtools": "^1.0.8"
   }
 }

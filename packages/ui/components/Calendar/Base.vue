@@ -1,15 +1,14 @@
-
-
 <script setup>
-/*
-// TODO * Fix Styling
-// TODO * Create a breakpoint 
-// TODO     ** Mobile
-// TODO    ** Desktop
-// TODO * Create container for elements within day box
+/* TODO CalendarView.vue
+// TODO [] Styling Calendar Styling
+// TODO [] Create a breakpoint 
+// TODO    [] Mobile
+// TODO    [] Desktop
+// TODO [] Create container for elements within day box
 */
 
-import data from '../assets/calendar-data.json';
+
+import data from './assets/calendar-data.json';
 const month = new Date().getMonth();
 const year = new Date().getFullYear();
 const masks = {
@@ -23,28 +22,19 @@ const attributes = data;
 
 <template>
   <div class="text-center section">
-    <v-calendar
-      class="custom-calendar max-w-full"
-      :masks="masks"
-      :attributes="attributes"
-      disable-page-swipe
-      expanded
-    >
+    <VCalendar class="custom-calendar" :masks="masks" :attributes="attributes" disable-page-swipe>
       <template v-slot:day-content="{ day, attributes }">
         <div class="flex flex-col h-full z-10 overflow-hidden">
           <span class="day-label text-sm text-gray-900">{{ day.day }}</span>
           <div class="flex-grow overflow-y-auto overflow-x-auto">
-            <p
-              v-for="attr in attributes"
-              :key="attr.id"
-              class="text-xs leading-tight rounded-sm p-3 mt-0 mb-1 text-black text-center align-text-bottom"
-            >
-              ${{ attr.cash}}
+            <p v-for="attr in attributes" :key="attr.id"
+              class="text-xs leading-tight rounded-sm p-3 mt-0 mb-1 text-black text-center align-text-bottom">
+              ${{ attr.cash }}
             </p>
           </div>
         </div>
       </template>
-    </v-calendar>
+    </VCalendar>
   </div>
 </template>
 

@@ -6,9 +6,87 @@ export type Json =
   | { [key: string]: Json | undefined }
   | Json[]
 
-export interface Database {
+export type Database = {
   public: {
     Tables: {
+      job_j: {
+        Row: {
+          created_at: string
+          id: number
+          jid: number
+          role_id: number | null
+        }
+        Insert: {
+          created_at?: string
+          id?: number
+          jid?: number
+          role_id?: number | null
+        }
+        Update: {
+          created_at?: string
+          id?: number
+          jid?: number
+          role_id?: number | null
+        }
+        Relationships: []
+      }
+      job_pool: {
+        Row: {
+          beerSales: boolean | null
+          foodSales: boolean | null
+          id: number
+          jid: number
+          jname: string | null
+          jrole: string | null
+          liquorSales: boolean | null
+          retailSales: boolean | null
+          user_id: string
+          val: number | null
+          wineSales: boolean | null
+        }
+        Insert: {
+          beerSales?: boolean | null
+          foodSales?: boolean | null
+          id?: number
+          jid?: number
+          jname?: string | null
+          jrole?: string | null
+          liquorSales?: boolean | null
+          retailSales?: boolean | null
+          user_id: string
+          val?: number | null
+          wineSales?: boolean | null
+        }
+        Update: {
+          beerSales?: boolean | null
+          foodSales?: boolean | null
+          id?: number
+          jid?: number
+          jname?: string | null
+          jrole?: string | null
+          liquorSales?: boolean | null
+          retailSales?: boolean | null
+          user_id?: string
+          val?: number | null
+          wineSales?: boolean | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "jobs_duplicate_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "public_job_pool_jid_fkey"
+            columns: ["jid"]
+            isOneToOne: false
+            referencedRelation: "jobs_d"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
       jobs: {
         Row: {
           bar_tip: number | null
@@ -46,6 +124,32 @@ export interface Database {
         Relationships: [
           {
             foreignKeyName: "jobs_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
+      jobs_d: {
+        Row: {
+          id: number
+          name: string | null
+          user_id: string
+        }
+        Insert: {
+          id?: number
+          name?: string | null
+          user_id: string
+        }
+        Update: {
+          id?: number
+          name?: string | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "public_jobs_d_user_id_fkey"
             columns: ["user_id"]
             isOneToOne: false
             referencedRelation: "users"

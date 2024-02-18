@@ -1,20 +1,23 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import {createResolver} from '@nuxt/kit'
+const {resolve} = createResolver(import.meta.url)
 export default defineNuxtConfig({
-    /* UI Modules */
-    modules:[
+  alias: {'~ui' : resolve('./')},
+  /* UI Modules */
+  modules: [
     '@samk-dev/nuxt-vcalendar',
-    '@nuxtjs/tailwindcss',
+    // '@nuxtjs/tailwindcss',
     '@formkit/nuxt',
-    'nuxt-primevue'
-    ],
+    'nuxt-primevue',
+    '@nuxt/ui'
+  ],
 
-    /* UI Tailwind Config */
-    tailwindcss: {
-    cssPath: '~/packages/ui/assets',
+  /* UI Tailwind Config */
+  tailwindcss: {
     configPath: '/tailwind.config',
   },
   /* UI Prime View Config */
-primevue: {
+  primevue: {
     importPT: { as: 'Tailwind', from: 'primevue/passthrough/tailwind' },
-},
+  },
 });

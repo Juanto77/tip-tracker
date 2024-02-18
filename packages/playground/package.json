@@ -22,9 +22,11 @@
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "@nuxt/devtools": "^1.0.8",
     "@pinia/nuxt": "^0.5.1",
     "eslint": "^8.56.0",
     "@tip-tracker/ui": "workspace:^",
-    "@tip-tracker/auth": "workspace:^"
+    "@tip-tracker/auth": "workspace:^",
+    "@tip-tracker/util": "workspace:^"
   }
 }

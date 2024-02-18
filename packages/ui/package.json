@@ -2,9 +2,8 @@
   "name": "@tip-tracker/ui",
   "type": "module",
   "version": "1.0.0",
-    "main": "./nuxt.config.js",
-    "private": true,
-
+  "main": "./nuxt.config.js",
+  "private": true,
   "scripts": {
     "build": "nuxt build",
     "playground": "nuxt dev",
@@ -16,18 +15,18 @@
     "lint": "eslint --ext .js,.vue,.ts,.tsx --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@formkit/nuxt": "^1.5.7",
+    "@nuxt/ui": "^2.13.0",
+    "@samk-dev/nuxt-vcalendar": "^1.0.2",
     "nuxt": "^3.10.1",
+    "primevue": "^3.48.1",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5",
-    "zod": "^3.22.4",
-    "@formkit/nuxt": "^1.5.7",
-    "@samk-dev/nuxt-vcalendar": "^1.0.2",
-    "primevue": "^3.48.1"
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "eslint": "^8.56.0",
-    "@nuxtjs/tailwindcss": "^6.11.4",
     "nuxt-primevue": "^0.3.0"
   }
 }

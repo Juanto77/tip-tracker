@@ -25,14 +25,16 @@ logs
 .env.*
 !.env.example
 
-# Private Files
-.trash
-.old
-.docs
-.db
-scratchpad.md
-
 #Config Files
 .vscode
 .eslintrc.cjs
 .eslintignore
+
+#Workspace Folders
+.trash
+.backup
+.docs
+.db
+.dep
+.attrs
+Templates

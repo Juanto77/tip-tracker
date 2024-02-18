@@ -1,0 +1,156 @@
+[
+  {
+    "id": 7,
+    "user_id": "a74c9361-2585-4154-91f8-3d378d51377e",
+    "name": "Q39 json",
+    "metadata": {
+      "params": {
+        "cardFee": 2.25
+      },
+      "barTip": {
+        "value": 5,
+        "liquorSales": true,
+        "beerSales": true,
+        "wineSales": true,
+        "foodSales": false,
+        "retailSales": false
+      },
+      "busTip": {
+        "value": 1,
+        "liquorSales": true,
+        "beerSales": true,
+        "wineSales": true,
+        "foodSales": true,
+        "retailSales": false
+      },
+      "foodTip": {
+        "value": 2,
+        "liquorSales": false,
+        "beerSales": false,
+        "wineSales": false,
+        "foodSales": true,
+        "retailSales": false
+      }
+    }
+  },
+  {
+    "id": 4,
+    "user_id": "a74c9361-2585-4154-91f8-3d378d51377e",
+    "name": "Q39 json w/ collect",
+    "metadata": {
+      "params": {
+        "cardFee": 2.25
+      },
+      "barTip": {
+        "value": 5,
+        "child": {
+          "liquorSales": true,
+          "beerSales": true,
+          "wineSales": true,
+          "foodSales": false,
+          "retailSales": false
+        }
+      },
+      "busTip": {
+        "value": 1,
+        "child": {
+          "liquorSales": true,
+          "beerSales": true,
+          "wineSales": true,
+          "foodSales": true,
+          "retailSales": false
+        }
+      },
+      "foodTip": {
+        "value": 2,
+        "child": {
+          "liquorSales": false,
+          "beerSales": false,
+          "wineSales": false,
+          "foodSales": true,
+          "retailSales": false
+        }
+      }
+    }
+  },
+  {
+    "id": 5,
+    "user_id": "a74c9361-2585-4154-91f8-3d378d51377e",
+    "name": "Q39 jsonb",
+    "metadata": [
+      {
+        "cardFee": 2.25
+      },
+      {
+        "value": 5,
+        "title": "barTip",
+        "liquorSales": true,
+        "beerSales": true,
+        "wineSales": true,
+        "foodSales": false,
+        "retailSales": false
+      },
+      {
+        "value": 1,
+        "title": "busTip",
+        "liquorSales": true,
+        "beerSales": true,
+        "wineSales": true,
+        "foodSales": true,
+        "retailSales": false
+      },
+      {
+        "value": 2,
+        "title": "foodTip",
+        "liquorSales": false,
+        "beerSales": false,
+        "wineSales": false,
+        "foodSales": true,
+        "retailSales": false
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "user_id": "a74c9361-2585-4154-91f8-3d378d51377e",
+    "name": "Q39 jsonb w/ collect",
+    "metadata": [
+      {
+        "cardFee": 2.25
+      },
+      {
+        "value": 5,
+        "title": "barTip",
+        "child": {
+          "liquorSales": true,
+          "beerSales": true,
+          "wineSales": true,
+          "foodSales": false,
+          "retailSales": false
+        }
+      },
+      {
+        "value": 1,
+        "title": "busTip",
+        "child": {
+          "liquorSales": true,
+          "beerSales": true,
+          "wineSales": true,
+          "foodSales": true,
+          "retailSales": false
+        }
+      },
+      {
+        "value": 2,
+        "title": "foodTip",
+        "child": {
+          "liquorSales": false,
+          "beerSales": false,
+          "wineSales": false,
+          "foodSales": true,
+          "retailSales": false
+        }
+      }
+    ]
+  }
+]

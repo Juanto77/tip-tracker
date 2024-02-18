@@ -1,6 +1,10 @@
 /* Global Core Configuration */
 
 export default defineNuxtConfig({
+  /* Debugger & Development */
+  devtools: { enabled: true },
+  // debug: true,
+
   app: {
     head: {
       title: 'Tip Tracker',
@@ -10,8 +14,5 @@ export default defineNuxtConfig({
     },
   },
 
-  /* Debugger & Development */
-  devtools: { enabled: true },
-  // debug: true,
-  extends: ['../../packages/ui', '../../packages/auth', '../../packages/playground']
+  extends: ['../../packages/ui', '../../packages/auth', '../../packages/playground', '@tip-tracker/util']
 });

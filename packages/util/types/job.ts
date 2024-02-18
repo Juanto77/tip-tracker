@@ -1,9 +1,9 @@
 /* A bit redundant because I don't need hold values elsewhere, I can post them straight from jobData, though it's useful because fetchJobs makes use of it.
-
-TODO * Refactor for updated db structure
+TODO auth/types/jobs.ts
+TODO [] Refactor for updated db structure
 */
 
-declare interface Job {
+export default interface Job {
   id?: number;
   name?: string;
   job_name?: string;

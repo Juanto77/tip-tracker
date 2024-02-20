@@ -1,18 +1,26 @@
 <script setup lang="ts">
-// const loading = ref(false);
+/* Type Imports */
 import type { FormError, FormSubmitEvent } from '#ui/types';
+import type { Database } from '~util/types/database'
 import type Job from '~util/types/job'
+
+/* Store Imports */
 import { useTipInputStore } from '~util/stores/AddTip';
 import { useCalcStore } from '~util/stores/Calc';
 import { useJobStore } from '~util/stores/GetJobs';
-import { object } from 'zod';
+
+/* Server */
 const client = useSupabaseClient<Database>();
 const user = useSupabaseUser();
+
+/* Store definitions */
 const tipInput = useTipInputStore()
 const calcStore = useCalcStore()
 const jobStore = useJobStore()
 
+/* Fetch Job Data */
 jobStore.fetch()
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 
@@ -27,129 +35,100 @@ const dbPost = async (event: any) => {
   console.log(event);
 };
 
-let zzzz = ref<Job>
+///////////////////////////////////////////////////////////////////////////////////////////
+/* Store & State*/
+let jobData = ref();
+let jobObj = reactive([]);
 
-/* Call Function to get rest of job data on form submission */
-async function jobData(val: number) {
-  const { data: fullJob } = await client.from('jobs').select(`*`).eq('id', val);
-  // console.log(fullJob);
-  if (fullJob) {
-    const selectedJob = fullJob.find((job) => job.id === val);
-    // console.log(selectedJob);
-    zzzz = selectedJob; //Abit redundant because selectedJob will post to DB as is.
-    dbPost(zzzz); // Test post to Database
-  }
+let state = reactive({
+  jid: "4",
+
+  clockIn: 0,
+  clockOut: 0,
+
+  cashTip: 0,
+  creditTip: 0,
+
+  foodSales: 111,
+  beerSales: 222,
+  liquorSales: 333,
+  wineSales: 444,
+  retailSales: 555,
+
+  guestNum: 0,
+})
+
+/* Store busTip, barTip, foodTip vals here */
+let tipMap = new Map();
+
+function addTotals(job, idx, arr) {
+
+
+
+  let parent = job.key
+  let val = job.value.value;
+  let child = job.value.child;
+
+
+
+  let sum = 0;
+
+  // // FIXME let findP = (this.val / 100) * this.sum;
+
+
+  let length = Object.keys(child).length;
+  let count = 0;
+
+
+  Object.entries(tipInput.sales).forEach(([key, value]) => {
+    count = 0
+
+    Object.entries(child).forEach(([key2, value2]) => {
+      if (value2 === true && key === key2 && count < length) {
+        sum += value;
+        console.log((val / 100) * this.sum)
+        count++;
+        tipMap.set(parent, sum);
+      } else {
+        count++;
+
+      }
+    });
+  });
+
+  /* TESTING */
+  // console.log(tipMap)
 }
-///////////////////////////////////////////////////////////////////////////////////////////
-// async function parent() {
-//   const input = toRaw(tip.sales)
-//   const meta = toRaw(jobStore.returnTipMeta)
-//   return { input, meta }
-// }
-/* recursive approach */
-// function iterate(obj) {
-//   Object.keys(obj).forEach((key) => {
-//     // console.log(`${key}: ${obj[key]}`)
-//     if (typeof obj[key] === 'object' && obj[key] !== null) {
-//       iterate(obj[key])
-//       console.log(obj[key])
-//     }
-//   })
+
+/* Can just add this to the submit button but leaving for testing purposes */
+
+// function submit() {
+//   Object.keys(jobStore.jobSelect.metadata).forEach((key) => {
+//     jobStore.jobObj.push({ key: key, value: jobStore.jobSelect.metadata[key] })
+//   },
+//   )
+//   jobStore.jobObj.forEach(addTotals, (job, idx, arr) => { return }) // I think this being nested will work.
 // }
 
-/* non-recurisve approach */
-// function iterate(obj) {
-//   const stack = [obj];
-//   const bar = [obj]
-//   while (stack?.length > 0) {
-//     const currentObj = stack.pop();
-//     Object.keys(currentObj).forEach((key) => {
-//       console.log(`key: ${key}, value: ${currentObj[key]}`)
-//       if (typeof currentObj[key] === 'object' && key == 'barTip') {
-//         stack.push(currentObj[key])
-//         console.log('foundbar')
-//       } else if (typeof currentObj[key] === 'object' && key == 'busTip') {
-//         stack.push(currentObj[key])
-//         console.log('foundbus')
-//       }
-//     })
-//   }
-// };
+/* Nested into submit but leaving here for the time being */
+// function what2() {
+//   jobStore.jobObj.forEach(addTotals, (job, idx, arr) => { return })
+// }
 
 
-function what() {
-  //Push truthy keys to array
-  const arr = []
-  //Remove Falsy Values
-  Object.entries(jobStore.barTip.child).forEach(([key, value]) => {
-    console.log(`${key}: ${value}`)
-  })
-
-  //Remaining values in array will grab respective from user input
-
+/* just for funsies */
+function resetJob() {
+  jobStore.$reset()
 }
 
-
-/////////////////////////////////////////////////////////////////////////////////////////
-// Object.keys(obj).forEach((key) => {
-//   const barTip = calcStore.barTip
-//   const busTip = calcStore.busTip
-//   const foodTip = calcStore.foodTip
-//   const value = obj[key]
-//   // console.log(key)
-//   // console.log([key, toRaw(value)])
-//   // console.log(`${ key }: ${ value }`)
-//   ///////////////////////////////////////////////////////////////////////////////////////////
-//   /* // Loops through object and pushes to store but */
-//   Object.keys(value).forEach((key2) => {
-//     console.log([`${key}: ${value[key2]}`, `${key2}: ${value[key2]}`])
-//     // console.log(`${ key }: `, `${ key2 }: ${ value[key2]}`)
-//     if (key == 'barTip' && typeof key === 'object') {
-//       barTip.push(`${key}: ${value[key2]}`)
-//     } else if (key == 'busTip') {
-//       busTip.push(value[key2])
-//     } else {
-//       foodTip.push(value[key2])
-//     }
-//   })
-//   console.log(key, value)
-//   // ///////////////////////////////////////////////////////////////////////////////////////////
-// })
-///////////////////////////////////////////////////////////////////////////////////////////
-//This works with new data structure
-// Object.entries(obj).forEach(([key, value]) => {
-//   const val = obj[key]
-//   // console.log(key, toRaw(value))
-//   Object.entries(val).forEach(([key2, value2]) => {
-//     console.log(`${key}: ${key2}, ${value2}`)
-//   })
-// })
-
-///////////////////////////////////////////////////////////////////////////////////////////
-// for (const [key, value] of Object.entries(obj)) {
-//   // let obj = key;
-//   // for (const [key2, value2] of Object.entries(obj[m])) {
-//   //   console.log(`${ key2 }: ${ value2 }`)
-//   // }
-//   console.log(`${key}: ${value}`)
-// }
-///////////////////////////////////////////////////////////////////////////////////////////
-
-// Object.keys(jobStore.foodTip.child).forEach((key) => {
-
-//   console.log(key, value)
-
-// })
-// }
-///////////////////////////////////////////////////////////////////////////////////////////
-// const tipInput = useTipInputStore()
-// const calcStore = useCalcStore()
-// const jobStore = useGetJobStore()
 async function onSubmit(event: FormSubmitEvent<any>) {
-  // const value = Number(event.data.job); //Was getting a string before
-  // console.log(event)
-  const user = useSupabaseUser();
-  what()
+  Object.keys(jobStore.jobSelect.metadata).forEach((key) => {
+    jobStore.jobObj.push({ key: key, value: jobStore.jobSelect.metadata[key] })
+  },
+  )
+  jobStore.jobObj.forEach(addTotals, (job, idx, arr) => { return })
+
+
 }
 </script>
 
@@ -237,4 +216,5 @@ async function onSubmit(event: FormSubmitEvent<any>) {
       <!-- /Submit -->
     </UForm>
   </UContainer>
+  <button @click="resetJob">Reset</button>
 </template>

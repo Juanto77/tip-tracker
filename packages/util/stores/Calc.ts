@@ -4,6 +4,8 @@ import { useTipInputStore } from './AddTip';
 
 export const useCalcStore = defineStore('Calc', {
     state: () => ({
+        tipMap: new Map(),
+        
 
     }),
     getters: {
@@ -33,20 +35,20 @@ export const useCalcStore = defineStore('Calc', {
         },
 
         totalSales: (state) => {
-            const tipStore = useTipInputStore();
-            const job = useJobStore()
-            return Object.values(tipStore.sales).reduce((a, b) => a + b, 0)
+            // const tipStore = useTipInputStore();
+            // const job = useJobStore()
+            // return Object.values(tipStore.sales).reduce((a, b) => a + b, 0)
 
         },
         /* Calculator */
         cardFeeValue:(state) =>{
-            const jobStore = useJobStore()
-            return jobStore.cardFee
+            // const jobStore = useJobStore()
+            // return jobStore.cardFee
         },
         cardFee: (state) => {
-            const jobStore = useJobStore()
-            const tipStore = useTipInputStore();
-            return (jobStore.cardFee / 100) * tipStore.income.creditTip
+            // const jobStore = useJobStore()
+            // const tipStore = useTipInputStore();
+            // return (jobStore.cardFee / 100) * tipStore.income.creditTip
         },
         ///////////////////////////////////////////////////////////////////////////////////////////
     },

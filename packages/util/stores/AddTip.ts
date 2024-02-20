@@ -1,10 +1,10 @@
 import { defineStore, acceptHMRUpdate } from 'pinia';
-
+// TODO Change Name
 export const useTipInputStore = defineStore('TipInput', {
     state: () => ({
         ///////////////////////////////////////////////////////////////////////////////////////////
-        jobData:{
-            jid: '' as string,
+        jobData: {
+            jid: '4',
         },
         hours: {
             clockIn: '',
@@ -15,21 +15,21 @@ export const useTipInputStore = defineStore('TipInput', {
             creditTip: 0,
         },
         sales: {
-            foodSales: 0,
-            beerSales: 0,
-            liquorSales: 0,
-            wineSales: 0,
-            retailSales: 0,
-            
+            foodSales: 111,
+            beerSales: 222,
+            liquorSales: 333,
+            wineSales: 444,
+            retailSales: 555,
+
         },
-        stats:{
+        stats: {
             guestNum: 0,
         },
 
     }),
-    
+
     getters: {
-    
+
     },
 
 
@@ -38,7 +38,7 @@ export const useTipInputStore = defineStore('TipInput', {
     // [Map State 2](https://jerickson.net/basics-of-mapstate-vuex/)
     actions: {
     },
-});
+    })
 if (import.meta.hot) {
     import.meta.hot.accept(acceptHMRUpdate(useTipInputStore, import.meta.hot))
 }

@@ -81,6 +81,9 @@
     "user_id": "a74c9361-2585-4154-91f8-3d378d51377e",
     "name": "UseThis",
     "card_fee": 2.25,
+      "params": {
+        "cardFee": 2.25
+      },
     "metadata": {
       "barTip": {
         "child": {
@@ -101,9 +104,6 @@
           "retailSales": false
         },
         "value": 1
-      },
-      "params": {
-        "cardFee": 2.25
       },
       "foodTip": {
         "child": {

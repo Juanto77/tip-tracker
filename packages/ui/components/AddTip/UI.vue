@@ -5,21 +5,21 @@ import type { Database } from '~util/types/database'
 import type Job from '~util/types/job'
 
 /* Store Imports */
-import { useTipInputStore } from '~util/stores/AddTip';
+import { useTipStore } from '~util/stores/useTipStore';
 import { useCalcStore } from '~util/stores/Calc';
-import { useJobStore } from '~util/stores/GetJobs';
+import { useJobStore } from '~util/stores/useJobStore';
 
 /* Server */
 const client = useSupabaseClient<Database>();
 const user = useSupabaseUser();
 
 /* Store definitions */
-const tipInput = useTipInputStore()
+const tipStore = useTipStore()
 const calcStore = useCalcStore()
 const jobStore = useJobStore()
 
 /* Fetch Job Data */
-jobStore.fetch()
+tipStore.fetch()
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -63,30 +63,24 @@ let tipMap = new Map();
 
 function addTotals(job, idx, arr) {
 
-
-
   let parent = job.key
   let val = job.value.value;
   let child = job.value.child;
 
-
-
   let sum = 0;
 
-  // // FIXME let findP = (this.val / 100) * this.sum;
-
+  // FIXME let findP = (this.val / 100) * this.sum;
 
   let length = Object.keys(child).length;
   let count = 0;
 
-
-  Object.entries(tipInput.sales).forEach(([key, value]) => {
+  Object.entries(tipStore.sales).forEach(([key, value]) => {
     count = 0
 
     Object.entries(child).forEach(([key2, value2]) => {
       if (value2 === true && key === key2 && count < length) {
         sum += value;
-        console.log((val / 100) * this.sum)
+        // console.log((val / 100) * this.sum)
         count++;
         tipMap.set(parent, sum);
       } else {
@@ -103,30 +97,30 @@ function addTotals(job, idx, arr) {
 /* Can just add this to the submit button but leaving for testing purposes */
 
 // function submit() {
-//   Object.keys(jobStore.jobSelect.metadata).forEach((key) => {
-//     jobStore.jobObj.push({ key: key, value: jobStore.jobSelect.metadata[key] })
+//   Object.keys(tipStore.jobSelect.metadata).forEach((key) => {
+//     tipStore.jobObj.push({ key: key, value: tipStore.jobSelect.metadata[key] })
 //   },
 //   )
-//   jobStore.jobObj.forEach(addTotals, (job, idx, arr) => { return }) // I think this being nested will work.
+//   tipStore.jobObj.forEach(addTotals, (job, idx, arr) => { return }) // I think this being nested will work.
 // }
 
 /* Nested into submit but leaving here for the time being */
 // function what2() {
-//   jobStore.jobObj.forEach(addTotals, (job, idx, arr) => { return })
+//   tipStore.jobObj.forEach(addTotals, (job, idx, arr) => { return })
 // }
 
 
 /* just for funsies */
 function resetJob() {
-  jobStore.$reset()
+  tipStore.$reset()
 }
 
 async function onSubmit(event: FormSubmitEvent<any>) {
-  Object.keys(jobStore.jobSelect.metadata).forEach((key) => {
-    jobStore.jobObj.push({ key: key, value: jobStore.jobSelect.metadata[key] })
+  Object.keys(tipStore.jobSelect.metadata).forEach((key) => {
+    tipStore.job.obj.push({ key: key, value: tipStore.jobSelect.metadata[key] })
   },
   )
-  jobStore.jobObj.forEach(addTotals, (job, idx, arr) => { return })
+  tipStore.job.obj.forEach(addTotals, (job, idx, arr) => { return })
 
 
 }
@@ -134,12 +128,12 @@ async function onSubmit(event: FormSubmitEvent<any>) {
 
 <template>
   <UContainer>
-    <UForm ref="add-tip-form" :state="tipInput" @submit="onSubmit" class="p-4">
+    <UForm ref="add-tip-form" :state="tipStore" @submit="onSubmit" class="p-4">
       <div class="py-3">
         <h1>Job</h1>
         <div class="pb-3">
           <UFormGroup label="Job">
-            <USelect id="job-select" v-model="tipInput.jobData.jid" :options="jobStore.jobList" label="select"
+            <USelect id="job-select" v-model="tipStore.job.data.jid" :options="tipStore.job.list" label="select"
               value-attribute="id" option-attribute="name" />
           </UFormGroup>
         </div>
@@ -151,10 +145,10 @@ async function onSubmit(event: FormSubmitEvent<any>) {
         </div>
         <div class="columns-2">
           <UFormGroup label="Clock In Time" class="py-3">
-            <UInput type="datetime-local" v-model="tipInput.hours.clockIn" name="in-time" />
+            <UInput type="datetime-local" v-model="tipStore.hours.clockIn" name="in-time" />
           </UFormGroup>
           <UFormGroup label="Clock Out Time" class="py-3">
-            <UInput type="datetime-local" v-model="tipInput.hours.clockOut" name="out-time" />
+            <UInput type="datetime-local" v-model="tipStore.hours.clockOut" name="out-time" />
           </UFormGroup>
         </div>
       </div>
@@ -166,10 +160,10 @@ async function onSubmit(event: FormSubmitEvent<any>) {
         </div>
         <div>
           <UFormGroup label="Cash Tips" class="py-3">
-            <UInput type="number" v-model="tipInput.income.cashTip" name="cash-tips" step="0.00" class="remove-arrow" />
+            <UInput type="number" v-model="tipStore.income.cashTip" name="cash-tips" step="0.00" class="remove-arrow" />
           </UFormGroup>
           <UFormGroup label="Credit Tips" class="py-3">
-            <UInput type="number" v-model="tipInput.income.creditTip" name="credit-tips" step="0.00" />
+            <UInput type="number" v-model="tipStore.income.creditTip" name="credit-tips" step="0.00" />
           </UFormGroup>
         </div>
       </div>
@@ -181,19 +175,19 @@ async function onSubmit(event: FormSubmitEvent<any>) {
         </div>
         <div>
           <UFormGroup label="Food Sales" class="py-3">
-            <UInput type="number" v-model="tipInput.sales.foodSales" name="food-sales" step="0.00" />
+            <UInput type="number" v-model="tipStore.sales.foodSales" name="food-sales" step="0.00" />
           </UFormGroup>
           <UFormGroup label="Beer Sales" class="py-3">
-            <UInput type="number" v-model="tipInput.sales.beerSales" name="beer-sales" step="0.00" />
+            <UInput type="number" v-model="tipStore.sales.beerSales" name="beer-sales" step="0.00" />
           </UFormGroup>
           <UFormGroup label="Liquor Sales" class="py-3">
-            <UInput type="number" v-model="tipInput.sales.liquorSales" name="liquor-sales" step="0.00" />
+            <UInput type="number" v-model="tipStore.sales.liquorSales" name="liquor-sales" step="0.00" />
           </UFormGroup>
           <UFormGroup label="Wine Sales" class="py-3">
-            <UInput type="number" v-model="tipInput.sales.wineSales" name="wine-sales" step="0.00" />
+            <UInput type="number" v-model="tipStore.sales.wineSales" name="wine-sales" step="0.00" />
           </UFormGroup>
           <UFormGroup label="Retail Sales" class="py-3">
-            <UInput type="number" v-model="tipInput.sales.retailSales" name="retail-sales" step="0.00" />
+            <UInput type="number" v-model="tipStore.sales.retailSales" name="retail-sales" step="0.00" />
           </UFormGroup>
         </div>
       </div>
@@ -202,7 +196,7 @@ async function onSubmit(event: FormSubmitEvent<any>) {
       <div>
         <div>
           <UFormGroup label="Guest Count" class="py-3">
-            <UInput type="number" v-model="tipInput.stats.guestNum" name="guest-count" />
+            <UInput type="number" v-model="tipStore.stats.guestNum" name="guest-count" />
           </UFormGroup>
         </div>
       </div>

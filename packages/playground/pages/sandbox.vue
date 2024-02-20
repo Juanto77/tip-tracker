@@ -4,7 +4,7 @@
   <!-- <FormExample /> -->
   <!-- <addTip /> -->
   <!-- <CalendarView /> -->
-  <AddTipUI />
-  <!-- <AddTipFK /> -->
+  <!-- <AddTipUI /> -->
+  <AddTipFK />
   <!-- <CalculatorBase /> -->
 </template>

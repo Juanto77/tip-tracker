@@ -1,6 +1,6 @@
 import { defineStore, acceptHMRUpdate } from 'pinia'
-import { useJobStore } from './GetJobs';
-import { useTipInputStore } from './AddTip';
+import { useJobStore } from './useJobStore';
+import { useTipStore } from './useTipStore';
 
 export const useCalcStore = defineStore('Calc', {
     state: () => ({

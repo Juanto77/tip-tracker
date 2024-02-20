@@ -1,5 +1,5 @@
 import { defineStore, acceptHMRUpdate } from 'pinia'
-import { useTipInputStore } from './AddTip';
+import { useTipStore } from './useTipStore';
 export const useJobStore = defineStore('Job Store', {
     state: () => ({
         jobList: [] as Array<any>,
@@ -9,13 +9,13 @@ export const useJobStore = defineStore('Job Store', {
     getters: {
 
         jobSelect: (state) => {
-            const tipStore = useTipInputStore();
+            const tipStore = useTipStore();
             return state.jobList.filter((job) => job.id === Number(tipStore.jobData.jid))[length];
         },
 
 
         metadata: (state) => {
-            const tipStore = useTipInputStore();
+            const tipStore = useTipStore();
             return state.jobList.filter((job) => job.id === Number(tipStore.jobData.jid))[length].metadata
         },
 

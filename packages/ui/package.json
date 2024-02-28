@@ -15,14 +15,14 @@
     "lint": "eslint --ext .js,.vue,.ts,.tsx --ignore-path .gitignore ."
   },
   "dependencies": {
+    "nuxt": "^3.10.1",
+    "vue": "^3.4.15",
+    "vue-router": "^4.2.5",
+    "zod": "^3.22.4",
     "@formkit/nuxt": "^1.5.7",
     "@nuxt/ui": "^2.13.0",
     "@samk-dev/nuxt-vcalendar": "^1.0.2",
-    "nuxt": "^3.10.1",
-    "primevue": "^3.48.1",
-    "vue": "^3.4.15",
-    "vue-router": "^4.2.5",
-    "zod": "^3.22.4"
+    "primevue": "^3.48.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^12.1.0",

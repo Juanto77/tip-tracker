@@ -1,9 +1,15 @@
 /* Global Core Configuration */
+import {createResolver} from '@nuxt/kit';
+const {resolve} = createResolver(import.meta.url);
 
 export default defineNuxtConfig({
+  
   /* Debugger & Development */
   devtools: { enabled: true },
   // debug: true,
+
+alias: {'~Core' : resolve('./')},
+
 
   app: {
     head: {
@@ -14,5 +20,5 @@ export default defineNuxtConfig({
     },
   },
 
-  extends: ['../../packages/ui', '../../packages/auth', '../../packages/playground', '@tip-tracker/util']
+  extends: ['../../packages/finance', '../../packages/server', '../../packages/ui'],
 });

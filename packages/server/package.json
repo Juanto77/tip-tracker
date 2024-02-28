@@ -1,8 +1,9 @@
 {
-  "name": "tip-tracker",
+  "name": "@tip-tracker/server",
   "private": true,
   "type": "module",
   "version": "1.0.0",
+  "main": "./nuxt.config.js",
   "scripts": {
     "build": "nuxt build",
     "playground": "nuxt dev",
@@ -13,15 +14,15 @@
     "debug": "nuxi dev --inspect",
     "lint": "eslint --ext .js,.vue,.ts,.tsx --ignore-path .gitignore ."
   },
-  "devDependencies": {
-    "@nuxtjs/eslint-config-typescript": "^12.1.0",
-    "@tip-tracker/finance": "workspace:^",
-    "@tip-tracker/server": "workspace:^",
-    "@tip-tracker/ui": "workspace:^",
-    "eslint": "^8.56.0",
+  "dependencies": {
     "nuxt": "^3.10.1",
     "vue": "^3.4.15",
-    "vue-router": "^4.2.5",
-    "@nuxt/devtools": "^1.0.8"
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "@nuxtjs/supabase": "^1.1.6",
+    "eslint": "^8.56.0",
+    "@pinia/nuxt": "^0.5.1"
   }
 }

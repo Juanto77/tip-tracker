@@ -1,13 +1,13 @@
 {
-  "name": "@tip-tracker/home",
+  "name": "@tip-tracker/base",
   "private":true,
   "version": "1.0.0",
   "scripts": {
     "build": "pnpm -r build",
     "devc": "pnpm --filter tip-tracker dev",
-    "devp": "pnpm --filter @tip-tracker/playground dev",
+    "devp": "pnpm --filter @tip-tracker/finance dev",
     "devu" : "pnpm --filter @tip-tracker/ui dev",
-    "deva" : "pnpm --filter @tip-tracker/auth dev"
+    "deva" : "pnpm --filter @tip-tracker/server dev"
 
   },
   "keywords": [],

@@ -22,3 +22,4 @@ TODO - Figure out how to import types from other packages a bit easier
 
 #### Calculator Function
 TODO Restructure Database with key rel for each tip out category
+TODO Calculate PPA

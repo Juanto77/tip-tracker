@@ -25,6 +25,7 @@
     "primevue": "^3.48.1"
   },
   "devDependencies": {
+     "@tip-tracker/server": "workspace:^",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "eslint": "^8.56.0",
     "nuxt-primevue": "^0.3.0"

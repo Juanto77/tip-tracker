@@ -8,3 +8,5 @@ declare global {
   type jobs = Database['public']['Tables']['job_pool']['Relationships']
   type userTip = Tables<'user_tip'>
 }
+
+export type { userTip }

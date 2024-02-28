@@ -9,6 +9,8 @@ export default defineNuxtConfig({
     '~UIAssets': resolve('./assets'),
   },
 
+  extends: ['../server'],
+
   /* UI Modules */
   modules: [
     '@samk-dev/nuxt-vcalendar',
@@ -18,8 +20,6 @@ export default defineNuxtConfig({
     '@formkit/nuxt',
     // '@nuxtjs/tailwindcss',
   ],
-
-  extends: [],
 
   /* UI Tailwind Config */
   tailwindcss: {

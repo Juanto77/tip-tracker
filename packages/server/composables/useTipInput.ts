@@ -80,6 +80,7 @@ export default function () {
             creditTip: tipStore.income.creditTip,
             cashTip: tipStore.income.cashTip,
             sales: tipStore.sales,
+            totalSales: totalStore.totalSales,
             stats: tipStore.stats,
             tipOut: totalStore.tipOut,
             creditNet: totalStore.creditNet,

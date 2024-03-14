@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "version": "1.0.0",
-  "main": "./nuxt.config.js",
+  "main": "./nuxt.config.ts",
   "scripts": {
     "build": "nuxt build",
     "playground": "nuxt dev",
@@ -22,7 +22,8 @@
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/supabase": "^1.1.6",
-    "eslint": "^8.56.0",
-    "@pinia/nuxt": "^0.5.1"
+    "@pinia/nuxt": "^0.5.1",
+    "dayjs-nuxt": "^2.1.9",
+    "eslint": "^8.56.0"
   }
 }

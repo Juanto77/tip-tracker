@@ -1,17 +1,12 @@
 /* Finance Configuration */
-import {createResolver} from '@nuxt/kit'
-const {resolve} = createResolver(import.meta.url)
+import { createResolver } from '@nuxt/kit'
+const { resolve } = createResolver(import.meta.url)
 
 export default defineNuxtConfig({
-extends: ['../ui', '../server'],
-alias: {'~Finance' : resolve('./')},
+  extends: ['../ui', '../server'],
 
-/* Finance Module */
-  modules: [
+  alias: { '~Finance': resolve('./') },
 
-    // '@formkit/nuxt',
-    // // 'nuxt-primevue',
-    // // '@nuxt/ui',
-    // '@samk-dev/nuxt-vcalendar',
-  ],
+  /* Finance Module */
+  modules: [],
 });

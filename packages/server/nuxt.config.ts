@@ -3,15 +3,17 @@ import { createResolver } from '@nuxt/kit';
 const { resolve } = createResolver(import.meta.url);
 export default defineNuxtConfig({
   extends: [''],
-  alias: { 
-    '~Server': resolve('./'),
-    '~sStores' : resolve('./stores'),
-    '~sComposables' : resolve('./composables'),
-    '~sTypes' : resolve('./types'),
 
-},
-  
-  modules: ['@pinia/nuxt', '@nuxtjs/supabase'],
+  alias: {
+    '~Server': resolve('./'),
+    '~sStores': resolve('./stores'),
+    '~sComposables': resolve('./composables'),
+    '~sTypes': resolve('./types'),
+    '~sAssets': resolve('./assets'),
+
+  },
+
+  modules: ['@pinia/nuxt', '@nuxtjs/supabase', 'dayjs-nuxt'],
 
 
   /* Supabase Config */

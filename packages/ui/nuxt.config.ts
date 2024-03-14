@@ -1,8 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { createResolver } from '@nuxt/kit';
+
 const { resolve } = createResolver(import.meta.url);
 
 export default defineNuxtConfig({
+
   alias: {
     '~UI': resolve('./'),
     '~UIComponents': resolve('./components'),
@@ -10,24 +12,38 @@ export default defineNuxtConfig({
   },
 
   extends: ['../server'],
-
-  /* UI Modules */
+ 
   modules: [
     '@samk-dev/nuxt-vcalendar',
-    '@formkit/nuxt',
     'nuxt-primevue',
-    '@nuxt/ui',
-    '@formkit/nuxt',
-    // '@nuxtjs/tailwindcss',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/device',
+    '@nuxtjs/color-mode',
+    'dayjs-nuxt'
   ],
 
-  /* UI Tailwind Config */
+
   tailwindcss: {
-    configPath: '/tailwind.config',
+    configPath: '/tailwind.config.js',
   },
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
+
+  css: [
+    '@fortawesome/fontawesome-svg-core/styles.css'
+  ],
 
   /* UI Prime View Config */
   primevue: {
-    importPT: { as: 'Tailwind', from: 'primevue/passthrough/tailwind' },
+    // usePrimeVue: true,
+    options: {
+      unstyled: true,
+    },
+    importPT: { as: 'base', from: '~UIAssets/presets/base' }
+    // importPT: { as: 'Tailwind', from: 'primevue/passthrough/tailwind' },
   },
 });

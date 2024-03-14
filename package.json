@@ -1,19 +1,26 @@
 {
   "name": "@tip-tracker/base",
-  "private":true,
+  "private": true,
   "version": "1.0.0",
   "scripts": {
     "build": "pnpm -r build",
     "devc": "pnpm --filter tip-tracker dev",
-    "devp": "pnpm --filter @tip-tracker/finance dev",
-    "devu" : "pnpm --filter @tip-tracker/ui dev",
-    "deva" : "pnpm --filter @tip-tracker/server dev"
-
+    "core": "pnpm --filter tip-tracker",
+    "finance": "pnpm --filter @tip-tracker/finance",
+    "ui": "pnpm --filter @tip-tracker/ui",
+    "server": "pnpm --filter @tip-tracker/server",
+    "calendar": "pnpm --filter @tip-tracker/calendar",
+    "finance-dev": "pnpm --filter @tip-tracker/finance dev",
+    "ui-dev": "pnpm --filter @tip-tracker/ui dev",
+    "server-dev": "pnpm --filter @tip-tracker/server dev",
+    "calendar-dev": "pnpm --filter @tip-tracker/calendar dev",
+    "cleanup-core": "pnpm dlx nuxi cleanup ./app/core",
+    "cleanup-finance": "pnpm dlx nuxi cleanup ./packages/finance",
+    "cleanup-ui": "pnpm dlx nuxi cleanup ./packages/ui",
+    "cleanup-server": "pnpm dlx nuxi cleanup ./packages/server",
+    "all-clean": "pnpm cleanup-core && pnpm cleanup-finance && pnpm cleanup-ui && pnpm cleanup-server"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "dotenv-cli": "^7.3.0"
-  }
+  "license": "ISC"
 }

@@ -114,8 +114,8 @@ async function buildCalendar() {
 
     }
 
-    const { data } = await client.from( 'user_tip' ).select( 'id, inTime, netIncome' ).gte( 'inTime', rStart.value ).lte( 'inTime', rEnd.value ).then( ( { data } ) => {
-        let arr = data;
+    const { data: tipIncome } = await client.from( 'user_tip' ).select( 'id, inTime, netIncome' ).gte( 'inTime', rStart.value ).lte( 'inTime', rEnd.value ).then( ( data ) => {
+        let arr = tipIncome;
         arr.forEach( ( el: any, idx: any, arr: any ) => {
 
             let date = dayjs( el.inTime ).format( 'YYYY-MM-DD' );

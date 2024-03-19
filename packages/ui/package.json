@@ -20,7 +20,6 @@
     "@fortawesome/vue-fontawesome": "^3.0.6",
     "@nuxtjs/color-mode": "^3.3.2",
     "@samk-dev/nuxt-vcalendar": "^1.0.2",
-    "nuxt": "^3.10.1",
     "primevue": "^3.49.1",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5",
@@ -33,6 +32,7 @@
     "@tip-tracker/server": "workspace:^",
     "dayjs-nuxt": "^2.1.9",
     "eslint": "^8.56.0",
+    "nuxt": "^3.10.3",
     "nuxt-primevue": "^0.3.0",
     "typescript": "^5.3.3",
     "vue-tsc": "^2.0.1"

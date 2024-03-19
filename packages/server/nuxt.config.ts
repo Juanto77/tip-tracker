@@ -22,7 +22,7 @@ export default defineNuxtConfig( {
     redirectOptions: {
       login: '/login',
       callback: '/confirm',
-      exclude: [ '/form', '/sandbox', '/signup', '/magiclink', '/dashboard/monthview' ],
+      exclude: [ '/form', '/sandbox', '/signup', '/magiclink', '/dashboard/monthview', '/dashboard/*' ],
     },
   },
 } );

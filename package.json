@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "pnpm -r build",
-    "devc": "pnpm --filter tip-tracker dev",
+    "devc": "pnpm --filter tip-tracker dev --host",
     "core": "pnpm --filter tip-tracker",
     "finance": "pnpm --filter @tip-tracker/finance",
     "ui": "pnpm --filter @tip-tracker/ui",

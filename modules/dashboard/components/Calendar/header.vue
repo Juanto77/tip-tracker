@@ -27,7 +27,7 @@ const emits = defineEmits( [ 'update:modelValue' ] );
 
 
 
-import { useDashboardStore } from '../../stores/view/Dashboard';
+import { useDashboardStore } from '~Dashboard/stores/Dashboard';
 
 
 const dayjs = useDayjs();

@@ -6,9 +6,10 @@ import type { FormError, FormSubmitEvent } from '#ui/types';
 import type { Database } from '~sTypes/database';
 
 /* Store Imports */
-import { useTipStore } from '~sStores/useTipStore';
-import { useTotalStore } from '~sStores/useTotalStore';
-import { useJobStore } from '~sStores/useJobStore';
+
+import { useTipStore } from '~Dashboard/stores/useTipStore';
+import { useTotalStore } from '~Dashboard/stores/useTotalStore';
+import { useJobStore } from '~Dashboard/stores/useJobStore';
 
 /* Database */
 const client = useSupabaseClient<Database>();
@@ -23,7 +24,7 @@ const jobStore = useJobStore();
 jobStore.fetchJobs();
 
 /* Tip Input Composable */
-import useTipInput from '~sComposables/useTipInput';
+import { useTipInput } from '#imports';
 const { submit, testing, post } = useTipInput();
 
 async function onSubmit( event: FormSubmitEvent<any> ) {

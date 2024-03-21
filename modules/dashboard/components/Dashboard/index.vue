@@ -6,8 +6,8 @@
     <slot name="charts">
         <LibPageContainer>
             <!-- <Bar :data="chartData" /> -->
-            <Bar :data="chartData" :options="chartOptions" />
-            <!-- <ChartsBarChart :data="chartData" :options="options" /> -->
+            <!-- <Bar :data="chartData" :options="chartOptions" /> -->
+            <ChartsBarChart :data="chartData" :options="chartOptions" />
         </LibPageContainer>
     </slot>
     <slot name="calendar-pane">
@@ -18,7 +18,7 @@
 
 <script setup>
 import { Bar } from 'vue-chartjs';
-import { useDashboardStore } from '../../stores/view/Dashboard';
+import { useDashboardStore } from '~Dashboard/stores/Dashboard';
 
 const dayjs = useDayjs();
 const day = dayjs().format('YYYY-MM-DD');

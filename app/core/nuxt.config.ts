@@ -11,9 +11,9 @@ export default defineNuxtConfig( {
       ],
     },
   },
-  modules: [ '@pinia/nuxt', '@nuxtjs/supabase', 'dayjs-nuxt', '@pinia-plugin-persistedstate/nuxt' ],
+  modules: [],
 
-  extends: [ '../../packages/ui', ],
+  extends: [ '../../packages/ui', '../../packages/server', '../../modules/dashboard' ],
 
   alias: { '~TT': resolve( './' ) },
   ///////////////////////////////////////////////////////////////////////////////////////////

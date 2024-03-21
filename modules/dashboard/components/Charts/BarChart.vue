@@ -1,5 +1,5 @@
 <template>
-    <Bar :data="" :options="" />
+    <Bar :data="props.data" :options="props.options" />
 </template>
 
 <script setup lang="ts">
@@ -12,6 +12,7 @@ const props = defineProps( {
     },
     options: {
         type: Object,
+        required: true,
     }
 } );
 

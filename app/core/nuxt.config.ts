@@ -1,14 +1,23 @@
 /* Global Core Configuration */
 import { createResolver } from '@nuxt/kit';
-const { resolve } = createResolver(import.meta.url);
+const { resolve } = createResolver( import.meta.url );
 
-export default defineNuxtConfig({
+export default defineNuxtConfig( {
 
   /* Debugger & Development */
-  devtools: { enabled: true },
+  // /*
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true,
+    },
+  },
+  // */
+
   // debug: true,
 
-  alias: { '~Core': resolve('./') },
+  alias: { '~Core': resolve( './' ) },
 
 
   app: {
@@ -20,5 +29,5 @@ export default defineNuxtConfig({
     },
   },
 
-  extends: ['../../packages/finance', '../../packages/server', '../../packages/ui',],
-});
+  extends: [ '../../packages/finance', '../../packages/server', '../../packages/ui', ],
+} );

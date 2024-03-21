@@ -15,15 +15,15 @@
     "lint": "eslint --ext .js,.vue,.ts,.tsx --ignore-path .gitignore ."
   },
   "dependencies": {
-    "nuxt": "^3.10.1",
-    "vue": "^3.4.15",
-    "vue-router": "^4.2.5"
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
-    "@nuxtjs/supabase": "^1.1.6",
+    "@nuxtjs/supabase": "^1.1.7",
     "@pinia/nuxt": "^0.5.1",
     "dayjs-nuxt": "^2.1.9",
-    "eslint": "^8.56.0"
+    "eslint": "^8.57.0",
+    "nuxt": "^3.11.1"
   }
 }

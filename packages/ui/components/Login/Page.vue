@@ -109,8 +109,8 @@
 
 <script setup>
 const client = useSupabaseClient();
-const email = ref();
-const password = ref();
+const email = ref('');
+const password = ref('');
 
 async function signInAuth() {
     const { error } = await client.auth.signInWithPassword({

@@ -1,7 +1,7 @@
 <script setup>
-const client = useSupabaseClient()
-const email = ref()
-const password = ref()
+const client = useSupabaseClient();
+const email = ref();
+const password = ref();
 
 async function signInAuth() {
     const { error } = await client.auth.signInWithPassword({
@@ -18,10 +18,12 @@ async function signInAuth() {
     <LibPageContainer>
         <div class="block">
             <div>
-                <InputText v-model="email" placeholder="Email Address" />
+                <LibInputText v-model="email" placeholder="Email Address" />
+                <!-- <InputText v-model="email" placeholder="Email Address" /> -->
             </div>
             <div>
-                <Password v-model="password" placeholder="Password" />
+                <LibInputPassword v-model="password" placeholder="Password" />
+                <!-- <Password v-model="password" placeholder="Password" /> -->
             </div>
             <div><Button label="Log In" @click="signInAuth" /></div>
         </div>

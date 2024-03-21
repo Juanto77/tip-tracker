@@ -1,18 +1,18 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { createResolver } from '@nuxt/kit';
 
-const { resolve } = createResolver(import.meta.url);
+const { resolve } = createResolver( import.meta.url );
 
-export default defineNuxtConfig({
+export default defineNuxtConfig( {
 
   alias: {
-    '~UI': resolve('./'),
-    '~UIComponents': resolve('./components'),
-    '~UIAssets': resolve('./assets'),
+    '~UI': resolve( './' ),
+    '~UIComponents': resolve( './components' ),
+    '~UIAssets': resolve( './assets' ),
   },
 
-  extends: ['../server'],
- 
+  extends: [ '../server' ],
+
   modules: [
     '@samk-dev/nuxt-vcalendar',
     'nuxt-primevue',
@@ -33,12 +33,12 @@ export default defineNuxtConfig({
     },
   },
 
-  css: [
-    '@fortawesome/fontawesome-svg-core/styles.css'
-  ],
+  // css: [
+  //   '@fortawesome/fontawesome-svg-core/styles.css'
+  // ],
 
   /* UI Prime View Config */
-  primevue: {
+  primevue: { // Treeshaking to lower bundle size
     // usePrimeVue: true,
     options: {
       unstyled: true,
@@ -46,4 +46,4 @@ export default defineNuxtConfig({
     importPT: { as: 'base', from: '~UIAssets/presets/base' }
     // importPT: { as: 'Tailwind', from: 'primevue/passthrough/tailwind' },
   },
-});
+} );

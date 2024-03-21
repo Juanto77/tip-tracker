@@ -18,11 +18,13 @@ export default defineNuxtConfig( {
 
 
   /* Supabase Config */
+
   supabase: {
     redirectOptions: {
       login: '/login',
       callback: '/confirm',
-      exclude: [ '/form', '/sandbox', '/signup', '/magiclink', '/dashboard/monthview', '/dashboard/*' ],
+      exclude: [ '/form', '/sandbox', '/signup', '/magiclink', '/dashboard/monthview', '/dashboard/*', '/UISandbox' ],
     },
   },
+
 } );

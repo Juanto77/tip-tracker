@@ -27,20 +27,13 @@ const emits = defineEmits( [ 'update:modelValue' ] );
 
 
 
-import { useCalendarStore } from '~Server/stores/view/Calendar';
-import toObject from 'dayjs/plugin/toObject';
+import { useDashboardStore } from '~Server/stores/view/Dashboard';
+
 
 const dayjs = useDayjs();
-const store = useCalendarStore();
+const store = useDashboardStore();
 
 store.fetch();
-
-
-dayjs.extend( toObject );
-
-
-// store.viewDate = dayjs( props.startDate ).format( 'YYYY-MM-DD' );
-
 
 /* Types */
 type Props = {
@@ -49,4 +42,4 @@ type Props = {
     display?: 'month' | 'year' | 'week' | 'day';
 };
 
-</script>
+</script>~Server/stores/view/Dashboard

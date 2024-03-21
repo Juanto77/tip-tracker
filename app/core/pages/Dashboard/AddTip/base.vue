@@ -15,27 +15,27 @@ const client = useSupabaseClient<Database>();
 const user = useSupabaseUser();
 
 /* Store definitions */
-const tipStore = useTipStore()
-const totalStore = useTotalStore()
-const jobStore = useJobStore()
+const tipStore = useTipStore();
+const totalStore = useTotalStore();
+const jobStore = useJobStore();
 
 /* Fetch job data using store*/
-jobStore.fetchJobs()
+jobStore.fetchJobs();
 
 /* Tip Input Composable */
 import useTipInput from '~sComposables/useTipInput';
-const { submit, testing, post } = useTipInput()
+const { submit, testing, post } = useTipInput();
 
-async function onSubmit(event: FormSubmitEvent<any>) {
+async function onSubmit( event: FormSubmitEvent<any> ) {
   // Object.keys(jobStore.jobSelect.metadata).forEach((key) => {
   //   jobStore.object.push({ key: key, value: jobStore.jobSelect.metadata[key] })
   // },
   // )
   // jobStore.object.forEach(addTotals, (job, idx, arr) => { return })
 
-  submit() // composable
-  testing() // composable
-  post()
+  submit(); // composable
+  testing(); // composable
+  post();
 
 }
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -144,3 +144,4 @@ async function onSubmit(event: FormSubmitEvent<any>) {
     </UForm>
   </UContainer>
 </template>
+~/composables/useTipInput

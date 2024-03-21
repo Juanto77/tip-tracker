@@ -18,7 +18,7 @@
 
 <script setup>
 import { Bar } from 'vue-chartjs';
-import { useDashboardStore } from '~Server/stores/view/Dashboard';
+import { useDashboardStore } from '../../stores/view/Dashboard';
 
 const dayjs = useDayjs();
 const day = dayjs().format('YYYY-MM-DD');
@@ -56,7 +56,7 @@ const chartData = ref({
         {
             backgroundColor: '#f87979',
             // label: toRaw(store.dateArr),
-            data: store.tipIncome
+            data: data
         },
     ],
 });

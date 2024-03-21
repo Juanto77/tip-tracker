@@ -3,23 +3,6 @@ import { createResolver } from '@nuxt/kit';
 const { resolve } = createResolver( import.meta.url );
 
 export default defineNuxtConfig( {
-
-  /* Debugger & Development */
-  // /*
-  devtools: {
-    enabled: true,
-
-    timeline: {
-      enabled: true,
-    },
-  },
-  // */
-
-  // debug: true,
-
-  alias: { '~Core': resolve( './' ) },
-
-
   app: {
     head: {
       title: 'Tip Tracker',
@@ -28,6 +11,31 @@ export default defineNuxtConfig( {
       ],
     },
   },
+  modules: [ '@pinia/nuxt', '@nuxtjs/supabase', 'dayjs-nuxt', '@pinia-plugin-persistedstate/nuxt' ],
 
-  extends: [ '../../packages/finance', '../../packages/server', '../../packages/ui', ],
+  extends: [ '../../packages/ui', ],
+
+  alias: { '~TT': resolve( './' ) },
+  ///////////////////////////////////////////////////////////////////////////////////////////
+  /* Debugger & Development */
+  devtools: {
+    enabled: true,
+    timeline: {
+      enabled: true,
+    },
+  },
+  // debug: true,
+
+  ///////////////////////////////////////////////////////////////////////////////////////////
+  /* Add On Configurations */
+
+
+  supabase: {
+    redirectOptions: {
+      login: '/login',
+      callback: '/confirm',
+      exclude: [ '/form', '/sandbox', '/signup', '/magiclink', '/dashboard/monthview', '/dashboard/*', '/UISandbox' ],
+    },
+  },
+
 } );

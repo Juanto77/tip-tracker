@@ -11,10 +11,9 @@ export default defineNuxtConfig( {
     '~UIAssets': resolve( './assets' ),
   },
 
-  extends: [ '../server' ],
+  extends: [],
 
   modules: [
-    '@samk-dev/nuxt-vcalendar',
     'nuxt-primevue',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/device',

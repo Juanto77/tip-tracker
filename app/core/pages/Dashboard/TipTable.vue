@@ -1,18 +1,18 @@
 <script setup lang="ts">
 /* Database */
-import type { Database } from '~sTypes/database'
+import type { Database } from '../../types/database';
 const client = useSupabaseClient<Database>();
 const user = useSupabaseUser();
 
 /* Stores */
-import { useTableStore } from '~sStores/view/useTableStore'
-const tableStore = useTableStore()
+import { useTableStore } from '../../stores/view/useTableStore';
+const tableStore = useTableStore();
 // tableStore.fetch()
 
 // const getSales = await $fetch('/api/sales')
-const { data: getSales, error } = await client.from('user_tip').select('id, inTime, outTime, totalHours, creditTip, cashTip, sales, totalSales, stats, tipOut, creditNet, cashNet, netIncome')
-if (error) {
-  console.log(error)
+const { data: getSales, error } = await client.from( 'user_tip' ).select( 'id, inTime, outTime, totalHours, creditTip, cashTip, sales, totalSales, stats, tipOut, creditNet, cashNet, netIncome' );
+if ( error ) {
+  console.log( error );
 }
 
 /* Form Params */
@@ -83,9 +83,9 @@ const columns = [
     label: 'Net Income',
     sortable: true
   },
-]
+];
 
-const selectedColumns = ref([...columns])
+const selectedColumns = ref( [ ...columns ] )
 
 </script>
 

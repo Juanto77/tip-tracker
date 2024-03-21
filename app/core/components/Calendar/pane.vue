@@ -26,7 +26,7 @@
 </template>
 
 <script setup lang="ts">
-import { useDashboardStore } from '~sStores/view/Dashboard';
+import { useDashboardStore } from '../../stores/view/Dashboard';
 
 const store = useDashboardStore();
 </script>~Server/stores/view/Dashboard

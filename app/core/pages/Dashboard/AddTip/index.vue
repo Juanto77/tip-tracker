@@ -13,12 +13,12 @@ const client = useSupabaseClient<Database>();
 const user = useSupabaseUser();
 
 /* Store definitions */
-const tipStore = useTipStore()
-const totalStore = useTotalStore()
-const jobStore = useJobStore()
+const tipStore = useTipStore();
+const totalStore = useTotalStore();
+const jobStore = useJobStore();
 
 /* Fetch job data using store*/
-jobStore.fetchJobs()
+jobStore.fetchJobs();
 
 /* Tip Input Composable */
 import useTipInput from '~sComposables/useTipInput';
@@ -130,3 +130,4 @@ title {
     width: 100%;
 } */
 </style>
+~/composables/useTipInput

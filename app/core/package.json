@@ -16,8 +16,7 @@
   "devDependencies": {
     "@nuxt/devtools": "^1.1.1",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
-    "@tip-tracker/finance": "workspace:^",
-    "@tip-tracker/server": "workspace:^",
+    "@nuxtjs/eslint-module": "^4.1.0",
     "@tip-tracker/ui": "workspace:^",
     "eslint": "^8.57.0",
     "nuxt": "^3.11.1",
@@ -25,5 +24,14 @@
     "vue": "^3.4.21",
     "vue-router": "^4.3.0",
     "vue-tsc": "^2.0.7"
+  },
+  "dependencies": {
+    "@nuxtjs/supabase": "^1.1.7",
+    "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
+    "@pinia/nuxt": "^0.5.1",
+    "chart.js": "^4.4.2",
+    "chartjs-adapter-dayjs-4": "^1.0.4",
+    "dayjs-nuxt": "^2.1.9",
+    "vue-chartjs": "^5.3.0"
   }
 }

@@ -52,12 +52,12 @@ import { computed, ref } from 'vue';
 
 import dayjs from 'dayjs';
 import isToday from 'dayjs/plugin/isToday';
-import { any } from 'zod';
+
 dayjs.extend( isToday );
 
 const props = defineProps( {
     modelValue: {
-        type: any,
+        type: String,
         default: null,
     },
     startDate: {

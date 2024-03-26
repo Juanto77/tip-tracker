@@ -14,12 +14,10 @@
     "lint": "eslint --ext .js,.vue,.ts,.tsx --ignore-path .gitignore ."
   },
   "devDependencies": {
-    "@nuxt/devtools": "^1.1.1",
+    "@nuxt/devtools": "^1.1.4",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/eslint-module": "^4.1.0",
     "@tip-tracker/dashboard": "workspace:^",
-    "@tip-tracker/charts": "workspace:^",
-    "@tip-tracker/calendar": "workspace:^",
     "@tip-tracker/ui": "workspace:^",
     "eslint": "^8.57.0",
     "nuxt": "^3.11.1",

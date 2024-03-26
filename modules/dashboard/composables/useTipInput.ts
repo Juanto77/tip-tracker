@@ -1,9 +1,10 @@
-import { useTipStore } from "~sStores/useTipStore";
-import { useJobStore } from "~sStores/useJobStore";
-import { useTotalStore } from "~sStores/useTotalStore";
+import { useTipStore } from "../stores/useTipStore";
+import { useJobStore } from "../stores/useJobStore";
+import { useTotalStore } from '../stores/useTotalStore'
 import { useSupabaseClient } from "#imports";
 import { useSupabaseUser } from "#imports";
-import type { Database } from '~sTypes/database'
+import type { Database } from '~Server/types/database'
+
 export default function () {
     const client = useSupabaseClient();
     const user = useSupabaseUser();

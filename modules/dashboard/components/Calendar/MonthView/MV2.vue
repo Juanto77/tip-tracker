@@ -50,7 +50,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Database } from '~sTypes/database'
+import type { Database } from '~Server/types/database'
 // import { useCreateCalendar } from '~sComposables/createCalendar';
 
 

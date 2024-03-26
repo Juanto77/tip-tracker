@@ -1,14 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { createResolver } from '@nuxt/kit';
 
-const { resolve } = createResolver( import.meta.url );
+const { resolve } = createResolver(import.meta.url);
 
-export default defineNuxtConfig( {
+export default defineNuxtConfig({
 
   alias: {
-    '~UI': resolve( './' ),
-    '~UIComponents': resolve( './components' ),
-    '~UIAssets': resolve( './assets' ),
+    '~UI': resolve('./'),
+    '~UIComponents': resolve('./components'),
+    '~UIAssets': resolve('./assets'),
   },
 
   extends: [],
@@ -42,7 +42,7 @@ export default defineNuxtConfig( {
     options: {
       unstyled: true,
     },
-    importPT: { as: 'base', from: '~UIAssets/presets/base' }
+    importPT: { as: 'base', from: '~UIAssets/presets/tw-lara' }
     // importPT: { as: 'Tailwind', from: 'primevue/passthrough/tailwind' },
   },
-} );
+});

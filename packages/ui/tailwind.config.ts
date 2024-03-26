@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-// import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss'
 
-export default {
+export default <Partial<Config>>{
   content: [
-    "~UIAssets/presets/**/*.{js,vue,ts}",
+    "./assets/presets/**/*.{js,vue,ts}"
   ],
   theme: {
     extend: {

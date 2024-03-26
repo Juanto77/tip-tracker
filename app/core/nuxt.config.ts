@@ -13,6 +13,7 @@ export default defineNuxtConfig( {
   },
   modules: [],
 
+  // extends: [ '../../packages/ui', '../../packages/server', '../../modules/dashboard', '../../modules/charts', '../../modules/calendar' ],
   extends: [ '../../packages/ui', '../../packages/server', '../../modules/dashboard' ],
 
   alias: { '~TT': resolve( './' ) },
@@ -28,14 +29,5 @@ export default defineNuxtConfig( {
 
   ///////////////////////////////////////////////////////////////////////////////////////////
   /* Add On Configurations */
-
-
-  supabase: {
-    redirectOptions: {
-      login: '/login',
-      callback: '/confirm',
-      exclude: [ '/form', '/sandbox', '/signup', '/magiclink', '/dashboard/monthview', '/dashboard/*', '/UISandbox' ],
-    },
-  },
 
 } );

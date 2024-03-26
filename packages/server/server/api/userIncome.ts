@@ -1,12 +1,14 @@
 import { serverSupabaseClient } from '#supabase/server';
-import type { Database } from '~sTypes/database'
+import type { Database } from '~Server/types/database';
+import { useDayjs } from '#imports';
 
-export default eventHandler(async (event) => {
-    const client = await serverSupabaseClient<Database>(event);
 
-    const { data, error } = await client.from('user_tip').select('id, inTime, netIncome')
-    if (error) {
-        console.error(error);
-    }
+export default eventHandler( async ( event ) => {
+    const client = await serverSupabaseClient( event );
+
+    const { data } = await client.from( 'user_tip' ).select( 'id, jobID, inTime, netIncome' );
+
+
+
     return data;
-});
+} );

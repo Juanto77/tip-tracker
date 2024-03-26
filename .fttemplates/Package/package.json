@@ -1,8 +1,9 @@
 {
-  "name": "tip-tracker",
+  "name": "@tip-tracker/<FTName| lowercase>",
   "private": true,
   "type": "module",
   "version": "1.0.0",
+  "main": "./nuxt.config.ts",
   "scripts": {
     "build": "nuxt build",
     "playground": "nuxt dev",
@@ -13,19 +14,17 @@
     "debug": "nuxi dev --inspect",
     "lint": "eslint --ext .js,.vue,.ts,.tsx --ignore-path .gitignore ."
   },
+  "dependencies": {
+    "nuxt": "^3.10.1",
+    "vue": "^3.4.15",
+    "vue-router": "^4.2.5"
+  },
   "devDependencies": {
-    "@nuxt/devtools": "^1.1.1",
-    "@nuxtjs/eslint-config-typescript": "^12.1.0",
-    "@nuxtjs/eslint-module": "^4.1.0",
-    "@tip-tracker/dashboard": "workspace:^",
-    "@tip-tracker/charts": "workspace:^",
-    "@tip-tracker/calendar": "workspace:^",
+    "@tip-tracker/server": "workspace:^",
     "@tip-tracker/ui": "workspace:^",
-    "eslint": "^8.57.0",
-    "nuxt": "^3.11.1",
-    "typescript": "^5.4.3",
-    "vue": "^3.4.21",
-    "vue-router": "^4.3.0",
-    "vue-tsc": "^2.0.7"
+    "@nuxt/devtools": "^1.0.8",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3",
+    "vue-tsc": "^2.0.1"
   }
 }

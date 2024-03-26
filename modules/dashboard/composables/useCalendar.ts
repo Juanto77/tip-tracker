@@ -1,36 +1,9 @@
-import { defineStore, acceptHMRUpdate } from 'pinia';
-import { useTimelineStore } from './Timeline';
-// import { useTimelineStore } from './Timeline';
-const dayjs = useDayjs();
-// const timeline = useTimelineStore()
-
-export const useCalendarStore = defineStore( 'Calendar', () => {
-    /* State */
-    const viewDate = ref( dayjs().format( 'YYYY-MM-DD' ) )
+import { useTimelineStore } from "~Dashboard/stores/Timeline";
+const dayjs = useDayjs()
+export const useCalendar = () => {
+    const timeline = useTimelineStore()
 
     const weekDays = ref( [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ] )
-    /*
-    const income = ref( {} )
- 
-    const incomeMerged = ref( {} )
- 
-    const tipIncome = ref( {} )
- 
-    const dateArr = ref( [] ) // labels for chart.js
- 
-    const incomeArr = ref( [] ) // dataset for chart.js
-    */
-    ///////////////////////////////////////////////////////////////////////////////////////////
-    /*
-    const day = computed( () => { return dayjs( viewDate.value ); } )
-
-    const currentMonth = computed( () => dayjs( viewDate.value ).format( 'MMMM YYYY' ) )
-
-
-    const monthStart = computed( () => day.value.startOf( 'month' ).add( -1, 'day' ).format( 'YYYY-MM-DD' ) )
-
-    const monthEnd = computed( () => day.value.endOf( 'month' ).add( -1, 'day' ).format( 'YYYY-MM-DD' ) )
-    */
 
     const prependCalendar = computed( () => {
         const timeline = useTimelineStore()
@@ -64,12 +37,10 @@ export const useCalendarStore = defineStore( 'Calendar', () => {
         return ranges
     } )
 
-    ///////////////////////////////////////////////////////////////////////////////////////////
+    const shiftMonth = ( amount ) => {
+        timeline.viewDate = timeline.day.add( amount, 'month' ).format( 'YYYY-MM-DD' );
+        // this.fetch();
+    }
 
-
-    return { viewDate, weekDays, prependCalendar, calendar };
-} );
-
-if ( import.meta.hot ) {
-    import.meta.hot.accept( acceptHMRUpdate( useCalendarStore, import.meta.hot ) );
+    return { weekDays, prependCalendar, calendar, shiftMonth }
 }

@@ -1,11 +1,10 @@
 /* Imports */
 import { defineStore, acceptHMRUpdate } from 'pinia';
-import { useCalendarStore } from './Calendar';
-import type { Database } from '~sTypes/database';
-
+// import { useCalendarStore } from './Calendar';
+// import { useTimelineStore } from './Timeline';
 /* Local vars */
 const dayjs = useDayjs();
-
+// const timeline = useTimelineStore();
 
 
 export const useDashboardStore = defineStore( 'Dashboard', {
@@ -56,12 +55,17 @@ export const useDashboardStore = defineStore( 'Dashboard', {
         },
         calendar: ( state ) => {
             let ranges = [];
+            /*
+            let rangeStart = timeline.day.startOf( 'month' ).add( -1, 'day' );
+            let rangeEnd = timeline.day.endOf( 'month' ).add( -1, 'day' );
+            */
             let rangeStart = state.day.startOf( 'month' ).add( -1, 'day' );
             let rangeEnd = state.day.endOf( 'month' ).add( -1, 'day' );
 
             let currentDate = rangeStart;
 
             while ( currentDate.isBefore( rangeEnd ) || currentDate.isSame( rangeEnd ) ) {
+                // while ( currentDate.isBefore( timeline.monthEnd ) || currentDate.isSame( timeline.monthEnd ) ) {
                 currentDate = currentDate.add( 1, 'day' );
                 let date = dayjs( currentDate ).format( 'YYYY-MM-DD' );
                 ranges.push( currentDate );

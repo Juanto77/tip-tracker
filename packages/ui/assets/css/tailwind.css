@@ -12,7 +12,8 @@
 /* 
 @tailwind base;
 @tailwind components;
-@tailwind utilities; */
+@tailwind utilities;
+ */
 
 :root {
   --primary-50: 236 253 245;
@@ -39,4 +40,3 @@
   --surface-900: 15 23 42;
   --surface-950: 3 6 23;
 }
-

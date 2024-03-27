@@ -3,7 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "dev": "pnpm nuxt dev ./app/core --host",
+    "dev": "pnpm nuxt dev ./app/core",
+    "devc": "pnpm nuxt dev ./app/core --host",
     "build": "pnpm nuxt build ./app/core",
     "nuxi-upgrade": "pnpm nuxt upgrade ./app/core && pnpm nuxt upgrade ./packages/finance && pnpm nuxt upgrade ./packages/ui && pnpm nuxt upgrade ./packages/server",
     "nuxi-clean": "pnpm nuxt cleanup ./app/core && pnpm nuxt cleanup ./packages/ui && pnpm nuxt cleanup ./packages/server && pnpm nuxt cleanup ./modules/dashboard",

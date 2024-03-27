@@ -12,7 +12,8 @@
 /* 
 @tailwind base;
 @tailwind components;
-@tailwind utilities; */
+@tailwind utilities;
+ */
 
 :root {
   --primary-50: 236 253 245;

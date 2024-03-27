@@ -1,12 +1,16 @@
 <template v-slot:calendar-header>
-    <div class="min-w-full">
+    <div class="min-w-full mt-5">
         <div class="flex flex-row">
-            <div class="flex-none mx-8">
+            <div class="flex-row mx-8">
                 <!-- <font-awesome-icon icon="fa-solid fa-chevron-left" @click="store.shiftMonth( -1 )"></font-awesome-icon> -->
                 <h1 @click="shiftMonth(-1)">BACK</h1>
             </div>
+            <div>
+                <DropdownBase />
+            </div>
             <div class="grow text-center">
                 <h1 class="monthName">{{ timeline.currentMonth }}</h1>
+
             </div>
             <div class="flex-none mx-8">
                 <h1 @click="shiftMonth(1)">FORWARD</h1>

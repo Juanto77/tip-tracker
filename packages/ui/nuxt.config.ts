@@ -18,12 +18,13 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/device',
     '@nuxtjs/color-mode',
-    'dayjs-nuxt'
+    'dayjs-nuxt',
+    'nuxt-icon'
   ],
 
 
   tailwindcss: {
-    configPath: '/tailwind.config.js',
+    configPath: '/tailwind.config.ts',
   },
   postcss: {
     plugins: {

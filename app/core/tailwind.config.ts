@@ -1,6 +1,6 @@
 import { type Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
-import scrollbar from "tailwind-scrollbar";
+/* import scrollbar from "tailwind-scrollbar"; */
 
 export default <Partial<Config>>{
     content: [
@@ -90,5 +90,5 @@ export default <Partial<Config>>{
             },
         },
     },
-    plugins: [scrollbar({ nocompatible: true })],
+    /* plugins: [scrollbar({ nocompatible: true })], */
 };

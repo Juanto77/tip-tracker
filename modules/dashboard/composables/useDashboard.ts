@@ -1,11 +1,11 @@
-import { useTimelineStore } from "~Dashboard/stores/Timeline";
+import { useTimelineStore } from "~/stores/TimelineStore";
 
 export const useDashboard = () => {
   const dayjs = useDayjs()
   const timeline = useTimelineStore()
 
-  const shiftMonth = ( amount: number ) => {
-    timeline.viewDate = timeline.day.add( amount, 'month' ).format( 'YYYY-MM-DD' );
+  const shiftMonth = (amount: number) => {
+    timeline.viewDate = timeline.day.add(amount, 'month').format('YYYY-MM-DD');
     // this.fetch();
   }
 

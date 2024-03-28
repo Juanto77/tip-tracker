@@ -1,9 +1,9 @@
-import { useTipStore } from "../stores/useTipStore";
-import { useJobStore } from "../stores/useJobStore";
-import { useTotalStore } from '../stores/useTotalStore'
-import { useSupabaseClient } from "#imports";
-import { useSupabaseUser } from "#imports";
-import type { Database } from '~Server/types/database'
+import { useTipStore } from "~/stores/TipStore";
+import { useJobStore } from "~/stores/JobStore";
+import { useTotalStore } from '~/stores/TotalStore'
+
+
+import type { Database } from '~/types/database'
 
 export default function () {
     const client = useSupabaseClient();
@@ -52,6 +52,7 @@ export default function () {
         })
         jobStore.object.forEach(addTotals, (job, idx, arr) => { return })
     }
+
     //TODO conditional logic to leave out card fee
     function getCreditNet() {
         // totalStore.creditNet = tipStore.income.creditTip - totalStore.cardFee  // setting totalStore credit net from tipInput 

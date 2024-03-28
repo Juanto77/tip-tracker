@@ -1,4 +1,4 @@
-import { useTimelineStore } from "~Dashboard/stores/Timeline";
+import { useTimelineStore } from "~/stores/TimelineStore";
 
 const dayjs = useDayjs()
 export const useCalendar = () => {
@@ -17,15 +17,19 @@ export const useCalendar = () => {
     const calendar = computed(() => {
         const timeline = useTimelineStore()
         let ranges = [];
-        // /*
+        /*
         let rangeStart = timeline.day.startOf('month').add(-1, 'day');
         let rangeEnd = timeline.day.endOf('month').add(-1, 'day');
-        // */
+        */
 
+        /* Changed it to use the dropdown ref in timeline store */
         /*
-         let rangeStart = day.value.startOf( 'month' ).add( -1, 'day' );
-         let rangeEnd = day.value.endOf( 'month' ).add( -1, 'day' );
-         */
+        let rangeStart = timeline.viewStart.add(-1, 'day')
+        let rangeEnd = timeline.viewEnd.add(-1, 'day');
+*/
+        /* Moved the addition to the timeline store */
+        let rangeStart = timeline.viewStart
+        let rangeEnd = timeline.viewEnd
 
         let currentDate = rangeStart;
 
@@ -38,11 +42,11 @@ export const useCalendar = () => {
         }
         return ranges
     })
+    /* Moved to timeline store */
+    // const shiftMonth = (amount) => {
+    //     timeline.viewDate = timeline.day.add(amount, 'month').format('YYYY-MM-DD');
+    //     // this.fetch();
+    // }
 
-    const shiftMonth = (amount) => {
-        timeline.viewDate = timeline.day.add(amount, 'month').format('YYYY-MM-DD');
-        // this.fetch();
-    }
-
-    return { weekDays, prependCalendar, calendar, shiftMonth }
+    return { weekDays, prependCalendar, calendar }
 }

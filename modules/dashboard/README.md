@@ -6,3 +6,13 @@ Add Dependencies to app/core
 
 Extend in nuxt.config.ts
 `'../../package/Dashboard'`
+
+# Todo
+
+- Create User pref store
+- create layout for dashboard
+    - include props
+
+
+# Dayjs
+- [Advanced Format](https://day.js.org/docs/en/plugin/advanced-format)

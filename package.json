@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "pnpm nuxt dev ./app/core",
     "devc": "pnpm nuxt dev ./app/core --host",
+    "dash": "pnpm nuxt dev ./modules/dashboard --host",
     "build": "pnpm nuxt build ./app/core",
-    "nuxi-upgrade": "pnpm nuxt upgrade ./app/core && pnpm nuxt upgrade ./packages/finance && pnpm nuxt upgrade ./packages/ui && pnpm nuxt upgrade ./packages/server",
-    "nuxi-clean": "pnpm nuxt cleanup ./app/core && pnpm nuxt cleanup ./packages/ui && pnpm nuxt cleanup ./packages/server && pnpm nuxt cleanup ./modules/dashboard",
+    "nuxt-upgrade": "pnpm nuxt upgrade ./app/core && pnpm nuxt upgrade ./packages/finance && pnpm nuxt upgrade ./packages/ui && pnpm nuxt upgrade ./packages/server",
+    "nuxt-clean": "pnpm nuxt cleanup ./app/core && pnpm nuxt cleanup ./packages/ui && pnpm nuxt cleanup ./packages/server && pnpm nuxt cleanup ./modules/dashboard",
     "purge-base": "rm -r ./node_modules && rm ./pnpm-lock.yaml",
     "purge-nuxt": "rm -r ./packages/ui/node_modules && rm -r ./packages/ui/.nuxt && rm -r ./packages/server/node_modules && rm -r ./packages/server/.nuxt && rm -r ./app/core/node_modules && rm -r ./app/core/.nuxt && rm -r ./modules/dashboard/.nuxt && rm -r ./modules/dashboard/node_modules",
     "purge-all": "rm -r ./node_modules && rm ./pnpm-lock.yaml && rm -r ./packages/ui/node_modules && rm -r ./packages/ui/.nuxt && rm -r ./app/core/node_modules && rm -r ./app/core/.nuxt && rm -r ./modules/dashboard/.nuxt && rm -r ./modules/dashboard/node_modules && rm -r ./packages/server/.nuxt && rm -r ./packages/server/node_modules"

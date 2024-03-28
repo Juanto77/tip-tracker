@@ -4,25 +4,25 @@ const { resolve } = createResolver(import.meta.url);
 export default defineNuxtConfig({
 
   alias: { '~Server': resolve('./') },
-  // devtools: { enabled: true },
+  devtools: { enabled: true },
   // debug: true,
 
-  /* Configure Server options */
-  // extends: ['../server', '../ui', '../finance'],
+  // modules: ['@nuxtjs/supabase', 'nuxt-security'],
 
   modules: ['@nuxtjs/supabase'],
 
-  /*
+
   supabase: {
     redirectOptions: {
       login: '/login',
       callback: '/confirm',
-      exclude: ['/form', '/sandbox', '/signup', '/magiclink', '/dashboard/monthview', '/Dashboard/*', '/UISandbox'],
+      // exclude: ['/form', '/sandbox', '/signup', '/magiclink', '/dashboard/monthview', '/Dashboard/*', '/UISandbox'],
+      exclude: ['/sandbox', '/signup', '/magiclink'],
+      // cookieRedirect: true,
     },
   },
-  */
-  supabase: {
-    redirect: false,
-  },
 
+  /*   supabase: {
+      redirect: false,
+    }, */
 });

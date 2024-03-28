@@ -31,7 +31,6 @@ logs
 .eslintignore
 
 #Workspace Folders
-.trash
 .backup
 .docs
 .db

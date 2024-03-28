@@ -1,4 +1,4 @@
-# Tip-Tracker UI
+# Tip-Tracker
 
 #### Sitemap
 - Index
@@ -38,7 +38,7 @@
 
 #### Components
 - Data Views
-  - Calendar
+  - ~Calendar~
   - Table
   - Post Submit
 

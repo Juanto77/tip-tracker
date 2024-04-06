@@ -9,8 +9,6 @@
                     </div>
                 </template>
                 <template #content>
-
-
                     <form class="md:col-span-2">
                         <!-- <div class="grid grid-cols-1 gap-x-6 gap-y-8 sm:max-w-xl sm:grid-cols-6"> -->
                         <div class="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
@@ -31,7 +29,7 @@
                                     <!-- <input type="text" name="first-name" id="first-name" autocomplete="given-name"
                                         v-model="j.name"
                                         class="block w-full rounded-md border-0 bg-text-black/5 py-1.5 text-black shadow-sm ring-1 ring-inset ring-text-black/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" /> -->
-                                    <UIInputText type="text" name="first-name" id="first-name" v-model="j.name" />
+                                    <UIFormTextInput type="text" name="first-name" id="first-name" v-model="j.name" />
                                 </div>
                             </div>
                             <div class="sm:col-span-3">
@@ -39,8 +37,8 @@
                                     Last name
                                 </label>
                                 <div class="mt-2">
-                                    <UIInputText type="text" name="last-name" id="last-name" autocomplete="family-name"
-                                        v-model="j.id" />
+                                    <UIFormTextInput type="text" name="last-name" id="last-name"
+                                        autocomplete="family-name" v-model="j.id" />
                                     <!-- <input type="text" name="last-name" id="last-name" autocomplete="family-name"
                                         v-model="j.id"
                                         class="block w-full rounded-md border-0 bg-text-black/5 py-1.5 text-black shadow-sm ring-1 ring-inset ring-text-black/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" /> -->

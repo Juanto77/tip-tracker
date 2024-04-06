@@ -110,6 +110,8 @@
 </template>
 
 <script setup>
+/* Last updated 4/3/2024, moved to login page */
+
 const client = useSupabaseClient();
 const session = useSupabaseSession()
 const email = ref('');

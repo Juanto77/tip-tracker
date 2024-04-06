@@ -26,7 +26,7 @@
                             <label for="first-name" class="block text-sm font-medium leading-6 text-black">First
                                 name</label>
                             <div class="mt-2">
-                                <UIInputText type="text" name="first-name" id="first-name" autocomplete="given-name"
+                                <UIFormTextInput type="text" name="first-name" id="first-name" autocomplete="given-name"
                                     v-model="userData.first_name" />
                                 <!--     <input type="text" name="first-name" id="first-name"
                                     autocomplete="given-name" v-model="fName"
@@ -38,7 +38,7 @@
                             <label for="last-name" class="block text-sm font-medium leading-6 text-black">Last
                                 name</label>
                             <div class="mt-2">
-                                <UIInputText type="text" name="first-name" id="last-name" autocomplete="given-name"
+                                <UIFormTextInput type="text" name="first-name" id="last-name" autocomplete="given-name"
                                     v-model="userData.last_name" />
                                 <!-- <input type="text" name="last-name" id="last-name" autocomplete="family-name"
                                     v-model="lName"
@@ -50,7 +50,7 @@
                             <label for="email" class="block text-sm font-medium leading-6 text-black">Email
                                 address</label>
                             <div class="mt-2">
-                                <UIInputText id="email" name="email" type="email" autocomplete="email"
+                                <UIFormTextInput id="email" name="email" type="email" autocomplete="email"
                                     v-model="userData.email" />
                                 <!-- <input
                                     id="email" name="email" type="email" autocomplete="email" v-model="email"
@@ -67,7 +67,7 @@
                                     <!-- <span
                                         class="flex select-none items-center pl-3 text-gray-400 sm:text-sm">example.com/</span> -->
 
-                                    <UIInputText type="text" name="username" id="username" autocomplete="username"
+                                    <UIFormTextInput type="text" name="username" id="username" autocomplete="username"
                                         v-model="username"
                                         class="flex-1 border-0 bg-transparent py-1.5 pl-1 text-black focus:ring-0 sm:text-sm sm:leading-6"
                                         placeholder="janesmith" />

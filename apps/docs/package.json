@@ -8,7 +8,7 @@
     "serve": "vitepress serve pages"
   },
   "devDependencies": {
-    "@myturborepo/ui": "workspace:*",
+    "@tip-tracker-turbo/ui": "workspace:*",
     "vitepress": "^1.0.2",
     "vue": "^3.4.21"
   }

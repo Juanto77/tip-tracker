@@ -12,18 +12,20 @@ export default defineNuxtConfig({
   // extends: ['../auth'],
 
   modules: [
-    '@myturborepo/ui',
+    '@tip-tracker-turbo/ui',
     '@nuxtjs/supabase',
     '@pinia/nuxt',
     'dayjs-nuxt',
     '@pinia-plugin-persistedstate/nuxt',
-    'nuxt-primevue',
+    // 'nuxt-primevue',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/device',
     '@nuxtjs/color-mode',
     'dayjs-nuxt',
     'nuxt-icon',
-    'nuxt-headlessui'
+    'nuxt-headlessui',
+    '@vee-validate/nuxt'
+
   ],
 
   /* Nitro Config for Turbo */
@@ -42,6 +44,12 @@ export default defineNuxtConfig({
     },
   },
 
+  headlessui: {
+    prefix: 'H'
+  },
+
+
+  /*
   primevue: { // Treeshaking to lower bundle size
     // usePrimeVue: true,
     options: {
@@ -50,6 +58,7 @@ export default defineNuxtConfig({
     importPT: { as: 'base', from: '~/assets/presets/tw-lara' }
     // importPT: { as: 'Tailwind', from: 'primevue/passthrough/tailwind' },
   },
+  */
 
   // /*
   supabase: {

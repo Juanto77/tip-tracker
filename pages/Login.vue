@@ -13,7 +13,7 @@
                     <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email
                         address</label>
                     <div class="mt-2">
-                        <UIFormTextInput id="email" type="text" v-model="email" placeholder="Email Address" />
+                        <UIFormInputText label="email" id="email" type="text" v-model="email" placeholder="Email Address" />
                         <!-- <LibInputText id="email" v-model="email" placeholder="Email Address"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" /> -->
 
@@ -23,9 +23,9 @@
                 <div>
                     <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
                     <div class="mt-2">
-                        <UIFormTextInput id="password" type="password" v-model="password" placeholder="Password" />
-                        <!-- <UIInputPassword id="password" type="password" v-model="password" placeholder="Password"
-                            :feedback="false" variant="outline" /> -->
+                        <!-- <MyTurborepoTextInput id="password" type="password" v-model="password" placeholder="Password" /> -->
+                        <UIFormInputText label="password" id="password" type="password" v-model="password" placeholder="Password"
+                            :feedback="false" variant="outline" />
                         <!-- <LibInputPassword id="password" v-model="password" placeholder="Password" :feedback="false"
                                 class=" block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1
                                 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset
@@ -110,6 +110,8 @@
 </template>
 
 <script setup>
+/* Last updated 4/3/2024, moved to login page */
+
 const client = useSupabaseClient();
 const session = useSupabaseSession()
 const email = ref('');
@@ -122,6 +124,8 @@ import { useAuthStore } from '~/stores/Auth';
 const auth = useAuthStore()
 
 async function emailAuth() {
+    console.log(email.value)
+    console.log(password)
     const { error } = await client.auth.signInWithPassword({
         email: email.value,
         password: password.value,

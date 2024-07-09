@@ -1,1 +1,18 @@
-Create a cross-platform app that will store data from user input, calculate tip out based on percentages provided by the user and sum up the total amout of income per shift, week, month and year. This app will also provide the ability for the user to define custom parameters for a desired output (i.e what is the percentage of liquor sales, what are their sales on every thursday, what were their sales on this day last year, etc...), calculate estimated taxes on both the federal and state level while accounting for the taxes already paid by their hourly.
+Add to ~/package.json
+`"{COMMAND}" : "pnpm --filter @tip-tracker/Dashboard dev"`
+
+Add Dependencies to app/core
+`pnpm add -D @tip-tracker/Dashboard`
+
+Extend in nuxt.config.ts
+`'../../package/Dashboard'`
+
+# Todo
+
+- Create User pref store
+- create layout for dashboard
+    - include props
+
+
+# Dayjs
+- [Advanced Format](https://day.js.org/docs/en/plugin/advanced-format)

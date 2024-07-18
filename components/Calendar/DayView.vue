@@ -25,7 +25,7 @@
 </template>
 
 <script setup>
-import { useDashboardStore } from '~/stores/DashboardStore';
+// import { useDashboardStore } from '~/stores/DashboardStore';
 import { useTimelineStore } from '~/stores/TimelineStore';
 import { useCalendar } from '#imports';
 import advancedFormat from 'dayjs/plugin/advancedFormat'
@@ -35,7 +35,7 @@ const income = _incomeData.incomeData
 
 
 const timeline = useTimelineStore()
-const store = useDashboardStore();
+// const store = useDashboardStore();
 
 const { weekDays, prependCalendar, calendar } = useCalendar()
 

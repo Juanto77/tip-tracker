@@ -18,7 +18,7 @@
 
 <script setup>
 import { Bar } from 'vue-chartjs';
-import { useDashboardStore } from '~/stores/Dashboard';
+// import { useDashboardStore } from '~/stores/Dashboard';
 
 const dayjs = useDayjs();
 const day = dayjs().format('YYYY-MM-DD');

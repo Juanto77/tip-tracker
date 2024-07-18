@@ -10,48 +10,24 @@ export const useIncomeData = defineStore('Income Data', () => {
     /* Import Data to Object */
     const incomeData = ref({})
 
-    const dailyIncome = ref({})
+    const dailyIncome = ref({}) // FORMERLY AN OBJECT
 
-    const monthlyIncome = ref({})
+    const monthlyIncome = ref({}) 
 
     const yearIncome = ref(0)
 
     const routeData = ref({})
 
-    async function getTips() {
-
-        const client = useSupabaseClient()
-        const { data, error } = await client
-            .from('user_tip')
-            .select(`*, user_jobs(*)`)
-        // .eq('id', i)
-
-        // console.log(data)
-
-        // incomeData.value = data
-
-        // data.forEach((o, idx, arr) =>{
-        //     incomeData.value = o
-        // })       
-
-    }
-
 
     /* Combine multiple incomes that occur in one day */
-    // FIXME: Fix Error Handling when navigating to month that has no tips entered.
     async function dayFilter(month) {
-        
         try{
         Object.entries(localData.value[month]).forEach((i, idx, arr) => {
-
-            // console.log(arr)
-
             const childItem = i[1]
-
             const parentDate = JSON.parse(JSON.stringify(dayjs(childItem.inTime).format('YYYY-MM-DD')))
             const parentMonth = JSON.parse(JSON.stringify(dayjs(childItem.inTime).format('YYYY-MM')))
-
             let _child = {}
+            let child = []
 
             let filter = arr.filter((item) => {
                 const localItem = item[1]
@@ -59,52 +35,26 @@ export const useIncomeData = defineStore('Income Data', () => {
                 return itemDay === parentDate
             })
 
-
             let dayIncome = filter.reduce((acc, item) => {
                 let nestedItem = item[1]
-                let incomeRange = dayjs(nest.inTime).format('YYYY-MM-DD');
-                _child[nestedItem.id] = nestedItem
+                let incomeRange = dayjs(nestedItem.inTime).format('YYYY-MM-DD');
+                // _child[nestedItem.id] = nestedItem
+                child.push(nestedItem)
+
                 return acc + item[1].netIncome
             }, 0)
 
-            incomeData.value[month][parentDate] = _child
+            // incomeData.value[month][parentDate] = _child
+            incomeData.value[month][parentDate] = child
+
             dailyIncome.value[parentDate] = dayIncome
+            // dailyIncome.value.push({date: parentDate, income: dayIncome})
         })
+     // FIXME: Fix Error Handling when navigating to month that has no tips entered.
+
     } catch (e){
         alert(e)
     }
-
-
-        ///////////////////////////////////////////////////////////////////////////////////////////
-        /* Combine multiple incomes that occur in one day */
-        // Object.keys(incomeData.value).forEach((key) => {
-        //         console.log(incomeData.value[key])
-        //         Object.entries(incomeData.value[key]).forEach((o, idx, arr) => {
-        //             const childItem = o[1]
-        //             /* Day format */
-        //             const parentDate = JSON.parse(JSON.stringify(dayjs(childItem.inTime).format('YYYY-MM-DD')))
-
-        //             let filter = arr.filter((item) => {
-        //                 const itemDay = JSON.parse(JSON.stringify(dayjs(item[1].inTime).format('YYYY-MM-DD')))
-        //                 return itemDay === parentDate
-        //             })
-
-
-        //             let dayIncome = filter.reduce((acc, item) => {
-        //                 let incomeRange = dayjs(item.inTime).format('YYYY-MM-DD');
-        //                 return acc + item[1].netIncome
-        //             }, 0)
-
-
-        //             dailyIncome.value[parentDate] = dayIncome
-
-        //             // console.log('FILTER DAY', filter)
-        //             // console.log(incomeData.value[key])
-        //             // console.log('O', o)
-        //             // console.log('idx', idx)
-        //             // console.log('ARR', arr)
-        //         })
-        //     })
     }
 
 
@@ -118,9 +68,7 @@ export const useIncomeData = defineStore('Income Data', () => {
             /* Update YTD Income */
             sumTotal += el.netIncome
             // yearIncome.value += el.netIncome
-
             let _child = {} 
-
 
             /* Group income entries by month */
             let filter = arr.filter((item) => {
@@ -132,8 +80,6 @@ export const useIncomeData = defineStore('Income Data', () => {
             /* Calculate income per month & push tip profiles to parent month*/
             let monthIncome = filter.reduce((acc, item) => {
                 _child[item.id] = item
-                // _child.push(item)
-
                 return acc + item.netIncome;
             }, 0);
 
@@ -143,6 +89,7 @@ export const useIncomeData = defineStore('Income Data', () => {
             monthlyIncome.value[date] = monthIncome
             yearIncome.value = sumTotal
 
+            // monthlyIncome.value.push
         });
         dayFilter(today) // Call day filter on completion
     }
@@ -158,12 +105,12 @@ export const useIncomeData = defineStore('Income Data', () => {
         if (error) {
             console.log(error)
         }
-
-        // rawIncomeData.value = data;
         let arr = data;
-        // rawIncomeData.value = data;
-
         monthFilter(arr)
+    }
+
+    function $setDailyIncome(){
+        dailyIncome.value = []
     }
 
     function $onRoute() {
@@ -175,7 +122,10 @@ export const useIncomeData = defineStore('Income Data', () => {
 
 
 
-    return { incomeData, dailyIncome, monthlyIncome, yearIncome, routeData, getTips, getIncome, monthFilter, dayFilter, $onRoute }
+    return { incomeData, dailyIncome, monthlyIncome, yearIncome, routeData, getIncome, monthFilter, dayFilter, $onRoute }
+
+}, {
+    // persist: true
 })
 
 if (import.meta.hot) {

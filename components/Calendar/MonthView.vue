@@ -22,28 +22,29 @@
                                 $ {{ i }}
                             </div>
                         </template>
-                        <!-- <template v-for="data of incomeData[useTimelineStore()._currentMonth]" >
-                            <div v-if="$dayjs(data.inTime).format('YYYY-MM-DD') == day.format('YYYY-MM-DD')" :day="day.format('YYYY-MM-DD')">
-                                <div class="align-middle">
-                                    $ {{ data.netIncome }}
-                                </div>
-                            </div>
-                        </template> -->
-                        <!-- </div> -->
                     </div>
-                    <!-- </div> -->
                 </template>
             </div>
         </template>
-        <!-- Only show if daily view is selected -->
+
+        <!-- DAILY VIEW -->
+         <!-- TODO: Style the data view for single day -->
         <template v-else>
             <template v-for="day in calendar">
                 <div class="text-center border border-slate-200 flex flex-col h-32" :day="day.format('YYYY-MM-DD')">
                     {{ day.format('Do') }}
-                    <template v-for="(i, idx) of incomeStore.dailyIncome">
+                    <template v-for="(i, idx) in incomeData[_currentMonth]">
+                        
                         <div v-if="idx == day.format('YYYY-MM-DD')" :day="day.format('YYYY-MM-DD')">
-                            $ {{ i }}
+                            <div v-for="a in i">
+                                <NuxtLink :to="{ name: 'crud-tip-id', params: { 'crud': 'edit', 'id': a.id } }">
+                                    {{ a.id }} :
+                                  $  {{ a.netIncome }}
+                                </NuxtLink>
+                            </div>
+
                         </div>
+
                     </template>
                     <!-- <template v-for="data of incomeData[useTimelineStore()._currentMonth]" >
                                 <div v-if="$dayjs(data.inTime).format('YYYY-MM-DD') == day.format('YYYY-MM-DD')" :day="day.format('YYYY-MM-DD')">
@@ -59,21 +60,20 @@
         </template>
 
     </div>
-    <div>timeline: {{ useTimelineStore()._currentMonth }}</div>
-    <div>current month: {{ currentMonth }}</div>
+
 </template>
 
 <script setup lang="ts">
-    import { useDashboardStore } from '~/stores/DashboardStore';
+
     import { useTimelineStore } from '~/stores/TimelineStore';
     import { useCalendar } from '~/composables/useCalendar';
     import advancedFormat from 'dayjs/plugin/advancedFormat'
 
     const timeline = useTimelineStore()
-    // const store = useDashboardStore();
     const incomeStore = useIncomeData()
-    const incomeData = useIncomeData().incomeData
-    let currentMonth = useTimelineStore()._currentMonth
+    const { incomeData } = storeToRefs(useIncomeData())
+    const { _currentMonth, viewDate } = storeToRefs(useTimelineStore())
+
 
     const { weekDays, prependCalendar, calendar } = useCalendar()
 

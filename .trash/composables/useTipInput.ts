@@ -1,6 +1,6 @@
-import { useTipStore } from "~/stores/TipStore";
-import { useJobStore } from "~/stores/JobStore";
-import { useTotalStore } from '~/stores/TotalStore'
+// import { useTipStore } from "~/stores/TipStore";
+// import { useJobStore } from "~/stores/JobStore";
+// import { useTotalStore } from '~/stores/TotalStore'
 
 
 import type { Database } from '~/types/database'
@@ -9,9 +9,9 @@ export default function () {
     const client = useSupabaseClient();
     const user = useSupabaseUser();
     /* Store Definitions */
-    const tipStore = useTipStore();
-    const jobStore = useJobStore();
-    const totalStore = useTotalStore();
+    // const tipStore = useTipStore();
+    // const jobStore = useJobStore();
+    // const totalStore = useTotalStore();
 
     function addTotals(job, idx, arr) {
         //#region Tip Out

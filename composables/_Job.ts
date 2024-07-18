@@ -1,19 +1,21 @@
-export function useNext() {
+export function use_Job() {
+
+
   function link() {
-    const store = useAddJobStore()
+    const store = useJobStore()
     store._sourceLink()
   }
 
   function step() {
     const route = useRoute()
-    const store = useAddJobStore()
+    const store = useJobStore()
     if (route.path === '/add-job-start' || '/add-job-info' || '/Add-job-start') {
       navigateTo({ path: '/add-job-sales' })
       if (store.template === true && store._template === true) {
-        store.$set(1)
+        // store.$set(1)
       }
       else if (store.template === false && store._template === true) {
-        store.$set(0)
+        // store.$set(0)
       }
       store._template = false
     }
@@ -28,5 +30,13 @@ export function useNext() {
       store.post()
     }
   }
-  return { step }
+
+  function back() {
+    const router = useRouter()
+    const store = useCreateJobStore()
+    store.resetPair()
+    router.back()
+  }
+
+  return { step, back }
 }

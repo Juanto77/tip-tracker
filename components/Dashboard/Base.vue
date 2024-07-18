@@ -23,7 +23,7 @@ import { useDashboardStore } from '~/stores/Dashboard';
 const dayjs = useDayjs();
 const day = dayjs().format('YYYY-MM-DD');
 
-const store = useDashboardStore();
+// const store = useDashboardStore();
 // const dataFetch = store.incomeData;
 
 ///////////////////////////////////////////////////////////////////////////////////////////

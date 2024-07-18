@@ -1,0 +1,83 @@
+{
+    "createJob": {
+        "jobName": "",
+        "_active": true,
+        "_calculate": false,
+        "_advanced": true,
+        "template": false,
+        "_template": false,
+        "saleSource": [
+      {
+        "id": "1081203b-67de-4620-9153-c1c7b55c8b8c",
+        "name": "Food Sales",
+        "code": "fSales",
+        "active": false,
+        "income": 0
+    },
+    {
+        "id": "612cd97e-d0a7-4d7b-b699-138f413d0cc0",
+        "name": "Beer Sales",
+        "code": "bSales",
+        "active": false,
+        "income": 0
+    },
+    {
+        "id": "2a7345a5-b620-4a66-a98c-f67c93652cf0",
+        "name": "Liquor Sales",
+        "code": "liqSales",
+        "active": false,
+        "income": 0
+    },
+    {
+        "id": "6d5aee84-6600-40ed-9da8-23b9705e718e",
+        "name": "Wine Sales",
+        "code": "wiSales",
+        "active": false,
+        "income": 0
+    },
+    {
+        "id": "704223ef-d04a-42d0-b564-9fb61258d1a5",
+        "name": "Retail Sales",
+        "code": "retSailes",
+        "active": false,
+        "income": 0
+    }
+        ],
+        "poolSource": [
+           {
+            "id": "f47cb342-675f-4673-8140-1b6a50a9c521",
+            "name": "Food Runner",
+            "code": "frPool",
+            "_child": {},
+            "active": false,
+            "sum": 0,
+            "percent": 0
+        },
+        {
+            "id": "ba56d0d9-1b49-44cc-919f-5d71e14d25df",
+            "name": "Bar",
+            "code": "barPool",
+            "active": false,
+            "sum": 0,
+            "percent": 0
+        },
+        {
+            "id": "f0fce236-bcec-4ec6-b70d-8695943e125a",
+            "name": "Host",
+            "code": "hPool",
+            "active": false,
+            "sum": 0,
+            "percent": 0
+        },
+        {
+            "id": "4444c709-692c-4482-8e1f-f8d3f4ea8fbb",
+            "name": "Busser",
+            "code": "busPool",
+            "active": false,
+            "sum": 0,
+            "percent": 0
+        }
+        ],
+        "pairSource": {}
+    }
+}

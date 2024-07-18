@@ -40,5 +40,6 @@
     "yaml",
     "toml",
     "astro",
-  ]
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

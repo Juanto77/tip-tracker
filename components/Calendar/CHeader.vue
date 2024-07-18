@@ -5,7 +5,7 @@
                 <h1 @click="timeline.shiftView(-1)">BACK</h1>
             </div>
             <div>
-                <UIDropDown v-model="timeline.viewSelect" :options="viewList" />
+                <SelectButton v-model="timeline.viewSelect" :options="timeline.viewList" optionLabel="name"/>
             </div>
             <div class="grow text-center">
                 <h1 class="monthName">{{ timeline.currentMonth }}</h1>
@@ -36,13 +36,14 @@ const emits = defineEmits(['update:modelValue']);
 import { useDashboardStore } from '~/stores/DashboardStore';
 import { useTimelineStore } from '~/stores/TimelineStore';
 import { useCalendar } from '~/composables/useCalendar';
+import Select from 'primevue/select';
 
 const { prependCalendar, calendar } = useCalendar()
 
 
 const dayjs = useDayjs();
 const timeline = useTimelineStore();
-const store = useDashboardStore();
+// const store = useDashboardStore();
 // const calendar = useCalendarStore();
 
 const viewList = ref([
@@ -51,7 +52,7 @@ const viewList = ref([
     { name: 'Year', code: 'y' }
 ])
 
-store.fetch();
+// store.fetch();
 
 /* Types */
 type Props = {

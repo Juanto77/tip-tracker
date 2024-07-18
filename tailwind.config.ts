@@ -9,7 +9,7 @@ export default <Partial<Config>>{
   theme: {
     extend: {
       colors: {
-        /*
+        
                 'primary-50': 'rgb(var(--primary-50))',
                 'primary-100': 'rgb(var(--primary-100))',
                 'primary-200': 'rgb(var(--primary-200))',
@@ -39,11 +39,11 @@ export default <Partial<Config>>{
                 'Celadon': '#BCD8c1',
                 'Flax': '#E9D985',
                 'White-Smoke': '#F2F4F3'
-        */
+        
       },
     },
   },
   plugins: [
-
+    require('tailwindcss-primeui')
   ],
 };

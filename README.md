@@ -1,18 +1,8 @@
-Add to ~/package.json
-`"{COMMAND}" : "pnpm --filter @tip-tracker/Dashboard dev"`
+# Change log
 
-Add Dependencies to app/core
-`pnpm add -D @tip-tracker/Dashboard`
-
-Extend in nuxt.config.ts
-`'../../package/Dashboard'`
-
-# Todo
-
-- Create User pref store
-- create layout for dashboard
-    - include props
-
-
-# Dayjs
-- [Advanced Format](https://day.js.org/docs/en/plugin/advanced-format)
+7/18/2024:
+- Re-wrote Dashboard to be one component
+- Fixed add job page
+- Renamed Add Tip Store to Tip Store and refactored the tip-out calculation
+- started structuring the data for display using income store
+- theres probably alot more but this is just a start

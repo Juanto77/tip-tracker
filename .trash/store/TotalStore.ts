@@ -1,6 +1,6 @@
 import { defineStore, acceptHMRUpdate } from 'pinia'
-import { useJobStore } from './JobStore';
-import { useTipStore } from './TipStore';
+// import { useJobStore } from './JobStore';
+// import { useTipStore } from './TipStore';
 
 
 export const useTotalStore = defineStore('Get Totals', {

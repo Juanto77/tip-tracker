@@ -25,7 +25,7 @@
     </NuxtLink>
   </li>
   <li>
-    <NuxtLink to="/Dashboard/AddTip">
+    <NuxtLink to="/add-tip">
       Add Tip
     </NuxtLink>
   </li>

@@ -1,6 +1,6 @@
 <template>
     <div class="container mx-auto w-auto max-w-full">
-        <HeaderMenuBar />
+        <ZHeaderBase />
         <main class="my-3">
             <slot />
         </main>
@@ -9,6 +9,7 @@
 
 <script setup>
 // Link to Google Fonts
+/* 
 useHead({
     link: [
         {
@@ -22,13 +23,16 @@ useHead({
         }
     ]
 });
+ */
 </script>
 
 <style>
 /* Set the font family for the entire site */
+/* 
 body {
     font-family: 'Inter';
-}
+} 
+*/
 
 /* Set the background color for the entire site */
 body {

@@ -16,7 +16,6 @@
 
         <template #end>
             <div class="flex align-items-center gap-2">
-                <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
             </div>
         </template>
     </Menubar>
@@ -24,7 +23,6 @@
 
 <script setup>
 import { ref } from "vue";
-import Badge from "primevue/badge";
 
 const items = ref([
     {

@@ -130,12 +130,13 @@ interface pairSource {
 
 
 /* Insert Updates to database */
-    const { error } = await client
+    const { data, error } = await client
       .from('user_jobs')
       .insert(updates)
     if (error) {
       console.log(error)
     }
+    console.log(updates)
   }
 
 

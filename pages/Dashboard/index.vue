@@ -2,9 +2,9 @@
     <CalendarCHeader />
 
     <div class="grid grid-cols-2 gap-1">
-        <div class="m-10">
+        <!-- <div class="m-10">
             <Chart type="line" :data="chartData" :options="chartOptions" />
-        </div>
+        </div> -->
         <div class="m-10">
             <CalendarMonthView />
         </div>
@@ -17,16 +17,17 @@
     import { useTimelineStore } from '~/stores/TimelineStore';
     import { Bar } from 'vue-chartjs';
     /* Dayjs */
-    const dayjs = useDayjs();
-    const day = dayjs().format('YYYY-MM-DD');
+    // const dayjs = useDayjs();
+    // const day = dayjs().format('YYYY-MM-DD');
 
     /* Stores */
-    const timeline = useTimelineStore()
-    const income = useIncomeData()
-    const { dailyIncome, monthlyIncome, getIncome } = storeToRefs(useIncomeData())
-    income.getIncome()
+    // const timeline = useTimelineStore()
+    // const income = useIncomeData()
+    // const { dailyIncome, monthlyIncome, getIncome } = storeToRefs(useIncomeData())
+    // income.getIncome()
 
     /* Chart Data */
+/*     
     const chartData = ref({
         // labels: income.dailyIncome,
         // type: 'bar',
@@ -39,7 +40,7 @@
                 tension: 0.4 // For Line Graphs
             },
         ],
-    });
+    }); */
 
     const chartOptions = ref({
         responsive: true,

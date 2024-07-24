@@ -23,7 +23,7 @@ if (route.params.crud === 'edit' ){
     console.log(route.params.id)
     // console.log($route.params.id)
     store.getTips(route.params.id)
-    currentView = resolveComponent('IncomeTip')
+    currentView = resolveComponent('IncomeAddTip')
 }
 
 

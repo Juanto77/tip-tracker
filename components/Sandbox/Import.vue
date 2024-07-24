@@ -38,9 +38,11 @@ data.forEach((o, idx, arr)=>{
     ///////////////////////////////////////////////////////////////////////////////////////////
 
     const id = use_uid()
-    const jobID = "40784d56-39da-412c-9b57-2db4e8b79d5d"
+    // const jobID = "40784d56-39da-412c-9b57-2db4e8b79d5d" // Q39 
+    const jobID = "a6d1241c-033d-4496-a07c-e08d9f70b9de" // Q39 Comp
     const userID = "a74c9361-2585-4154-91f8-3d378d51377e"
     const jobName = "Q39"
+    const date = dataDate
     const inTime = dataDate + 'T' + dataInTime
     const outTime = dataDate + 'T' + dataOut
     const cashTip = dataCash
@@ -255,7 +257,7 @@ const pairSource = {
 }
 
 
-block.push({id, jobID, userID, inTime, outTime, cashTip, creditTip, totalGuest, totalSales, grossIncome, cardFee, totalHours, totalTipOut, netIncome, saleSource, pairSource, poolSource})
+block.push({id, jobID, userID, jobName, date, inTime, outTime, cashTip, creditTip, totalGuest, totalSales, grossIncome, cardFee, totalHours, totalTipOut, netIncome, saleSource, pairSource, poolSource})
 
     // block[use_uid()] = {id, jobID, inTime, outTime, cashTip, creditTip, totalGuest, totalSales, grossIncome, cardFee, totalHours, totalTipOut, netIncome, saleSource, pairSource, poolSource}
 

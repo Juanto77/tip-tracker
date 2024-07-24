@@ -19,7 +19,6 @@ export default defineNuxtConfig({
     '@nuxt/devtools',
     '@nuxtjs/supabase',
     '@pinia/nuxt',
-    '@pinia-orm/nuxt',
     'dayjs-nuxt',
     '@pinia-plugin-persistedstate/nuxt',
     '@primevue/nuxt-module',

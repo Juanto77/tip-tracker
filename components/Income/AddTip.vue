@@ -3,7 +3,7 @@
     const client = useSupabaseClient<Database>();
     const user = useSupabaseUser();
     const tipStore = useTipStore();
-    // tipStore.jobPull()
+    tipStore.jobPull()
     import InputNumber from 'primevue/inputnumber';
     
     ///////////////////////////////////////////////////////////////////////////////////////////
@@ -17,7 +17,7 @@
         <div class="w-4/6">
             <div class="card">
                 <label for="jobSelection">Job</label>
-                <Select v-model="tipStore.jobSelect" :options="tipStore.jobArray" optionLabel="job_name" />
+                <Select v-model="tipStore.jobSelect" :options="tipStore.jobArray" optionLabel="job_name" :onclick="tipStore.$setState" />
             </div>
             <div class="card">
                 <div class="columns-2">
@@ -36,14 +36,14 @@
                         <label for="cashTip" class="block pb-2 font-normal">Cash Tip</label>
                         <InputGroup>
                             <InputGroupAddon>$</InputGroupAddon>
-                            <InputNumber v-model="tipStore.cashTip" id="cashTip" />
+                            <InputNumber v-model="tipStore.cashTip" id="cashTip" :minFractionDigits="2" :maxFractionDigits="5"/>
                         </InputGroup>
                     </div>
                     <div>
                         <label for="cardTip" class="block pb-2 font-normal">Card Tip</label>
                         <InputGroup>
                             <InputGroupAddon>$</InputGroupAddon>
-                            <InputNumber v-model="tipStore.creditTip" id="cardTip" />
+                            <InputNumber v-model="tipStore.creditTip" id="cardTip" :minFractionDigits="2" :maxFractionDigits="5"/>
                         </InputGroup>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                         <label :for="`${item.name}_sales`">{{ item.name }}</label>
                         <InputGroup>
                             <InputGroupAddon>$</InputGroupAddon>
-                            <InputNumber :id="`${item.name}_sales`" v-model="item.sales" />
+                            <InputNumber :id="`${item.name}_sales`" v-model="item.sales" :minFractionDigits="2" :maxFractionDigits="5"/>
                         </InputGroup>
                     </div>
 

@@ -11,13 +11,13 @@ export function use_Job() {
     const store = useJobStore()
     if (route.path === '/add-job-start' || '/add-job-info' || '/Add-job-start') {
       navigateTo({ path: '/add-job-sales' })
-      if (store.template === true && store._template === true) {
+  /*     if (store.template === true && store._template === true) {
         // store.$set(1)
       }
       else if (store.template === false && store._template === true) {
         // store.$set(0)
       }
-      store._template = false
+      store._template = false */
     }
     if (route.path === '/add-job-sales') {
       navigateTo({ path: '/add-job-pool' })
@@ -33,7 +33,7 @@ export function use_Job() {
 
   function back() {
     const router = useRouter()
-    const store = useCreateJobStore()
+    const store = useJobStore()
     store.resetPair()
     router.back()
   }

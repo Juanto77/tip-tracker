@@ -66,16 +66,21 @@
 <script setup lang="ts">
 
     import { useTimelineStore } from '~/stores/TimelineStore';
-    import { useCalendar } from '~/composables/useCalendar';
+    // import { useCalendar } from '~/composables/useCalendar';
     import advancedFormat from 'dayjs/plugin/advancedFormat'
 
     const timeline = useTimelineStore()
     const incomeStore = useIncomeData()
     const { incomeData } = storeToRefs(useIncomeData())
-    const { _currentMonth, viewDate } = storeToRefs(useTimelineStore())
+    const { _currentMonth, viewDate, prependCalendar, calendar, weekDays, _viewEnd, _viewStart } = storeToRefs(useTimelineStore())
+
+    const start = JSON.stringify(_viewStart.value)
+    const end = JSON.stringify(_viewEnd.value)
+
+      incomeStore.getIncome(_viewStart.value, _viewEnd.value)
 
 
-    const { weekDays, prependCalendar, calendar } = useCalendar()
+    // const { weekDays, prependCalendar, calendar } = useCalendar()
 
     const day = useDayjs();
     day.extend(advancedFormat)

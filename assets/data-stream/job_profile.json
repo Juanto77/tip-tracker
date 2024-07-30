@@ -1,0 +1,122 @@
+{
+    "id":"18464e1a-8a0d-4883-9b56-1f82716887eb",
+    "user_id": "a74c9361-2585-4154-91f8-3d378d51377e",
+    "job_name": "Q39",
+    "source_pair":{
+        "pool_103a6b8d-b7a4-4423-a488-014486e07fe7": {
+            "_name": "Food",
+            "_child": {
+                "sale_671c0bf9-053d-4ac8-88c1-16f6c41bfb78": {
+                    "_name": "Liquor",
+                    "_value": false
+                },
+                "sale_7429008f-79c2-4d8e-94e0-d54bb3f291d1": {
+                    "_name": "Wine",
+                    "_value": false
+                },
+                "sale_8d64d4d3-17db-4478-837c-0c29df45a911": {
+                    "_name": "Retail",
+                    "_value": false
+                },
+                "sale_9f561f76-1333-4f93-80a6-fd993ade3cf3": {
+                    "_name": "Food",
+                    "_value": true
+                },
+                "sale_fd9e0268-aaee-4e8e-bd25-70e1a30a86aa": {
+                    "_name": "Beer",
+                    "_value": false
+                }
+            }
+        },
+        "pool_9b865656-f192-43e9-ad1a-99d37c40d2a5": {
+            "_name": "Bus",
+            "_child": {
+                "sale_671c0bf9-053d-4ac8-88c1-16f6c41bfb78": {
+                    "_name": "Liquor",
+                    "_value": true
+                },
+                "sale_7429008f-79c2-4d8e-94e0-d54bb3f291d1": {
+                    "_name": "Wine",
+                    "_value": true
+                },
+                "sale_8d64d4d3-17db-4478-837c-0c29df45a911": {
+                    "_name": "Retail",
+                    "_value": false
+                },
+                "sale_9f561f76-1333-4f93-80a6-fd993ade3cf3": {
+                    "_name": "Food",
+                    "_value": true
+                },
+                "sale_fd9e0268-aaee-4e8e-bd25-70e1a30a86aa": {
+                    "_name": "Beer",
+                    "_value": true
+                }
+            }
+        },
+        "pool_d9ba3b04-8058-4874-a70f-d4a5abbd3a58": {
+            "_name": "Bar",
+            "_child": {
+                "sale_671c0bf9-053d-4ac8-88c1-16f6c41bfb78": {
+                    "_name": "Liquor",
+                    "_value": true
+                },
+                "sale_7429008f-79c2-4d8e-94e0-d54bb3f291d1": {
+                    "_name": "Wine",
+                    "_value": true
+                },
+                "sale_8d64d4d3-17db-4478-837c-0c29df45a911": {
+                    "_name": "Retail",
+                    "_value": false
+                },
+                "sale_9f561f76-1333-4f93-80a6-fd993ade3cf3": {
+                    "_name": "Food",
+                    "_value": false
+                },
+                "sale_fd9e0268-aaee-4e8e-bd25-70e1a30a86aa": {
+                    "_name": "Beer",
+                    "_value": true
+                }
+            }
+        }
+    },
+    "sale_source": {
+        "sale_671c0bf9-053d-4ac8-88c1-16f6c41bfb78": {
+            "_name": "Liquor",
+            "_value": false
+        },
+        "sale_7429008f-79c2-4d8e-94e0-d54bb3f291d1": {
+            "_name": "Wine",
+            "_value": false
+        },
+        "sale_8d64d4d3-17db-4478-837c-0c29df45a911": {
+            "_name": "Retail",
+            "_value": false
+        },
+        "sale_9f561f76-1333-4f93-80a6-fd993ade3cf3": {
+            "_name": "Food",
+            "_value": false
+        },
+        "sale_fd9e0268-aaee-4e8e-bd25-70e1a30a86aa": {
+            "_name": "Beer",
+            "_value": false
+        }
+    },
+    "active": "TRUE",
+    "calculate": "TRUE",
+    "advanced": "TRUE",
+    "pool_source":{
+        "pool_103a6b8d-b7a4-4423-a488-014486e07fe7": {
+            "_name": "Food",
+            "_value": false
+        },
+        "pool_9b865656-f192-43e9-ad1a-99d37c40d2a5": {
+            "_name": "Bus",
+            "_value": false
+        },
+        "pool_d9ba3b04-8058-4874-a70f-d4a5abbd3a58": {
+            "_name": "Bar",
+            "_value": false
+        }
+    }
+
+}

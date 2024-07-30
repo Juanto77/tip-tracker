@@ -1,1 +1,8 @@
-Create a cross-platform app that will store data from user input, calculate tip out based on percentages provided by the user and sum up the total amout of income per shift, week, month and year. This app will also provide the ability for the user to define custom parameters for a desired output (i.e what is the percentage of liquor sales, what are their sales on every thursday, what were their sales on _this_ day last year, etc...), calculate estimated taxes on both the federal and state level while accounting for the taxes already paid by their hourly.
+# Change log
+
+7/18/2024:
+- Re-wrote Dashboard to be one component
+- Fixed add job page
+- Renamed Add Tip Store to Tip Store and refactored the tip-out calculation
+- started structuring the data for display using income store
+- theres probably alot more but this is just a start

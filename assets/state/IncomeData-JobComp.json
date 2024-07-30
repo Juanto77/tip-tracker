@@ -1,0 +1,1656 @@
+{
+    "Income Data": {
+        "loading": false,
+        "incomeData": {},
+        "dailyIncome": {},
+        "monthlyIncome": {},
+        "yearIncome": 0,
+        "rawJobComp": [
+            {
+                "active": true,
+                "id": "40784d56-39da-412c-9b57-2db4e8b79d5d",
+                "job_name": "Q39",
+                "user_tip": [
+                    {
+                        "id": "bbb3651f-0013-4221-972e-5326101833b5",
+                        "date": "2024-01-11",
+                        "netIncome": 234.89
+                    },
+                    {
+                        "id": "86df92e0-e127-4a19-8fb8-269cad3515d3",
+                        "date": "2024-01-13",
+                        "netIncome": 392.71
+                    },
+                    {
+                        "id": "128400a7-e1b7-46ce-bb97-eb9ba1dc5190",
+                        "date": "2024-01-14",
+                        "netIncome": 309.99
+                    },
+                    {
+                        "id": "47d1fb48-40ce-496c-ab2f-cfa6b41a1f8c",
+                        "date": "2024-01-19",
+                        "netIncome": 48.06
+                    },
+                    {
+                        "id": "bd3e079e-3029-4445-9397-7099a35b0d5d",
+                        "date": "2024-01-20",
+                        "netIncome": 343.58
+                    },
+                    {
+                        "id": "28695bf0-25b3-4f6a-b8b0-f2a54cee3ca9",
+                        "date": "2024-01-25",
+                        "netIncome": 321.34
+                    },
+                    {
+                        "id": "56ffc8f5-f7dc-4207-b050-e63230c0c158",
+                        "date": "2024-01-26",
+                        "netIncome": 524.9
+                    },
+                    {
+                        "id": "5192b920-8324-402a-8c5e-35b75f2db01b",
+                        "date": "2024-01-27",
+                        "netIncome": 382.63
+                    },
+                    {
+                        "id": "296dbe56-7aff-46d4-b395-f7db1706daa9",
+                        "date": "2024-02-02",
+                        "netIncome": 175.42
+                    },
+                    {
+                        "id": "9a6a6b68-924d-4265-ad61-fd22bcc1cf6d",
+                        "date": "2024-02-03",
+                        "netIncome": 705.18
+                    },
+                    {
+                        "id": "f8480e2e-ee19-4164-83b5-d9e199d9edf9",
+                        "date": "2024-02-09",
+                        "netIncome": 699.83
+                    },
+                    {
+                        "id": "8e872d13-0931-43ae-a778-8f477d2afd9b",
+                        "date": "2024-02-10",
+                        "netIncome": 863.78
+                    },
+                    {
+                        "id": "61d88ea6-0d19-4524-824c-651cc8226f6a",
+                        "date": "2024-02-22",
+                        "netIncome": 243.13
+                    },
+                    {
+                        "id": "87c6b9cb-960f-4cd7-9981-5c8087dd5346",
+                        "date": "2024-02-23",
+                        "netIncome": 546.92
+                    },
+                    {
+                        "id": "c882616f-74ec-4b95-8b3b-982180498b95",
+                        "date": "2024-02-24",
+                        "netIncome": 710.75
+                    },
+                    {
+                        "id": "b43e3ea1-5759-40f2-9c9b-50207c4ef25f",
+                        "date": "2024-02-25",
+                        "netIncome": 221.19
+                    },
+                    {
+                        "id": "c135c326-d9ec-40bc-ae9b-e472438bc8f3",
+                        "date": "2024-02-29",
+                        "netIncome": 245.06
+                    },
+                    {
+                        "id": "2338c1cd-78c6-4824-b5e8-429926268812",
+                        "date": "2024-03-01",
+                        "netIncome": 112.56
+                    },
+                    {
+                        "id": "b94b87fd-850b-4791-92c5-41b0a2a37c47",
+                        "date": "2024-03-02",
+                        "netIncome": 648.14
+                    },
+                    {
+                        "id": "e3929cf7-6532-4bff-b7f8-143e172c6de1",
+                        "date": "2024-03-03",
+                        "netIncome": 341.07
+                    },
+                    {
+                        "id": "1e176ba3-3b62-43b2-979a-f319a9e38782",
+                        "date": "2024-03-07",
+                        "netIncome": 309.21
+                    },
+                    {
+                        "id": "df46e602-cdb4-42f7-915d-8e6e6a01db73",
+                        "date": "2024-03-08",
+                        "netIncome": 478.22
+                    },
+                    {
+                        "id": "debdf01f-7edb-40ac-be2c-8ae78ea8ad94",
+                        "date": "2024-03-09",
+                        "netIncome": 769.6
+                    },
+                    {
+                        "id": "7b66fd91-c515-4649-8f1a-b09a7f9b6227",
+                        "date": "2024-03-14",
+                        "netIncome": 189.53
+                    },
+                    {
+                        "id": "4d39367d-d461-4306-bdfb-6e096043c5ae",
+                        "date": "2024-03-15",
+                        "netIncome": 648.2
+                    },
+                    {
+                        "id": "12fa7bc8-c38a-45c2-b35c-d8d23ba49ce0",
+                        "date": "2024-03-16",
+                        "netIncome": 746.95
+                    },
+                    {
+                        "id": "b0801a64-5a4c-4f1a-9c75-fab16ebcebe2",
+                        "date": "2024-03-17",
+                        "netIncome": 420.91
+                    },
+                    {
+                        "id": "52b4790e-ff79-4d5e-9bf8-20f17f80eb2b",
+                        "date": "2024-03-22",
+                        "netIncome": 795.09
+                    },
+                    {
+                        "id": "68eb627c-65ba-4e15-b79b-526f6c9e4d5e",
+                        "date": "2024-03-23",
+                        "netIncome": 1048.33
+                    },
+                    {
+                        "id": "8f6cc926-c147-4838-be9b-b810cf155817",
+                        "date": "2024-03-24",
+                        "netIncome": 741.75
+                    },
+                    {
+                        "id": "4e55d267-8b7f-4f9f-8668-eab683dff0b3",
+                        "date": "2024-03-29",
+                        "netIncome": 245.79
+                    },
+                    {
+                        "id": "c7973cdd-a2af-4979-b242-67b8a5bd2bd2",
+                        "date": "2024-03-30",
+                        "netIncome": 354.45
+                    },
+                    {
+                        "id": "c746cf81-8b94-4772-b8b7-565a276a1c7e",
+                        "date": "2024-04-04",
+                        "netIncome": 160.91
+                    },
+                    {
+                        "id": "f3a411db-a71b-4a7e-8b18-2743a752ee21",
+                        "date": "2024-04-06",
+                        "netIncome": 836.52
+                    },
+                    {
+                        "id": "ad62773d-36b7-4310-bc43-016badd3eb4f",
+                        "date": "2024-04-28",
+                        "netIncome": 334.79
+                    },
+                    {
+                        "id": "5a53f488-dbc2-40e2-ada7-7ff3d78ad540",
+                        "date": "2024-05-02",
+                        "netIncome": 303.56
+                    },
+                    {
+                        "id": "76d1f104-8d86-43a0-96b4-e94a62781442",
+                        "date": "2024-05-03",
+                        "netIncome": 747.63
+                    },
+                    {
+                        "id": "5003b7c9-6144-491e-8a91-dfe0f9294bc3",
+                        "date": "2024-05-04",
+                        "netIncome": 742.65
+                    },
+                    {
+                        "id": "a5e82a61-bed4-4954-a0ed-9b5cfd878e25",
+                        "date": "2024-05-05",
+                        "netIncome": 691.3
+                    },
+                    {
+                        "id": "1ad6e73d-a938-46bc-a266-2120c1ce8631",
+                        "date": "2024-05-11",
+                        "netIncome": 618.34
+                    },
+                    {
+                        "id": "798802e0-dcf8-49b9-a0f9-d8dd6a18c612",
+                        "date": "2024-05-12",
+                        "netIncome": 742.18
+                    },
+                    {
+                        "id": "b34a2579-ce40-45ce-b022-c513b515ddd7",
+                        "date": "2024-05-17",
+                        "netIncome": 301.2
+                    },
+                    {
+                        "id": "b32693b6-101e-4f37-8c48-0c9742775e0b",
+                        "date": "2024-05-18",
+                        "netIncome": 376.96
+                    },
+                    {
+                        "id": "82b54fa8-06f4-457c-b47c-f007f32e56d0",
+                        "date": "2024-05-19",
+                        "netIncome": 403.63
+                    },
+                    {
+                        "id": "4b8dc2a3-3967-44c8-8e61-512f930e870f",
+                        "date": "2024-05-23",
+                        "netIncome": 283.17
+                    },
+                    {
+                        "id": "83072967-657b-4098-a82d-33ea0729b9dc",
+                        "date": "2024-05-24",
+                        "netIncome": 309.98
+                    },
+                    {
+                        "id": "f18550ad-c7d1-4017-8a61-97bf611b9f96",
+                        "date": "2024-05-25",
+                        "netIncome": 754.38
+                    },
+                    {
+                        "id": "366c7b1e-b53a-4d67-b89f-db393f880293",
+                        "date": "2024-05-26",
+                        "netIncome": 771.18
+                    },
+                    {
+                        "id": "9bc627d7-e86d-4db0-8e73-f735fc6f77f1",
+                        "date": "2024-06-06",
+                        "netIncome": 272.19
+                    },
+                    {
+                        "id": "846dbcbf-f1f4-4a86-ba99-dcfcb094d78e",
+                        "date": "2024-06-07",
+                        "netIncome": 551.32
+                    },
+                    {
+                        "id": "7621d65b-c144-47ba-8222-cc8b12b6cad5",
+                        "date": "2024-06-09",
+                        "netIncome": 227.19
+                    },
+                    {
+                        "id": "c6e3df31-d6d6-427e-9fe0-9483eca561d5",
+                        "date": "2024-06-13",
+                        "netIncome": 292.72
+                    },
+                    {
+                        "id": "4a782120-7bb3-4d49-b8b7-707fbc3a2fd3",
+                        "date": "2024-06-14",
+                        "netIncome": 751.56
+                    },
+                    {
+                        "id": "694b28f1-12ad-4501-80ae-e5d8a5c34000",
+                        "date": "2024-06-15",
+                        "netIncome": 663.97
+                    },
+                    {
+                        "id": "dbab8753-e183-462b-a1eb-42cea9efb49a",
+                        "date": "2024-06-16",
+                        "netIncome": 274.46
+                    },
+                    {
+                        "id": "59d32bb2-1b4f-4e81-b773-53f080549d95",
+                        "date": "2024-06-20",
+                        "netIncome": 248.06
+                    },
+                    {
+                        "id": "5d9e64d0-3e83-4685-84a5-ffbd89d0587a",
+                        "date": "2024-06-21",
+                        "netIncome": 849.26
+                    },
+                    {
+                        "id": "f5eb8ceb-cb7e-4fe3-b2fc-fa9cd60ba5cf",
+                        "date": "2024-06-22",
+                        "netIncome": 761.42
+                    },
+                    {
+                        "id": "3bf8505f-abe7-4147-9a8b-3277e44d5036",
+                        "date": "2024-06-26",
+                        "netIncome": 353.11
+                    },
+                    {
+                        "id": "fdda21af-05b9-4259-a778-d5b829705ecb",
+                        "date": "2024-06-27",
+                        "netIncome": 161.48
+                    },
+                    {
+                        "id": "9f6e79c6-c064-4533-b2f2-706952ed3209",
+                        "date": "2024-06-28",
+                        "netIncome": 207.48
+                    },
+                    {
+                        "id": "9a82c8c9-0e48-4751-8a6f-c839b323f32d",
+                        "date": "2024-06-28",
+                        "netIncome": 252.95
+                    },
+                    {
+                        "id": "08989a2a-1c7c-45da-adf0-8c3cec2ef457",
+                        "date": "2024-06-29",
+                        "netIncome": 782.35
+                    },
+                    {
+                        "id": "ce691145-39ca-4b70-8535-cb3725e7f3c5",
+                        "date": "2024-06-30",
+                        "netIncome": 815.86
+                    },
+                    {
+                        "id": "b7ad58e5-1dda-43e3-bbff-0f5bc7ba6071",
+                        "date": "2024-07-01",
+                        "netIncome": 310.53
+                    },
+                    {
+                        "id": "e29b5e56-35be-49a3-af20-e4ae4a867718",
+                        "date": "2024-07-04",
+                        "netIncome": 257.17
+                    },
+                    {
+                        "id": "1a7f4651-1085-4841-a9e7-3856f476aa4f",
+                        "date": "2024-07-05",
+                        "netIncome": 329.15
+                    },
+                    {
+                        "id": "5cde24cc-6b76-4f71-bedd-2a7050e6d1a7",
+                        "date": "2024-07-06",
+                        "netIncome": 296.08
+                    },
+                    {
+                        "id": "b4d26adc-d0f0-402f-9265-f5a25b682168",
+                        "date": "2024-07-07",
+                        "netIncome": 632.68
+                    },
+                    {
+                        "id": "2c1acdbf-8a80-49eb-a294-be5a3529fc98",
+                        "date": "2024-07-11",
+                        "netIncome": 250.09
+                    },
+                    {
+                        "id": "1dbc9f00-f8ca-4d6f-a4b6-73066dd58376",
+                        "date": "2024-07-12",
+                        "netIncome": 713.07
+                    },
+                    {
+                        "id": "4fca5d2b-0f2d-4e10-bb0e-179e7516a271",
+                        "date": "2024-07-13",
+                        "netIncome": 757
+                    },
+                    {
+                        "id": "d82ac63f-0e22-4971-85c9-b5bb98c1649e",
+                        "date": "2024-07-14",
+                        "netIncome": 304.38
+                    }
+                ]
+            },
+            {
+                "active": true,
+                "id": "a6d1241c-033d-4496-a07c-e08d9f70b9de",
+                "job_name": "q39 comp",
+                "user_tip": [
+                    {
+                        "id": "64e96ddc-3223-450f-a39c-2eeeabf59599",
+                        "date": "2024-01-11",
+                        "netIncome": 234.89
+                    },
+                    {
+                        "id": "69d3bd9f-1609-4c5f-ac40-2068f1d10a4c",
+                        "date": "2024-01-13",
+                        "netIncome": 392.71
+                    },
+                    {
+                        "id": "d5af7eb6-e01f-49f1-ba5a-34153ec33ca9",
+                        "date": "2024-01-14",
+                        "netIncome": 309.99
+                    },
+                    {
+                        "id": "bc69a4ac-f2dc-4a5b-b7ec-a206b555759a",
+                        "date": "2024-01-19",
+                        "netIncome": 48.06
+                    },
+                    {
+                        "id": "343ac749-2c7a-4ec1-a4c8-0daa24d36d87",
+                        "date": "2024-01-20",
+                        "netIncome": 343.58
+                    },
+                    {
+                        "id": "ef18b8d5-89ba-499e-bb99-37ce6ea5fa8e",
+                        "date": "2024-01-25",
+                        "netIncome": 321.34
+                    },
+                    {
+                        "id": "27e5892b-ebfa-453d-bb70-657694d76901",
+                        "date": "2024-01-26",
+                        "netIncome": 524.9
+                    },
+                    {
+                        "id": "3fb3111c-9914-430e-a6eb-b64997d40869",
+                        "date": "2024-01-27",
+                        "netIncome": 382.63
+                    },
+                    {
+                        "id": "68c6415c-b623-4a90-a492-4c5b47f7268c",
+                        "date": "2024-02-02",
+                        "netIncome": 175.42
+                    },
+                    {
+                        "id": "e8c27953-c23b-4ee3-af50-5da0902a3190",
+                        "date": "2024-02-03",
+                        "netIncome": 705.18
+                    },
+                    {
+                        "id": "8739052f-4a73-4a62-9027-e88a58b508ac",
+                        "date": "2024-02-09",
+                        "netIncome": 699.83
+                    },
+                    {
+                        "id": "1e8f6329-db04-48d1-9cd2-b412a4248f69",
+                        "date": "2024-02-10",
+                        "netIncome": 863.78
+                    },
+                    {
+                        "id": "168caf14-9449-4015-a044-774b72586a83",
+                        "date": "2024-02-22",
+                        "netIncome": 243.13
+                    },
+                    {
+                        "id": "1e599b04-1f40-4b01-bf80-551623f8dae0",
+                        "date": "2024-02-23",
+                        "netIncome": 546.92
+                    },
+                    {
+                        "id": "8e47a5c8-6670-441d-b3a3-aa60dd3d7b3c",
+                        "date": "2024-02-24",
+                        "netIncome": 710.75
+                    },
+                    {
+                        "id": "3af1a296-6d65-45a1-856e-aa17c828d0a4",
+                        "date": "2024-02-25",
+                        "netIncome": 221.19
+                    },
+                    {
+                        "id": "d1c39792-04bb-47b5-ae62-32d784e50330",
+                        "date": "2024-02-29",
+                        "netIncome": 245.06
+                    },
+                    {
+                        "id": "49e7882d-9371-4917-9322-e4ed226f270a",
+                        "date": "2024-03-01",
+                        "netIncome": 112.56
+                    },
+                    {
+                        "id": "c8827d37-0454-4451-abcc-b89b851a7fe0",
+                        "date": "2024-03-02",
+                        "netIncome": 648.14
+                    },
+                    {
+                        "id": "b7d9086e-2d7f-4c79-86c1-f4f546a35d4d",
+                        "date": "2024-03-03",
+                        "netIncome": 341.07
+                    },
+                    {
+                        "id": "4275680b-ada1-4d1a-b898-71cfd6531c18",
+                        "date": "2024-03-07",
+                        "netIncome": 309.21
+                    },
+                    {
+                        "id": "165c1800-5e06-445a-a85a-244ac37ddd86",
+                        "date": "2024-03-08",
+                        "netIncome": 478.22
+                    },
+                    {
+                        "id": "d09174a1-cc3f-4bdf-86bd-600ba8ec9ef5",
+                        "date": "2024-03-09",
+                        "netIncome": 769.6
+                    },
+                    {
+                        "id": "1965def7-dfc5-4c20-bac2-f511a3727342",
+                        "date": "2024-03-14",
+                        "netIncome": 189.53
+                    },
+                    {
+                        "id": "21c413f6-759d-4aee-9506-e1ba6a62acaa",
+                        "date": "2024-03-15",
+                        "netIncome": 648.2
+                    },
+                    {
+                        "id": "d4a5fc1d-7cf6-4258-b2db-897f75f13f3d",
+                        "date": "2024-03-16",
+                        "netIncome": 746.95
+                    },
+                    {
+                        "id": "13d23b4a-df13-4d67-97d9-513aa068d88c",
+                        "date": "2024-03-17",
+                        "netIncome": 420.91
+                    },
+                    {
+                        "id": "c955bdb2-6180-4a4a-b1d0-646ed2cd6b96",
+                        "date": "2024-03-22",
+                        "netIncome": 795.09
+                    },
+                    {
+                        "id": "57b02e14-d60e-4b02-9336-6ecf1e01f754",
+                        "date": "2024-03-23",
+                        "netIncome": 1048.33
+                    },
+                    {
+                        "id": "6b614ca3-a999-4c25-95d5-79b6b15a1697",
+                        "date": "2024-03-24",
+                        "netIncome": 741.75
+                    },
+                    {
+                        "id": "9af63936-e636-4024-9f71-c466c2586c3c",
+                        "date": "2024-03-29",
+                        "netIncome": 245.79
+                    },
+                    {
+                        "id": "c516bfca-ea9c-42e4-9054-d3b4423be081",
+                        "date": "2024-03-30",
+                        "netIncome": 354.45
+                    },
+                    {
+                        "id": "5b7979a7-8ae1-47e6-9eb3-81ea0872e326",
+                        "date": "2024-04-04",
+                        "netIncome": 160.91
+                    },
+                    {
+                        "id": "b4c54540-3c21-40bc-be97-f964e0fb3053",
+                        "date": "2024-04-06",
+                        "netIncome": 836.52
+                    },
+                    {
+                        "id": "16defd7b-6c7e-4384-a428-94dd98847162",
+                        "date": "2024-04-28",
+                        "netIncome": 334.79
+                    },
+                    {
+                        "id": "9359dad8-8e46-448c-8b0f-fa03f21716cd",
+                        "date": "2024-05-02",
+                        "netIncome": 303.56
+                    },
+                    {
+                        "id": "2e9319a3-f502-4df6-b1d2-dabfddd7f6fb",
+                        "date": "2024-05-03",
+                        "netIncome": 747.63
+                    },
+                    {
+                        "id": "ac756a4c-da55-49d7-9dad-2b0ec3a49e6e",
+                        "date": "2024-05-04",
+                        "netIncome": 742.65
+                    },
+                    {
+                        "id": "d62adbc4-bdb1-4085-9dee-9384536e67ba",
+                        "date": "2024-05-05",
+                        "netIncome": 691.3
+                    },
+                    {
+                        "id": "fee5ac2b-a311-46b4-bc99-fe79a107b9c3",
+                        "date": "2024-05-11",
+                        "netIncome": 618.34
+                    },
+                    {
+                        "id": "1226debe-b95d-4edb-b1ee-67ce37d1b879",
+                        "date": "2024-05-12",
+                        "netIncome": 742.18
+                    },
+                    {
+                        "id": "8ad321a9-21ba-430d-b4d4-8586130e1cd2",
+                        "date": "2024-05-17",
+                        "netIncome": 301.2
+                    },
+                    {
+                        "id": "20a25482-e527-41cf-9f2b-853dd5b1130e",
+                        "date": "2024-05-18",
+                        "netIncome": 376.96
+                    },
+                    {
+                        "id": "23c14105-fd05-43d5-9092-44988e300b73",
+                        "date": "2024-05-19",
+                        "netIncome": 403.63
+                    },
+                    {
+                        "id": "0c5f854d-24e2-4e4b-9af4-13505d59887b",
+                        "date": "2024-05-23",
+                        "netIncome": 283.17
+                    },
+                    {
+                        "id": "cf8fdef1-b520-44a0-8401-81ae1166d2c4",
+                        "date": "2024-05-24",
+                        "netIncome": 309.98
+                    },
+                    {
+                        "id": "b2267556-c0ce-497e-b4eb-e67f9aa61f93",
+                        "date": "2024-05-25",
+                        "netIncome": 754.38
+                    },
+                    {
+                        "id": "bb1da267-cd31-4bb7-8663-83ce99c0ff92",
+                        "date": "2024-05-26",
+                        "netIncome": 771.18
+                    },
+                    {
+                        "id": "f73453ae-8e26-4463-afaf-2a354894ca1f",
+                        "date": "2024-06-06",
+                        "netIncome": 272.19
+                    },
+                    {
+                        "id": "50474960-7b69-465c-b25f-1bafd1f750f8",
+                        "date": "2024-06-07",
+                        "netIncome": 551.32
+                    },
+                    {
+                        "id": "b95395a2-3ad6-4442-9482-a775736ffbc0",
+                        "date": "2024-06-09",
+                        "netIncome": 227.19
+                    },
+                    {
+                        "id": "ba3cce19-cf66-4814-bf9a-d654a0c3666c",
+                        "date": "2024-06-13",
+                        "netIncome": 292.72
+                    },
+                    {
+                        "id": "38a808a8-a06c-44ac-b9a6-799b0cd155a3",
+                        "date": "2024-06-14",
+                        "netIncome": 751.56
+                    },
+                    {
+                        "id": "39fad836-1b1a-497f-a8b9-ea9c868dd462",
+                        "date": "2024-06-15",
+                        "netIncome": 663.97
+                    },
+                    {
+                        "id": "6aac43b0-65b5-4f17-b2d7-c578ca260406",
+                        "date": "2024-06-16",
+                        "netIncome": 274.46
+                    },
+                    {
+                        "id": "b97b6863-f86f-49a3-ba05-8fa1477cae74",
+                        "date": "2024-06-20",
+                        "netIncome": 248.06
+                    },
+                    {
+                        "id": "ae977875-9bf2-4c03-abf4-746c1f3fbcc7",
+                        "date": "2024-06-21",
+                        "netIncome": 849.26
+                    },
+                    {
+                        "id": "da6ce4bc-6e7b-431a-b47f-79b0d79ab950",
+                        "date": "2024-06-22",
+                        "netIncome": 761.42
+                    },
+                    {
+                        "id": "ff3721f5-5d3e-4232-9245-8501b8999dcc",
+                        "date": "2024-06-26",
+                        "netIncome": 353.11
+                    },
+                    {
+                        "id": "843e88d1-8f94-40f4-a17d-4458a60834cd",
+                        "date": "2024-06-27",
+                        "netIncome": 161.48
+                    },
+                    {
+                        "id": "9765ee88-dc1b-4db2-80ed-eddecbac54d0",
+                        "date": "2024-06-28",
+                        "netIncome": 207.48
+                    },
+                    {
+                        "id": "7351c3cd-eeb8-4484-9624-9aaa6843baf0",
+                        "date": "2024-06-28",
+                        "netIncome": 252.95
+                    },
+                    {
+                        "id": "84497fcb-ccb3-41a9-9969-141fa69a048c",
+                        "date": "2024-06-29",
+                        "netIncome": 782.35
+                    },
+                    {
+                        "id": "f75bd85f-5c5d-4591-89d6-2451d16dae0d",
+                        "date": "2024-06-30",
+                        "netIncome": 815.86
+                    },
+                    {
+                        "id": "2b302b3d-e53f-4856-be31-cd6761e07835",
+                        "date": "2024-07-01",
+                        "netIncome": 310.53
+                    },
+                    {
+                        "id": "72a1314d-cb2c-4f26-afa1-516f661f7d9b",
+                        "date": "2024-07-04",
+                        "netIncome": 257.17
+                    },
+                    {
+                        "id": "a9ff7cd8-6e44-42af-a6fa-1710cc561e76",
+                        "date": "2024-07-05",
+                        "netIncome": 329.15
+                    },
+                    {
+                        "id": "0fa19190-c03e-4a4f-8171-9f95c32c4d0a",
+                        "date": "2024-07-06",
+                        "netIncome": 296.08
+                    },
+                    {
+                        "id": "e9d7f98f-edb5-45a8-8b80-328101f3a368",
+                        "date": "2024-07-07",
+                        "netIncome": 632.68
+                    },
+                    {
+                        "id": "7f90ff20-553f-4a41-b457-90800be019b5",
+                        "date": "2024-07-11",
+                        "netIncome": 250.09
+                    },
+                    {
+                        "id": "3e4c55f0-e314-4b30-9aef-03e3822d34bb",
+                        "date": "2024-07-12",
+                        "netIncome": 713.07
+                    },
+                    {
+                        "id": "50837fb8-425e-4f39-abf2-c996ba733e62",
+                        "date": "2024-07-13",
+                        "netIncome": 757
+                    },
+                    {
+                        "id": "b4956dce-ea3a-4ba4-86e5-2ab584265276",
+                        "date": "2024-07-14",
+                        "netIncome": 304.38
+                    }
+                ]
+            }
+        ],
+        "jobComp": {
+            "40784d56-39da-412c-9b57-2db4e8b79d5d": {
+                "jobName": "Q39",
+                "jobID": "40784d56-39da-412c-9b57-2db4e8b79d5d",
+                "income": [
+                    {
+                        "id": "bbb3651f-0013-4221-972e-5326101833b5",
+                        "date": "2024-01-11",
+                        "netIncome": 234.89
+                    },
+                    {
+                        "id": "86df92e0-e127-4a19-8fb8-269cad3515d3",
+                        "date": "2024-01-13",
+                        "netIncome": 392.71
+                    },
+                    {
+                        "id": "128400a7-e1b7-46ce-bb97-eb9ba1dc5190",
+                        "date": "2024-01-14",
+                        "netIncome": 309.99
+                    },
+                    {
+                        "id": "47d1fb48-40ce-496c-ab2f-cfa6b41a1f8c",
+                        "date": "2024-01-19",
+                        "netIncome": 48.06
+                    },
+                    {
+                        "id": "bd3e079e-3029-4445-9397-7099a35b0d5d",
+                        "date": "2024-01-20",
+                        "netIncome": 343.58
+                    },
+                    {
+                        "id": "28695bf0-25b3-4f6a-b8b0-f2a54cee3ca9",
+                        "date": "2024-01-25",
+                        "netIncome": 321.34
+                    },
+                    {
+                        "id": "56ffc8f5-f7dc-4207-b050-e63230c0c158",
+                        "date": "2024-01-26",
+                        "netIncome": 524.9
+                    },
+                    {
+                        "id": "5192b920-8324-402a-8c5e-35b75f2db01b",
+                        "date": "2024-01-27",
+                        "netIncome": 382.63
+                    },
+                    {
+                        "id": "296dbe56-7aff-46d4-b395-f7db1706daa9",
+                        "date": "2024-02-02",
+                        "netIncome": 175.42
+                    },
+                    {
+                        "id": "9a6a6b68-924d-4265-ad61-fd22bcc1cf6d",
+                        "date": "2024-02-03",
+                        "netIncome": 705.18
+                    },
+                    {
+                        "id": "f8480e2e-ee19-4164-83b5-d9e199d9edf9",
+                        "date": "2024-02-09",
+                        "netIncome": 699.83
+                    },
+                    {
+                        "id": "8e872d13-0931-43ae-a778-8f477d2afd9b",
+                        "date": "2024-02-10",
+                        "netIncome": 863.78
+                    },
+                    {
+                        "id": "61d88ea6-0d19-4524-824c-651cc8226f6a",
+                        "date": "2024-02-22",
+                        "netIncome": 243.13
+                    },
+                    {
+                        "id": "87c6b9cb-960f-4cd7-9981-5c8087dd5346",
+                        "date": "2024-02-23",
+                        "netIncome": 546.92
+                    },
+                    {
+                        "id": "c882616f-74ec-4b95-8b3b-982180498b95",
+                        "date": "2024-02-24",
+                        "netIncome": 710.75
+                    },
+                    {
+                        "id": "b43e3ea1-5759-40f2-9c9b-50207c4ef25f",
+                        "date": "2024-02-25",
+                        "netIncome": 221.19
+                    },
+                    {
+                        "id": "c135c326-d9ec-40bc-ae9b-e472438bc8f3",
+                        "date": "2024-02-29",
+                        "netIncome": 245.06
+                    },
+                    {
+                        "id": "2338c1cd-78c6-4824-b5e8-429926268812",
+                        "date": "2024-03-01",
+                        "netIncome": 112.56
+                    },
+                    {
+                        "id": "b94b87fd-850b-4791-92c5-41b0a2a37c47",
+                        "date": "2024-03-02",
+                        "netIncome": 648.14
+                    },
+                    {
+                        "id": "e3929cf7-6532-4bff-b7f8-143e172c6de1",
+                        "date": "2024-03-03",
+                        "netIncome": 341.07
+                    },
+                    {
+                        "id": "1e176ba3-3b62-43b2-979a-f319a9e38782",
+                        "date": "2024-03-07",
+                        "netIncome": 309.21
+                    },
+                    {
+                        "id": "df46e602-cdb4-42f7-915d-8e6e6a01db73",
+                        "date": "2024-03-08",
+                        "netIncome": 478.22
+                    },
+                    {
+                        "id": "debdf01f-7edb-40ac-be2c-8ae78ea8ad94",
+                        "date": "2024-03-09",
+                        "netIncome": 769.6
+                    },
+                    {
+                        "id": "7b66fd91-c515-4649-8f1a-b09a7f9b6227",
+                        "date": "2024-03-14",
+                        "netIncome": 189.53
+                    },
+                    {
+                        "id": "4d39367d-d461-4306-bdfb-6e096043c5ae",
+                        "date": "2024-03-15",
+                        "netIncome": 648.2
+                    },
+                    {
+                        "id": "12fa7bc8-c38a-45c2-b35c-d8d23ba49ce0",
+                        "date": "2024-03-16",
+                        "netIncome": 746.95
+                    },
+                    {
+                        "id": "b0801a64-5a4c-4f1a-9c75-fab16ebcebe2",
+                        "date": "2024-03-17",
+                        "netIncome": 420.91
+                    },
+                    {
+                        "id": "52b4790e-ff79-4d5e-9bf8-20f17f80eb2b",
+                        "date": "2024-03-22",
+                        "netIncome": 795.09
+                    },
+                    {
+                        "id": "68eb627c-65ba-4e15-b79b-526f6c9e4d5e",
+                        "date": "2024-03-23",
+                        "netIncome": 1048.33
+                    },
+                    {
+                        "id": "8f6cc926-c147-4838-be9b-b810cf155817",
+                        "date": "2024-03-24",
+                        "netIncome": 741.75
+                    },
+                    {
+                        "id": "4e55d267-8b7f-4f9f-8668-eab683dff0b3",
+                        "date": "2024-03-29",
+                        "netIncome": 245.79
+                    },
+                    {
+                        "id": "c7973cdd-a2af-4979-b242-67b8a5bd2bd2",
+                        "date": "2024-03-30",
+                        "netIncome": 354.45
+                    },
+                    {
+                        "id": "c746cf81-8b94-4772-b8b7-565a276a1c7e",
+                        "date": "2024-04-04",
+                        "netIncome": 160.91
+                    },
+                    {
+                        "id": "f3a411db-a71b-4a7e-8b18-2743a752ee21",
+                        "date": "2024-04-06",
+                        "netIncome": 836.52
+                    },
+                    {
+                        "id": "ad62773d-36b7-4310-bc43-016badd3eb4f",
+                        "date": "2024-04-28",
+                        "netIncome": 334.79
+                    },
+                    {
+                        "id": "5a53f488-dbc2-40e2-ada7-7ff3d78ad540",
+                        "date": "2024-05-02",
+                        "netIncome": 303.56
+                    },
+                    {
+                        "id": "76d1f104-8d86-43a0-96b4-e94a62781442",
+                        "date": "2024-05-03",
+                        "netIncome": 747.63
+                    },
+                    {
+                        "id": "5003b7c9-6144-491e-8a91-dfe0f9294bc3",
+                        "date": "2024-05-04",
+                        "netIncome": 742.65
+                    },
+                    {
+                        "id": "a5e82a61-bed4-4954-a0ed-9b5cfd878e25",
+                        "date": "2024-05-05",
+                        "netIncome": 691.3
+                    },
+                    {
+                        "id": "1ad6e73d-a938-46bc-a266-2120c1ce8631",
+                        "date": "2024-05-11",
+                        "netIncome": 618.34
+                    },
+                    {
+                        "id": "798802e0-dcf8-49b9-a0f9-d8dd6a18c612",
+                        "date": "2024-05-12",
+                        "netIncome": 742.18
+                    },
+                    {
+                        "id": "b34a2579-ce40-45ce-b022-c513b515ddd7",
+                        "date": "2024-05-17",
+                        "netIncome": 301.2
+                    },
+                    {
+                        "id": "b32693b6-101e-4f37-8c48-0c9742775e0b",
+                        "date": "2024-05-18",
+                        "netIncome": 376.96
+                    },
+                    {
+                        "id": "82b54fa8-06f4-457c-b47c-f007f32e56d0",
+                        "date": "2024-05-19",
+                        "netIncome": 403.63
+                    },
+                    {
+                        "id": "4b8dc2a3-3967-44c8-8e61-512f930e870f",
+                        "date": "2024-05-23",
+                        "netIncome": 283.17
+                    },
+                    {
+                        "id": "83072967-657b-4098-a82d-33ea0729b9dc",
+                        "date": "2024-05-24",
+                        "netIncome": 309.98
+                    },
+                    {
+                        "id": "f18550ad-c7d1-4017-8a61-97bf611b9f96",
+                        "date": "2024-05-25",
+                        "netIncome": 754.38
+                    },
+                    {
+                        "id": "366c7b1e-b53a-4d67-b89f-db393f880293",
+                        "date": "2024-05-26",
+                        "netIncome": 771.18
+                    },
+                    {
+                        "id": "9bc627d7-e86d-4db0-8e73-f735fc6f77f1",
+                        "date": "2024-06-06",
+                        "netIncome": 272.19
+                    },
+                    {
+                        "id": "846dbcbf-f1f4-4a86-ba99-dcfcb094d78e",
+                        "date": "2024-06-07",
+                        "netIncome": 551.32
+                    },
+                    {
+                        "id": "7621d65b-c144-47ba-8222-cc8b12b6cad5",
+                        "date": "2024-06-09",
+                        "netIncome": 227.19
+                    },
+                    {
+                        "id": "c6e3df31-d6d6-427e-9fe0-9483eca561d5",
+                        "date": "2024-06-13",
+                        "netIncome": 292.72
+                    },
+                    {
+                        "id": "4a782120-7bb3-4d49-b8b7-707fbc3a2fd3",
+                        "date": "2024-06-14",
+                        "netIncome": 751.56
+                    },
+                    {
+                        "id": "694b28f1-12ad-4501-80ae-e5d8a5c34000",
+                        "date": "2024-06-15",
+                        "netIncome": 663.97
+                    },
+                    {
+                        "id": "dbab8753-e183-462b-a1eb-42cea9efb49a",
+                        "date": "2024-06-16",
+                        "netIncome": 274.46
+                    },
+                    {
+                        "id": "59d32bb2-1b4f-4e81-b773-53f080549d95",
+                        "date": "2024-06-20",
+                        "netIncome": 248.06
+                    },
+                    {
+                        "id": "5d9e64d0-3e83-4685-84a5-ffbd89d0587a",
+                        "date": "2024-06-21",
+                        "netIncome": 849.26
+                    },
+                    {
+                        "id": "f5eb8ceb-cb7e-4fe3-b2fc-fa9cd60ba5cf",
+                        "date": "2024-06-22",
+                        "netIncome": 761.42
+                    },
+                    {
+                        "id": "3bf8505f-abe7-4147-9a8b-3277e44d5036",
+                        "date": "2024-06-26",
+                        "netIncome": 353.11
+                    },
+                    {
+                        "id": "fdda21af-05b9-4259-a778-d5b829705ecb",
+                        "date": "2024-06-27",
+                        "netIncome": 161.48
+                    },
+                    {
+                        "id": "9f6e79c6-c064-4533-b2f2-706952ed3209",
+                        "date": "2024-06-28",
+                        "netIncome": 207.48
+                    },
+                    {
+                        "id": "9a82c8c9-0e48-4751-8a6f-c839b323f32d",
+                        "date": "2024-06-28",
+                        "netIncome": 252.95
+                    },
+                    {
+                        "id": "08989a2a-1c7c-45da-adf0-8c3cec2ef457",
+                        "date": "2024-06-29",
+                        "netIncome": 782.35
+                    },
+                    {
+                        "id": "ce691145-39ca-4b70-8535-cb3725e7f3c5",
+                        "date": "2024-06-30",
+                        "netIncome": 815.86
+                    },
+                    {
+                        "id": "b7ad58e5-1dda-43e3-bbff-0f5bc7ba6071",
+                        "date": "2024-07-01",
+                        "netIncome": 310.53
+                    },
+                    {
+                        "id": "e29b5e56-35be-49a3-af20-e4ae4a867718",
+                        "date": "2024-07-04",
+                        "netIncome": 257.17
+                    },
+                    {
+                        "id": "1a7f4651-1085-4841-a9e7-3856f476aa4f",
+                        "date": "2024-07-05",
+                        "netIncome": 329.15
+                    },
+                    {
+                        "id": "5cde24cc-6b76-4f71-bedd-2a7050e6d1a7",
+                        "date": "2024-07-06",
+                        "netIncome": 296.08
+                    },
+                    {
+                        "id": "b4d26adc-d0f0-402f-9265-f5a25b682168",
+                        "date": "2024-07-07",
+                        "netIncome": 632.68
+                    },
+                    {
+                        "id": "2c1acdbf-8a80-49eb-a294-be5a3529fc98",
+                        "date": "2024-07-11",
+                        "netIncome": 250.09
+                    },
+                    {
+                        "id": "1dbc9f00-f8ca-4d6f-a4b6-73066dd58376",
+                        "date": "2024-07-12",
+                        "netIncome": 713.07
+                    },
+                    {
+                        "id": "4fca5d2b-0f2d-4e10-bb0e-179e7516a271",
+                        "date": "2024-07-13",
+                        "netIncome": 757
+                    },
+                    {
+                        "id": "d82ac63f-0e22-4971-85c9-b5bb98c1649e",
+                        "date": "2024-07-14",
+                        "netIncome": 304.38
+                    }
+                ]
+            },
+            "a6d1241c-033d-4496-a07c-e08d9f70b9de": {
+                "jobName": "q39 comp",
+                "jobID": "a6d1241c-033d-4496-a07c-e08d9f70b9de",
+                "income": [
+                    {
+                        "id": "64e96ddc-3223-450f-a39c-2eeeabf59599",
+                        "date": "2024-01-11",
+                        "netIncome": 234.89
+                    },
+                    {
+                        "id": "69d3bd9f-1609-4c5f-ac40-2068f1d10a4c",
+                        "date": "2024-01-13",
+                        "netIncome": 392.71
+                    },
+                    {
+                        "id": "d5af7eb6-e01f-49f1-ba5a-34153ec33ca9",
+                        "date": "2024-01-14",
+                        "netIncome": 309.99
+                    },
+                    {
+                        "id": "bc69a4ac-f2dc-4a5b-b7ec-a206b555759a",
+                        "date": "2024-01-19",
+                        "netIncome": 48.06
+                    },
+                    {
+                        "id": "343ac749-2c7a-4ec1-a4c8-0daa24d36d87",
+                        "date": "2024-01-20",
+                        "netIncome": 343.58
+                    },
+                    {
+                        "id": "ef18b8d5-89ba-499e-bb99-37ce6ea5fa8e",
+                        "date": "2024-01-25",
+                        "netIncome": 321.34
+                    },
+                    {
+                        "id": "27e5892b-ebfa-453d-bb70-657694d76901",
+                        "date": "2024-01-26",
+                        "netIncome": 524.9
+                    },
+                    {
+                        "id": "3fb3111c-9914-430e-a6eb-b64997d40869",
+                        "date": "2024-01-27",
+                        "netIncome": 382.63
+                    },
+                    {
+                        "id": "68c6415c-b623-4a90-a492-4c5b47f7268c",
+                        "date": "2024-02-02",
+                        "netIncome": 175.42
+                    },
+                    {
+                        "id": "e8c27953-c23b-4ee3-af50-5da0902a3190",
+                        "date": "2024-02-03",
+                        "netIncome": 705.18
+                    },
+                    {
+                        "id": "8739052f-4a73-4a62-9027-e88a58b508ac",
+                        "date": "2024-02-09",
+                        "netIncome": 699.83
+                    },
+                    {
+                        "id": "1e8f6329-db04-48d1-9cd2-b412a4248f69",
+                        "date": "2024-02-10",
+                        "netIncome": 863.78
+                    },
+                    {
+                        "id": "168caf14-9449-4015-a044-774b72586a83",
+                        "date": "2024-02-22",
+                        "netIncome": 243.13
+                    },
+                    {
+                        "id": "1e599b04-1f40-4b01-bf80-551623f8dae0",
+                        "date": "2024-02-23",
+                        "netIncome": 546.92
+                    },
+                    {
+                        "id": "8e47a5c8-6670-441d-b3a3-aa60dd3d7b3c",
+                        "date": "2024-02-24",
+                        "netIncome": 710.75
+                    },
+                    {
+                        "id": "3af1a296-6d65-45a1-856e-aa17c828d0a4",
+                        "date": "2024-02-25",
+                        "netIncome": 221.19
+                    },
+                    {
+                        "id": "d1c39792-04bb-47b5-ae62-32d784e50330",
+                        "date": "2024-02-29",
+                        "netIncome": 245.06
+                    },
+                    {
+                        "id": "49e7882d-9371-4917-9322-e4ed226f270a",
+                        "date": "2024-03-01",
+                        "netIncome": 112.56
+                    },
+                    {
+                        "id": "c8827d37-0454-4451-abcc-b89b851a7fe0",
+                        "date": "2024-03-02",
+                        "netIncome": 648.14
+                    },
+                    {
+                        "id": "b7d9086e-2d7f-4c79-86c1-f4f546a35d4d",
+                        "date": "2024-03-03",
+                        "netIncome": 341.07
+                    },
+                    {
+                        "id": "4275680b-ada1-4d1a-b898-71cfd6531c18",
+                        "date": "2024-03-07",
+                        "netIncome": 309.21
+                    },
+                    {
+                        "id": "165c1800-5e06-445a-a85a-244ac37ddd86",
+                        "date": "2024-03-08",
+                        "netIncome": 478.22
+                    },
+                    {
+                        "id": "d09174a1-cc3f-4bdf-86bd-600ba8ec9ef5",
+                        "date": "2024-03-09",
+                        "netIncome": 769.6
+                    },
+                    {
+                        "id": "1965def7-dfc5-4c20-bac2-f511a3727342",
+                        "date": "2024-03-14",
+                        "netIncome": 189.53
+                    },
+                    {
+                        "id": "21c413f6-759d-4aee-9506-e1ba6a62acaa",
+                        "date": "2024-03-15",
+                        "netIncome": 648.2
+                    },
+                    {
+                        "id": "d4a5fc1d-7cf6-4258-b2db-897f75f13f3d",
+                        "date": "2024-03-16",
+                        "netIncome": 746.95
+                    },
+                    {
+                        "id": "13d23b4a-df13-4d67-97d9-513aa068d88c",
+                        "date": "2024-03-17",
+                        "netIncome": 420.91
+                    },
+                    {
+                        "id": "c955bdb2-6180-4a4a-b1d0-646ed2cd6b96",
+                        "date": "2024-03-22",
+                        "netIncome": 795.09
+                    },
+                    {
+                        "id": "57b02e14-d60e-4b02-9336-6ecf1e01f754",
+                        "date": "2024-03-23",
+                        "netIncome": 1048.33
+                    },
+                    {
+                        "id": "6b614ca3-a999-4c25-95d5-79b6b15a1697",
+                        "date": "2024-03-24",
+                        "netIncome": 741.75
+                    },
+                    {
+                        "id": "9af63936-e636-4024-9f71-c466c2586c3c",
+                        "date": "2024-03-29",
+                        "netIncome": 245.79
+                    },
+                    {
+                        "id": "c516bfca-ea9c-42e4-9054-d3b4423be081",
+                        "date": "2024-03-30",
+                        "netIncome": 354.45
+                    },
+                    {
+                        "id": "5b7979a7-8ae1-47e6-9eb3-81ea0872e326",
+                        "date": "2024-04-04",
+                        "netIncome": 160.91
+                    },
+                    {
+                        "id": "b4c54540-3c21-40bc-be97-f964e0fb3053",
+                        "date": "2024-04-06",
+                        "netIncome": 836.52
+                    },
+                    {
+                        "id": "16defd7b-6c7e-4384-a428-94dd98847162",
+                        "date": "2024-04-28",
+                        "netIncome": 334.79
+                    },
+                    {
+                        "id": "9359dad8-8e46-448c-8b0f-fa03f21716cd",
+                        "date": "2024-05-02",
+                        "netIncome": 303.56
+                    },
+                    {
+                        "id": "2e9319a3-f502-4df6-b1d2-dabfddd7f6fb",
+                        "date": "2024-05-03",
+                        "netIncome": 747.63
+                    },
+                    {
+                        "id": "ac756a4c-da55-49d7-9dad-2b0ec3a49e6e",
+                        "date": "2024-05-04",
+                        "netIncome": 742.65
+                    },
+                    {
+                        "id": "d62adbc4-bdb1-4085-9dee-9384536e67ba",
+                        "date": "2024-05-05",
+                        "netIncome": 691.3
+                    },
+                    {
+                        "id": "fee5ac2b-a311-46b4-bc99-fe79a107b9c3",
+                        "date": "2024-05-11",
+                        "netIncome": 618.34
+                    },
+                    {
+                        "id": "1226debe-b95d-4edb-b1ee-67ce37d1b879",
+                        "date": "2024-05-12",
+                        "netIncome": 742.18
+                    },
+                    {
+                        "id": "8ad321a9-21ba-430d-b4d4-8586130e1cd2",
+                        "date": "2024-05-17",
+                        "netIncome": 301.2
+                    },
+                    {
+                        "id": "20a25482-e527-41cf-9f2b-853dd5b1130e",
+                        "date": "2024-05-18",
+                        "netIncome": 376.96
+                    },
+                    {
+                        "id": "23c14105-fd05-43d5-9092-44988e300b73",
+                        "date": "2024-05-19",
+                        "netIncome": 403.63
+                    },
+                    {
+                        "id": "0c5f854d-24e2-4e4b-9af4-13505d59887b",
+                        "date": "2024-05-23",
+                        "netIncome": 283.17
+                    },
+                    {
+                        "id": "cf8fdef1-b520-44a0-8401-81ae1166d2c4",
+                        "date": "2024-05-24",
+                        "netIncome": 309.98
+                    },
+                    {
+                        "id": "b2267556-c0ce-497e-b4eb-e67f9aa61f93",
+                        "date": "2024-05-25",
+                        "netIncome": 754.38
+                    },
+                    {
+                        "id": "bb1da267-cd31-4bb7-8663-83ce99c0ff92",
+                        "date": "2024-05-26",
+                        "netIncome": 771.18
+                    },
+                    {
+                        "id": "f73453ae-8e26-4463-afaf-2a354894ca1f",
+                        "date": "2024-06-06",
+                        "netIncome": 272.19
+                    },
+                    {
+                        "id": "50474960-7b69-465c-b25f-1bafd1f750f8",
+                        "date": "2024-06-07",
+                        "netIncome": 551.32
+                    },
+                    {
+                        "id": "b95395a2-3ad6-4442-9482-a775736ffbc0",
+                        "date": "2024-06-09",
+                        "netIncome": 227.19
+                    },
+                    {
+                        "id": "ba3cce19-cf66-4814-bf9a-d654a0c3666c",
+                        "date": "2024-06-13",
+                        "netIncome": 292.72
+                    },
+                    {
+                        "id": "38a808a8-a06c-44ac-b9a6-799b0cd155a3",
+                        "date": "2024-06-14",
+                        "netIncome": 751.56
+                    },
+                    {
+                        "id": "39fad836-1b1a-497f-a8b9-ea9c868dd462",
+                        "date": "2024-06-15",
+                        "netIncome": 663.97
+                    },
+                    {
+                        "id": "6aac43b0-65b5-4f17-b2d7-c578ca260406",
+                        "date": "2024-06-16",
+                        "netIncome": 274.46
+                    },
+                    {
+                        "id": "b97b6863-f86f-49a3-ba05-8fa1477cae74",
+                        "date": "2024-06-20",
+                        "netIncome": 248.06
+                    },
+                    {
+                        "id": "ae977875-9bf2-4c03-abf4-746c1f3fbcc7",
+                        "date": "2024-06-21",
+                        "netIncome": 849.26
+                    },
+                    {
+                        "id": "da6ce4bc-6e7b-431a-b47f-79b0d79ab950",
+                        "date": "2024-06-22",
+                        "netIncome": 761.42
+                    },
+                    {
+                        "id": "ff3721f5-5d3e-4232-9245-8501b8999dcc",
+                        "date": "2024-06-26",
+                        "netIncome": 353.11
+                    },
+                    {
+                        "id": "843e88d1-8f94-40f4-a17d-4458a60834cd",
+                        "date": "2024-06-27",
+                        "netIncome": 161.48
+                    },
+                    {
+                        "id": "9765ee88-dc1b-4db2-80ed-eddecbac54d0",
+                        "date": "2024-06-28",
+                        "netIncome": 207.48
+                    },
+                    {
+                        "id": "7351c3cd-eeb8-4484-9624-9aaa6843baf0",
+                        "date": "2024-06-28",
+                        "netIncome": 252.95
+                    },
+                    {
+                        "id": "84497fcb-ccb3-41a9-9969-141fa69a048c",
+                        "date": "2024-06-29",
+                        "netIncome": 782.35
+                    },
+                    {
+                        "id": "f75bd85f-5c5d-4591-89d6-2451d16dae0d",
+                        "date": "2024-06-30",
+                        "netIncome": 815.86
+                    },
+                    {
+                        "id": "2b302b3d-e53f-4856-be31-cd6761e07835",
+                        "date": "2024-07-01",
+                        "netIncome": 310.53
+                    },
+                    {
+                        "id": "72a1314d-cb2c-4f26-afa1-516f661f7d9b",
+                        "date": "2024-07-04",
+                        "netIncome": 257.17
+                    },
+                    {
+                        "id": "a9ff7cd8-6e44-42af-a6fa-1710cc561e76",
+                        "date": "2024-07-05",
+                        "netIncome": 329.15
+                    },
+                    {
+                        "id": "0fa19190-c03e-4a4f-8171-9f95c32c4d0a",
+                        "date": "2024-07-06",
+                        "netIncome": 296.08
+                    },
+                    {
+                        "id": "e9d7f98f-edb5-45a8-8b80-328101f3a368",
+                        "date": "2024-07-07",
+                        "netIncome": 632.68
+                    },
+                    {
+                        "id": "7f90ff20-553f-4a41-b457-90800be019b5",
+                        "date": "2024-07-11",
+                        "netIncome": 250.09
+                    },
+                    {
+                        "id": "3e4c55f0-e314-4b30-9aef-03e3822d34bb",
+                        "date": "2024-07-12",
+                        "netIncome": 713.07
+                    },
+                    {
+                        "id": "50837fb8-425e-4f39-abf2-c996ba733e62",
+                        "date": "2024-07-13",
+                        "netIncome": 757
+                    },
+                    {
+                        "id": "b4956dce-ea3a-4ba4-86e5-2ab584265276",
+                        "date": "2024-07-14",
+                        "netIncome": 304.38
+                    }
+                ]
+            }
+        },
+        "localData": {},
+        "yearComp": {},
+        "monthComp": {
+            "40784d56-39da-412c-9b57-2db4e8b79d5d": {
+                "_Name": "Q39",
+                "_ID": "40784d56-39da-412c-9b57-2db4e8b79d5d",
+                "2024-01-11": 234.89,
+                "2024-01-13": 392.71,
+                "2024-01-14": 309.99,
+                "2024-01-19": 48.06,
+                "2024-01-20": 343.58,
+                "2024-01-25": 321.34,
+                "2024-01-26": 524.9,
+                "2024-01-27": 382.63,
+                "2024-02-02": 175.42,
+                "2024-02-03": 705.18,
+                "2024-02-09": 699.83,
+                "2024-02-10": 863.78,
+                "2024-02-22": 243.13,
+                "2024-02-23": 546.92,
+                "2024-02-24": 710.75,
+                "2024-02-25": 221.19,
+                "2024-02-29": 245.06,
+                "2024-03-01": 112.56,
+                "2024-03-02": 648.14,
+                "2024-03-03": 341.07,
+                "2024-03-07": 309.21,
+                "2024-03-08": 478.22,
+                "2024-03-09": 769.6,
+                "2024-03-14": 189.53,
+                "2024-03-15": 648.2,
+                "2024-03-16": 746.95,
+                "2024-03-17": 420.91,
+                "2024-03-22": 795.09,
+                "2024-03-23": 1048.33,
+                "2024-03-24": 741.75,
+                "2024-03-29": 245.79,
+                "2024-03-30": 354.45,
+                "2024-04-04": 160.91,
+                "2024-04-06": 836.52,
+                "2024-04-28": 334.79,
+                "2024-05-02": 303.56,
+                "2024-05-03": 747.63,
+                "2024-05-04": 742.65,
+                "2024-05-05": 691.3,
+                "2024-05-11": 618.34,
+                "2024-05-12": 742.18,
+                "2024-05-17": 301.2,
+                "2024-05-18": 376.96,
+                "2024-05-19": 403.63,
+                "2024-05-23": 283.17,
+                "2024-05-24": 309.98,
+                "2024-05-25": 754.38,
+                "2024-05-26": 771.18,
+                "2024-06-06": 272.19,
+                "2024-06-07": 551.32,
+                "2024-06-09": 227.19,
+                "2024-06-13": 292.72,
+                "2024-06-14": 751.56,
+                "2024-06-15": 663.97,
+                "2024-06-16": 274.46,
+                "2024-06-20": 248.06,
+                "2024-06-21": 849.26,
+                "2024-06-22": 761.42,
+                "2024-06-26": 353.11,
+                "2024-06-27": 161.48,
+                "2024-06-28": 460.42999999999995,
+                "2024-06-29": 782.35,
+                "2024-06-30": 815.86,
+                "2024-07-01": 310.53,
+                "2024-07-04": 257.17,
+                "2024-07-05": 329.15,
+                "2024-07-06": 296.08,
+                "2024-07-07": 632.68,
+                "2024-07-11": 250.09,
+                "2024-07-12": 713.07,
+                "2024-07-13": 757,
+                "2024-07-14": 304.38
+            },
+            "a6d1241c-033d-4496-a07c-e08d9f70b9de": {
+                "_Name": "q39 comp",
+                "_ID": "a6d1241c-033d-4496-a07c-e08d9f70b9de",
+                "2024-01-11": 234.89,
+                "2024-01-13": 392.71,
+                "2024-01-14": 309.99,
+                "2024-01-19": 48.06,
+                "2024-01-20": 343.58,
+                "2024-01-25": 321.34,
+                "2024-01-26": 524.9,
+                "2024-01-27": 382.63,
+                "2024-02-02": 175.42,
+                "2024-02-03": 705.18,
+                "2024-02-09": 699.83,
+                "2024-02-10": 863.78,
+                "2024-02-22": 243.13,
+                "2024-02-23": 546.92,
+                "2024-02-24": 710.75,
+                "2024-02-25": 221.19,
+                "2024-02-29": 245.06,
+                "2024-03-01": 112.56,
+                "2024-03-02": 648.14,
+                "2024-03-03": 341.07,
+                "2024-03-07": 309.21,
+                "2024-03-08": 478.22,
+                "2024-03-09": 769.6,
+                "2024-03-14": 189.53,
+                "2024-03-15": 648.2,
+                "2024-03-16": 746.95,
+                "2024-03-17": 420.91,
+                "2024-03-22": 795.09,
+                "2024-03-23": 1048.33,
+                "2024-03-24": 741.75,
+                "2024-03-29": 245.79,
+                "2024-03-30": 354.45,
+                "2024-04-04": 160.91,
+                "2024-04-06": 836.52,
+                "2024-04-28": 334.79,
+                "2024-05-02": 303.56,
+                "2024-05-03": 747.63,
+                "2024-05-04": 742.65,
+                "2024-05-05": 691.3,
+                "2024-05-11": 618.34,
+                "2024-05-12": 742.18,
+                "2024-05-17": 301.2,
+                "2024-05-18": 376.96,
+                "2024-05-19": 403.63,
+                "2024-05-23": 283.17,
+                "2024-05-24": 309.98,
+                "2024-05-25": 754.38,
+                "2024-05-26": 771.18,
+                "2024-06-06": 272.19,
+                "2024-06-07": 551.32,
+                "2024-06-09": 227.19,
+                "2024-06-13": 292.72,
+                "2024-06-14": 751.56,
+                "2024-06-15": 663.97,
+                "2024-06-16": 274.46,
+                "2024-06-20": 248.06,
+                "2024-06-21": 849.26,
+                "2024-06-22": 761.42,
+                "2024-06-26": 353.11,
+                "2024-06-27": 161.48,
+                "2024-06-28": 460.42999999999995,
+                "2024-06-29": 782.35,
+                "2024-06-30": 815.86,
+                "2024-07-01": 310.53,
+                "2024-07-04": 257.17,
+                "2024-07-05": 329.15,
+                "2024-07-06": 296.08,
+                "2024-07-07": 632.68,
+                "2024-07-11": 250.09,
+                "2024-07-12": 713.07,
+                "2024-07-13": 757,
+                "2024-07-14": 304.38
+            }
+        },
+        "dayComp": {}
+    }
+}

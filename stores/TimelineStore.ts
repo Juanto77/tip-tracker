@@ -27,8 +27,8 @@ export const useTimelineStore = defineStore('Timeline', () => {
     const viewStart = computed(() => dayjs(day.value).startOf(selectFormat.value).add(-1, 'day'))
     const viewEnd = computed(() => dayjs(day.value).endOf(selectFormat.value).add(-1, 'day'))
 
-    const _viewStart = computed(() => dayjs(day.value).startOf(selectFormat.value).add(-1, 'day').format('YYYY-MM-DD'))
-    const _viewEnd = computed(() => dayjs(day.value).endOf(selectFormat.value).add(-1, 'day').format('YYYY-MM-DD'))
+    const _viewStart = computed(() => dayjs(day.value).startOf(selectFormat.value).format('YYYY-MM-DD'))
+    const _viewEnd = computed(() => dayjs(day.value).endOf(selectFormat.value).format('YYYY-MM-DD'))
     
     const currentMonth = computed(() => dayjs(viewDate.value).format('MMMM YYYY'))
     const _currentMonth = computed(() => dayjs(viewDate.value).format('YYYY-MM'))
@@ -74,18 +74,18 @@ export const useTimelineStore = defineStore('Timeline', () => {
     })
 
     /* Timetravel */
+/*     
     function shiftView(amount){
         const income = useIncomeData()
         viewDate.value = day.value.add(amount, selectFormat.value).format('YYYY-MM-DD');
-        income.dayFilter(_currentMonth.value)  
+        // income.dayFilter(_currentMonth.value)  
     }
-    /*
+ */
+    
     const shiftView = (amount) => {
-        const income = useIncomeData()
         viewDate.value = day.value.add(amount, selectFormat.value).format('YYYY-MM-DD');
-        income.dayFilter(_currentMonth.value)
     }
-        */
+       
 
     return { viewDate,weekDays, viewList, viewSelect, day, viewStart, viewEnd, currentMonth, _currentMonth, monthStart, monthEnd, selectFormat, shiftView,prependCalendar, calendar, _viewStart, _viewEnd }
 }, {

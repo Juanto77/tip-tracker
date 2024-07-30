@@ -17,7 +17,7 @@
         <div class="w-4/6">
             <div class="card">
                 <label for="jobSelection">Job</label>
-                <Select v-model="tipStore.jobSelect" :options="tipStore.jobArray" optionLabel="job_name" :onclick="tipStore.$setState" />
+                <Select v-model="tipStore.jobSelect" :options="tipStore.jobArray" optionLabel="jobName" :onclick="tipStore.$setState" />
             </div>
             <div class="card">
                 <div class="columns-2">

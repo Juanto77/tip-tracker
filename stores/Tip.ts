@@ -117,7 +117,7 @@ export const useTipStore = defineStore('Tip Store', () => {
     function $setState() {
         userID.value = jobSelect.value.user_id
         jobID.value = jobSelect.value.id
-        jobName.value = jobSelect.value.job_name
+        jobName.value = jobSelect.value.jobName
         advanced.value = jobSelect.value.advanced
         calculate.value = jobSelect.value.calculate
         _params.value = jobSelect.value._params

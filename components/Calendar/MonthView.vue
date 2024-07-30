@@ -17,7 +17,7 @@
                 <template v-for="day in calendar">
                     <div class="text-center border border-slate-200 flex flex-col h-32" :day="day.format('YYYY-MM-DD')">
                         {{ day.format('Do') }}
-                        <template v-for="(i, idx) of incomeStore.dailyIncome">
+                        <template v-for="(i, idx) of totalIncome.daySum">
                             <div v-if="idx == day.format('YYYY-MM-DD')" :day="day.format('YYYY-MM-DD')">
                                 $ {{ i }}
                             </div>
@@ -28,34 +28,25 @@
         </template>
 
         <!-- DAILY VIEW -->
-         <!-- TODO: Style the data view for single day -->
+        <!-- TODO: Style the data view for single day -->
         <template v-else>
             <template v-for="day in calendar">
-                <div class="text-center border border-slate-200 flex flex-col h-32" :day="day.format('YYYY-MM-DD')">
+                <div class="text-center border border-slate-200 flex flex-col h-fit" :day="day.format('YYYY-MM-DD')">
                     {{ day.format('Do') }}
-                    <template v-for="(i, idx) in incomeData[_currentMonth]">
-                        
-                        <div v-if="idx == day.format('YYYY-MM-DD')" :day="day.format('YYYY-MM-DD')">
-                            <div v-for="a in i">
-                                <NuxtLink :to="{ name: 'crud-tip-id', params: { 'crud': 'edit', 'id': a.id } }">
-                                    {{ a.id }} :
-                                  $  {{ a.netIncome }}
+                    <template v-for="(a, idx) in totalIncome.dayIncomeData" :key="a.id">
+                        <div v-if="$dayjs(a.date).format('YYYY-MM-DD') == day.format('YYYY-MM-DD')" class="mt-3">
+                            <div v-for="b in a.dayChild" class="mt-3">
+                                <NuxtLink :to="{ name: 'crud-tip-id', params: { 'crud': 'edit', 'id': b.id } }">
+                                    <div>{{ b.jobName }}</div>
+                                    <div>{{ b.id }} </div>
+                                    <div>$ {{ b.netIncome }} </div>
                                 </NuxtLink>
                             </div>
-
+                            <div>Total income: $ {{ a.income }} </div>
                         </div>
-
                     </template>
-                    <!-- <template v-for="data of incomeData[useTimelineStore()._currentMonth]" >
-                                <div v-if="$dayjs(data.inTime).format('YYYY-MM-DD') == day.format('YYYY-MM-DD')" :day="day.format('YYYY-MM-DD')">
-                                    <div class="align-middle">
-                                        $ {{ data.netIncome }}
-                                    </div>
-                                </div>
-                            </template> -->
-                    <!-- </div> -->
                 </div>
-                <!-- </div> -->
+             
             </template>
         </template>
 
@@ -71,13 +62,16 @@
 
     const timeline = useTimelineStore()
     const incomeStore = useIncomeData()
-    const { incomeData } = storeToRefs(useIncomeData())
+    const { totalIncome, jobIncome } = storeToRefs(useIncomeData())
     const { _currentMonth, viewDate, prependCalendar, calendar, weekDays, _viewEnd, _viewStart } = storeToRefs(useTimelineStore())
+    // const calDay = totalIncome.value.dayIncomeData[_viewStart.value]
 
-    const start = JSON.stringify(_viewStart.value)
-    const end = JSON.stringify(_viewEnd.value)
+    // const start = JSON.stringify(_viewStart.value)
+    // const end = JSON.stringify(_viewEnd.value)
 
-      incomeStore.getIncome(_viewStart.value, _viewEnd.value)
+    // incomeStore.getIncome()
+      incomeStore.getJobIncome()
+
 
 
     // const { weekDays, prependCalendar, calendar } = useCalendar()

@@ -41,5 +41,6 @@
     "toml",
     "astro",
   ],
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.parameterHints.enabled": false
 }

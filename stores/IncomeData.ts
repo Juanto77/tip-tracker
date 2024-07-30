@@ -2,6 +2,7 @@ import { defineStore, acceptHMRUpdate } from 'pinia'
 const dayjs = useDayjs()
 
 export const useIncomeData = defineStore('Income Data', () => {
+    const {_viewStart, _viewEnd } = storeToRefs(useTimelineStore())
     ///////////////////////////////////////////////////////////////////////////////////////////
     /* TODO */
     ///////////////////////////////////////////////////////////////////////////////////////////
@@ -12,15 +13,18 @@ export const useIncomeData = defineStore('Income Data', () => {
     // - In progress
 
     // TODO: Filter income data by date with a child object that contains tip info (job name, income, etc...)
+    ///////////////////////////////////////////////////////////////////////////////////////////
 
-
-    /* Fetch Data */
     const loading = ref(false)
     const rawIncomeData = ref([])
     const rawJobData = ref([])
     const localData = ref({})
 
     const jobSelection = ref([])
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    /* Chart Data Testing */
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    
 
     /* Formatting data for chart.js */
     // const chartData = ref({
@@ -44,11 +48,97 @@ export const useIncomeData = defineStore('Income Data', () => {
 
     //     }
     // })
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    /* CHART DATA */
+    // function buildChart() {
+    //     // let data = []
+    //     jobSelection.value.forEach((i, idx, arr) => {
+    //         const jobName = i.jobName
+    //         const jobID = i.id
+    //         const active = i.active
+    //         const jobTip = i.user_tip
+
+    //         // let data = []
+    //         let data = {}
+
+    //         jobTip.forEach((it, ix, ar) => {
+    //             const tip = it
+    //             const tipID = tip.id
+    //             const date = tip.date
+    //             const tipIncome = tip.netIncome
+
+    //             data[date] = tipIncome
+    //             // data.push({date: date, tipIncome})
+    //             // console.log(data)
+    //         })
+    //         chartData.value['datasets'].push({ label: jobName, jobID, data: data })
+    //     })
+    // }
+
+    const computedOptions = computed(() =>{
+        const options = {
+            responsive: true,
+            scales: {
+                x: {
+                    type: 'time',
+                    time: {
+                        unit: 'day',
+                        /*
+                        displayFormats:{
+                            day: 'YYYY-MM-DD'
+                        },
+                        */
+                    },
+                    min: _viewStart.value,
+                    max: _viewEnd.value
+                },
+            }
+        }
+        return options
+    })
+
+    const chartDisplay = computed(() => {
+        let chartData = {
+            datasets:[]
+        }
+
+        jobSelection.value.forEach((i, idx, arr) => {
+            const jobName = i.jobName
+            const jobID = i.id
+            const active = i.active
+            const jobTip = i.user_tip
+            
+            let data = {}
+
+            jobTip.forEach((it, ix, ar) => {
+                const tip = it
+                const tipID = tip.id
+                const date = tip.date
+                const tipIncome = tip.netIncome
+
+                data[date] = tipIncome
+                // data.push({date: date, tipIncome})
+                // console.log(data)
+            })
+            chartData.datasets.push({ label: jobName, jobID, data: data })
+        })
+        return chartData
+    })
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    /* totalIncome */
+    /* getIncome */
+    ///////////////////////////////////////////////////////////////////////////////////////////
 
 
+    /* GETJOBINCOME() */
+
+    /* BASED ON JOB SELECTION */
+
+    /* POSTING TO CHARTDATA */
     const totalIncome = computed(() => {
 
-    /* Flatten The Array */
+        /* Flatten The Array */
         let incomeArray = []
 
         jobSelection.value.forEach((i, idx, arr) => {
@@ -57,9 +147,9 @@ export const useIncomeData = defineStore('Income Data', () => {
         })
 
         const flatArray = [].concat(...incomeArray)
-///////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////////////
 
         let dayIncomeData = {}
         let daySum = {}
@@ -105,7 +195,7 @@ export const useIncomeData = defineStore('Income Data', () => {
                 return acc + itemIncome
             }, 0)
             daySum[dayFormat] = dayIncome
-            dayIncomeData[dayFormat] = { id: use_uid(), date: dayFormat , income: dayIncome, dayChild }
+            dayIncomeData[dayFormat] = { id: use_uid(), date: dayFormat, income: dayIncome, dayChild }
 
             let monthFilter = array.filter((item) => {
                 const itemID = item.id
@@ -125,11 +215,24 @@ export const useIncomeData = defineStore('Income Data', () => {
                 return acc + itemIncome
             }, 0)
             monthIncomeData[monthFormat] = monthIncome
-
-
         })
         return { daySum, dayIncomeData, monthIncomeData, yearIncomeData }
     })
+
+    /* TOTALINCOME */
+    async function getIncome() {
+        // const s = JSON.stringify(start)
+        // const e = JSON.stringify(end)
+        // const {viewStart, viewEnd} = useTimelineStore()
+        const client = useSupabaseClient();
+        const { data, error } = await client.from('user_tip').select('id, jobID, date, netIncome, jobName').order('date', { ascending: true })
+
+        // const { data, error } = await client.from('user_tip').select().gt('inTime', s ).lt('inTime', e) // Query time range
+        if (error) {
+            console.log(error)
+        }
+        rawIncomeData.value = data
+    }
 
     /*
     const totalIncome = computed(() =>{
@@ -151,16 +254,19 @@ export const useIncomeData = defineStore('Income Data', () => {
     })
     */
 
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    /* jobIncome */
+    /* getJobIncome */
+    ///////////////////////////////////////////////////////////////////////////////////////////
+
+    /* Multiple jobs & job selection */
+    /* GETJOBINCOME() */
     const jobIncome = computed(() => {
         let incomeObj = {}
 
         let jobDayIncome = {}
         let jobMonthIncome = {}
         let jobYearIncome = {}
-
-        let jobIncomeChart = {
-            
-        }
 
         let chartData = {
             month: {
@@ -174,12 +280,9 @@ export const useIncomeData = defineStore('Income Data', () => {
             const jobName = job.jobName
             const jobTip = job.user_tip
 
-            jobDayIncome[jobID] = {jobName, jobID, }
-            jobMonthIncome[jobID] = { jobName, jobID,  }
+            jobDayIncome[jobID] = { jobName, jobID, }
+            jobMonthIncome[jobID] = { jobName, jobID, }
             jobYearIncome[jobID] = 0
-
-            jobIncomeChart[jobID] = {label: jobName, jobID, data:{}}
-
 
             jobTip.forEach((i, idx, arr) => {
                 const tip = i
@@ -240,20 +343,16 @@ export const useIncomeData = defineStore('Income Data', () => {
                     return acc + itemIncome
                 }, 0)
                 jobMonthIncome[jobID][monthFormat] = monthIncome
-                jobIncomeChart[jobID].data[monthFormat]= monthIncome
+
 
             })
         })
 
-        
-        return { jobDayIncome, jobMonthIncome, jobYearIncome, jobIncomeChart }
+
+        return { jobDayIncome, jobMonthIncome, jobYearIncome }
     })
 
-    const chartData = computed(()=>{
-
-    })
-
-
+    /* JOBINCOME */
     async function getJobIncome() {
         const client = useSupabaseClient();
         // const { data, error } = await client.from('user_jobs').select(`id, job_name, user_tip(id, inTime, netIncome)`)
@@ -268,20 +367,6 @@ export const useIncomeData = defineStore('Income Data', () => {
         jobSelection.value = data
     }
 
-    async function getIncome() {
-        // const s = JSON.stringify(start)
-        // const e = JSON.stringify(end)
-        // const {viewStart, viewEnd} = useTimelineStore()
-        const client = useSupabaseClient();
-        const { data, error } = await client.from('user_tip').select('id, jobID, date, netIncome, jobName').order('date', { ascending: true })
-
-        // const { data, error } = await client.from('user_tip').select().gt('inTime', s ).lt('inTime', e) // Query time range
-        if (error) {
-            console.log(error)
-        }
-        rawIncomeData.value = data
-    }
-
 
 
 
@@ -293,12 +378,11 @@ export const useIncomeData = defineStore('Income Data', () => {
         rawIncomeData.value = []
         localData.value = {}
         rawJobData.value = []
-
-
+        jobSelection.value = []
     }
 
     return {
-        loading, getIncome, getJobIncome, $reset, jobIncome, totalIncome, rawIncomeData, rawJobData, jobSelection
+        loading, getIncome, getJobIncome, $reset, jobIncome, totalIncome, rawIncomeData, rawJobData, jobSelection, chartDisplay, chartOptions
     }
 
 }, {

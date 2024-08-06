@@ -266,13 +266,20 @@ export const useIncomeData = defineStore('Income Data', () => {
         // const { data, error } = await client.from('user_jobs').select(`id, job_name, user_tip(id, inTime, netIncome)`)
 
         // FIXME: Fetch Job name from user_tip table
+        
+        if (loading.value === false){
         const { data, error } = await client.from('user_jobs').select(`active, id, jobName, user_tip(id, netIncome, date, jobName, jobID)`).order('date', { referencedTable: 'user_tip', ascending: true })
         if (error) {
             loading.value = false
             console.log(error)
+        } else {
+            loading.value = true
+            rawJobData.value = data
+            jobSelection.value = data
         }
-        rawJobData.value = data
-        jobSelection.value = data
+    }
+        // rawJobData.value = data
+        // jobSelection.value = data
     }
 
 

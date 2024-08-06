@@ -8,8 +8,11 @@ dayjs.extend(weekYear)
 dayjs.extend(weekOfYear)
 ///////////////////////////////////////////////////////////////////////////////////////////
 /* TODO */
-///////////////////////////////////////////////////////////////////////////////////////////
 // TODO: Refactor as composable or component logic
+// TODO: Remove alot of these computed values & store locally in the component logic
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
 
 export const useTimelineStore = defineStore('Timeline', () => {
     /* State */
@@ -59,7 +62,6 @@ export const useTimelineStore = defineStore('Timeline', () => {
     const compYear = computed(() => dayjs(day.value).subtract(1, 'year'))
     const compYearStart = computed(() => dayjs(compYear.value).startOf('year'))
     const compYearEnd = computed(() => dayjs(compYear.value).endOf('year'))
-
 
     /* Comp View: Month */
     const viewMonthStart = computed(()=> dayjs(day.value).startOf('month'))

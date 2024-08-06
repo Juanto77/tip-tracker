@@ -1,6 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import Aura from '@primevue/themes/aura'
 export default defineNuxtConfig({
+  ssr: false,
+
   /* Development & Debugging */
   devtools: { enabled: true },
   dev: true,

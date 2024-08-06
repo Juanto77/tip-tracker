@@ -20,7 +20,7 @@
     "@nuxt/ui-pro": "^1.4.0",
     "@nuxtjs/device": "^3.1.1",
     "@pinia-plugin-persistedstate/nuxt": "^1.2.1",
-    "@pinia/nuxt": "^0.5.2",
+    "@pinia/nuxt": "^0.5.3",
     "@primevue/themes": "^4.0.4",
     "@vee-validate/nuxt": "^4.13.2",
     "chart.js": "^4.4.3",
@@ -30,8 +30,8 @@
     "primevue": "^4.0.4",
     "tailwindcss-primeui": "^0.3.4",
     "uuid": "^10.0.0",
-    "vue": "^3.4.35",
-    "vue-router": "^4.4.2"
+    "vue": "^3.4.36",
+    "vue-router": "^4.4.3"
   },
   "devDependencies": {
     "@antfu/utils": "^0.7.10",

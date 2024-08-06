@@ -10,6 +10,7 @@ dayjs.extend(isBetween)
 const month = computed(()=>{
     const income = {}
     let sum = 0
+    // FIXME: Parse Sum to .00
     Object.keys(totalIncome.value.monthIncomeData).forEach((key)=>{
             if(dayjs(key).isSame(_currentMonth.value)){
                 income[key]= totalIncome.value.monthIncomeData[key]

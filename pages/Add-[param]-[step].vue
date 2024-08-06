@@ -1,22 +1,22 @@
 <script setup lang="ts">
-import { JobAddInfo, JobAddLink, JobAddPool, JobAddSales } from '#components'
+import { AddJobInfo, AddJobLink, AddJobPool, AddJobSales } from '#components'
 
 const route = useRoute()
 const router = useRouter()
-let currentView = resolveComponent('JobAddInfo')
+let currentView = resolveComponent('AddJobInfo')
 
 if (route.path === '/add-job-start')
-  currentView = resolveComponent('JobAddInfo')
+  currentView = resolveComponent('AddJobInfo')
 if (route.path === '/add-job-sales') {
-  currentView = resolveComponent('JobAddSales')
+  currentView = resolveComponent('AddJobSales')
   // if (route. === 1){
 
   // }
 }
 if (route.path === '/add-job-pool')
-  currentView = resolveComponent('JobAddPool')
+  currentView = resolveComponent('AddJobPool')
 if (route.path === '/add-job-link')
-  currentView = resolveComponent('JobAddLink')
+  currentView = resolveComponent('AddJobLink')
 </script>
 
 <template>

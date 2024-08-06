@@ -1,13 +1,15 @@
 <template>
     <div class="container mx-auto w-auto max-w-full">
-        <ZHeaderBase />
+        <DesktopNavBar class=""/>
         <main class="my-3">
             <slot />
         </main>
     </div>
+    <NavDock class="lg:hidden md:hidden"/>
 </template>
 
 <script setup>
+
 // Link to Google Fonts
 /* 
 useHead({

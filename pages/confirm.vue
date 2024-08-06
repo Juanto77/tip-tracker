@@ -5,9 +5,9 @@ const user = useSupabaseUser()
 const cookieName = useRuntimeConfig().public.supabase.cookieName
 const cookieVal = useCookie(cookieName)
 const redirectPath = useCookie(`${cookieName}-redirect-path`).value
-console.log(cookieName)
-console.log(cookieVal)
-console.log(redirectPath)
+// console.log(cookieName)
+// console.log(cookieVal)
+// console.log(redirectPath)
 
 
 

@@ -1,5 +1,5 @@
 <template>
-<AuthLogIn/>
+<LogIn/>
 </template>
 
 <script setup>

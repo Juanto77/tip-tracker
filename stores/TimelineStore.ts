@@ -1,41 +1,87 @@
 import { defineStore, acceptHMRUpdate } from 'pinia';
+import weekYear from 'dayjs/plugin/weekYear.js'
+import weekOfYear from 'dayjs/plugin/weekOfYear.js'
 
 const dayjs = useDayjs();
 
+dayjs.extend(weekYear)
+dayjs.extend(weekOfYear)
+///////////////////////////////////////////////////////////////////////////////////////////
+/* TODO */
+///////////////////////////////////////////////////////////////////////////////////////////
+// TODO: Refactor as composable or component logic
 
 export const useTimelineStore = defineStore('Timeline', () => {
     /* State */
-    const viewDate = ref(dayjs().format('YYYY-MM-DD'))
     const weekDays = ref(['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'])
     const viewList = ref([
-        {name: 'Day', code: 'd'},
+        { name: 'Day', code: 'd' },
         { name: 'Week', code: 'w' },
         { name: 'Month', code: 'M' },
         // { name: 'Year', code: 'y' }
     ])
 
+    /* Default View Date */
+    const viewDate = ref(dayjs().format('YYYY-MM-DD'))
+
     /* Default view on load */
     const viewSelect = ref({ name: 'Month', code: 'M' })
-    
-    /* Format View Selection for */
+
+    /* Format View Selection */
     // TODO: Format for Dayjs usage
     const selectFormat = computed(() => viewSelect.value.name)
 
     /* Build Calendar */
     const day = computed(() => { return dayjs(viewDate.value); })
-    
+
+    // FIXME: Organize this better
+    /* Selected View Time Values */
     const viewStart = computed(() => dayjs(day.value).startOf(selectFormat.value).add(-1, 'day'))
     const viewEnd = computed(() => dayjs(day.value).endOf(selectFormat.value).add(-1, 'day'))
 
-    const _viewStart = computed(() => dayjs(day.value).startOf(selectFormat.value).format('YYYY-MM-DD'))
-    const _viewEnd = computed(() => dayjs(day.value).endOf(selectFormat.value).format('YYYY-MM-DD'))
-    
-    const currentMonth = computed(() => dayjs(viewDate.value).format('MMMM YYYY'))
+    const formatViewStart = computed(() => dayjs(day.value).startOf(selectFormat.value).format('YYYY-MM-DD'))
+    const formatViewEnd = computed(() => dayjs(day.value).endOf(selectFormat.value).format('YYYY-MM-DD'))
+
+    // FIXME: Can probably get rid of these
+    const formatWeekStart = computed(() => dayjs(day.value).startOf(selectFormat.value).add(-1, 'day').format('YYYY-MM-DD'))
+    const formatWeekEnd = computed(() => dayjs(day.value).endOf(selectFormat.value).add(1, 'day').format('YYYY-MM-DD'))
+
+    const monthDisplay = computed(() => dayjs(viewDate.value).format('MMMM YYYY'))
     const _currentMonth = computed(() => dayjs(viewDate.value).format('YYYY-MM'))
 
-    const monthStart = computed(() => day.value.startOf('month').add(-1, 'day').format('YYYY-MM-DD'))
-    const monthEnd = computed(() => day.value.endOf('month').add(-1, 'day').format('YYYY-MM-DD'))
+    const formatMonthStart = computed(() => day.value.startOf('month').add(-1, 'day').format('YYYY-MM-DD'))
+    const formatMonthEnd = computed(() => day.value.endOf('month').add(-1, 'day').format('YYYY-MM-DD'))
 
+    /* Comp View: Year */
+    const viewYearStart = computed(() => dayjs(day.value).startOf('year'))
+    const viewYearEnd = computed(() => dayjs(day.value).endOf('year'))
+
+    const compYear = computed(() => dayjs(day.value).subtract(1, 'year'))
+    const compYearStart = computed(() => dayjs(compYear.value).startOf('year'))
+    const compYearEnd = computed(() => dayjs(compYear.value).endOf('year'))
+
+
+    /* Comp View: Month */
+    const viewMonthStart = computed(()=> dayjs(day.value).startOf('month'))
+    const viewMonthEnd = computed(() => dayjs(day.value).endOf('month'))
+
+    const compMonthStart = computed(() => dayjs(compYear.value).startOf('month'))
+    const compMonthEnd = computed(() => dayjs(compYear.value).endOf('month'))
+
+    const compFormatMonth = computed(()=> dayjs(compWeek.value).format('YYYY-MM'))
+
+
+    /* Comp View: Week */
+    const viewWeek = computed(() => dayjs(day.value).week())
+    const viewWeekStart = computed(() => dayjs().week(viewWeek.value).startOf('week'))
+    const viewWeekEnd = computed(() => dayjs().week(viewWeek.value).endOf('week'))
+
+    const compWeek = computed(() => dayjs(day.value).subtract(52, 'week'))
+    const compWeekStart = computed(() => dayjs(compWeek.value).startOf('week'))
+    const compWeekEnd = computed(() => dayjs(compWeek.value).endOf('week'))
+
+    // TODO: Move to composable, don't need this as a global state
+    /* Calendar Pane*/
     const prependCalendar = computed(() => {
         let monthStart = day.value.startOf('month');
         let weekStart = monthStart.startOf('week');
@@ -58,8 +104,8 @@ export const useTimelineStore = defineStore('Timeline', () => {
         let rangeEnd = timeline.viewEnd.add(-1, 'day');
 */
         /* Moved the addition to the timeline store */
-        let rangeStart = timeline.viewStart
-        let rangeEnd = timeline.viewEnd
+        let rangeStart = viewStart.value
+        let rangeEnd = viewEnd.value
 
         let currentDate = rangeStart;
 
@@ -74,20 +120,60 @@ export const useTimelineStore = defineStore('Timeline', () => {
     })
 
     /* Timetravel */
-/*     
-    function shiftView(amount){
-        const income = useIncomeData()
-        viewDate.value = day.value.add(amount, selectFormat.value).format('YYYY-MM-DD');
-        // income.dayFilter(_currentMonth.value)  
-    }
- */
-    
+    /*     
+        function shiftView(amount){
+            const income = useIncomeData()
+            viewDate.value = day.value.add(amount, selectFormat.value).format('YYYY-MM-DD');
+            // income.dayFilter(_currentMonth.value)  
+        }
+     */
+
     const shiftView = (amount) => {
         viewDate.value = day.value.add(amount, selectFormat.value).format('YYYY-MM-DD');
     }
-       
 
-    return { viewDate,weekDays, viewList, viewSelect, day, viewStart, viewEnd, currentMonth, _currentMonth, monthStart, monthEnd, selectFormat, shiftView,prependCalendar, calendar, _viewStart, _viewEnd }
+
+    return {
+        day,
+        viewDate,
+        viewStart,
+        viewEnd,
+        monthDisplay,
+        _currentMonth,
+        formatMonthStart,
+        formatMonthEnd,
+        selectFormat,
+        shiftView,
+        prependCalendar,
+        formatViewStart,
+        formatViewEnd,
+        formatWeekStart,
+        formatWeekEnd,
+        // Comp View: Selected Week
+        viewWeek,
+        viewWeekStart,
+        viewWeekEnd,
+        compWeek,
+        compWeekStart,
+        compWeekEnd,
+        // Comp View: Selected Month
+        viewMonthStart,
+        viewMonthEnd,
+        compMonthStart,
+        compMonthEnd,
+        // Comp View: Year
+        viewYearStart,
+        viewYearEnd,
+        compYearStart,
+        compYearEnd,
+        calendar,
+        // For the Form
+        weekDays,
+        viewList,
+        viewSelect,
+        // Formatted DayJS values
+        compFormatMonth
+    }
 }, {
     // persist: true,
 },)

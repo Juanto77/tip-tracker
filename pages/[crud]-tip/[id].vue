@@ -14,7 +14,7 @@ const route = useRoute()
 const store = useTipStore()
 
 
-let currentView = resolveComponent('IncomeTip')
+let currentView = resolveComponent('ViewTip')
 
 /* Middleware */
 // console.log(route.query)
@@ -23,7 +23,7 @@ if (route.params.crud === 'edit' ){
     console.log(route.params.id)
     // console.log($route.params.id)
     store.getTips(route.params.id)
-    currentView = resolveComponent('IncomeAddTip')
+    currentView = resolveComponent('AddTip')
 }
 
 

@@ -32,8 +32,8 @@ const fields = [{
 }]
 
 function onSubmit (data) {
-  console.log('Submitted', data)
-  console.log(data.email)
+  // console.log('Submitted', data)
+  // console.log(data.email)
 }
 
 async function emailAuth(data) {
@@ -41,8 +41,8 @@ async function emailAuth(data) {
         email: data.email,
         password: data.password,
     }).then(navigateTo('/confirm'))
-    console.log(email)
-    console.log(password)
+    // console.log(email)
+    // console.log(password)
 
     if (error) console.log(error);
 }
